@@ -49,7 +49,9 @@ function Header() {
             </Link>
           </p>
           <p>
-            <a href="/testi">Testi</a>
+            <Link to={"/testi"}>
+              testi
+            </Link>
           </p>
           <p>
             <a href="">Shop</a>
