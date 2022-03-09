@@ -66,13 +66,19 @@ function Header() {
         </CustomClose>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Link to={"/home"}>
+              Home
+            </Link>
           </li>
           <li>
-            <a href="/video">Video</a>
+            <Link to={"/video"}>
+              video
+            </Link>
           </li>
           <li>
-            <a href="/testi">Testi</a>
+            <Link to={"/testi"}>
+              testi
+            </Link>
           </li>
           <li>
             <a href="">Shop</a>

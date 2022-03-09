@@ -29,6 +29,7 @@ a{
 }
 a:hover{
   opacity:70%;
+  color: red;
 }
 img{
   height:50px;
