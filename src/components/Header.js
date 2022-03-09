@@ -41,7 +41,9 @@ function Header() {
         </SocialContainer>
         <ButtonGroup>
           <p>
-            <a href="/home">Home</a>
+            <Link to={"/home"}>
+              Home
+            </Link>
           </p>
           <p>
             <Link to={"/video"}>
@@ -54,7 +56,7 @@ function Header() {
             </Link>
           </p>
           <p>
-            <a href="">Shop</a>
+            <a>Shop</a>
           </p>
         </ButtonGroup>
       </Menu>
@@ -173,7 +175,7 @@ const Menu = styled.div`
     color: white;
     text-decoration: none;
     :hover {
-      color: red;
+      color:red;
       text-decoration: none;
     }
   }
