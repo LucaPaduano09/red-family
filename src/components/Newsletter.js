@@ -120,6 +120,9 @@ const FormGroup = styled.div`
       width: 400px;
       text-align: center;
       border-radius: 20px;
+      @media (max-width: 376px){
+          width:300px;
+      }
     }
     button {
       width: 200px;
