@@ -67,21 +67,29 @@ function Header() {
         <ul>
           <li>
             <Link to={"/home"}>
+              <p style={{fontWeight:"bolder"}}onClick={() => {setBurgerStatus(false)}}>
               Home
+              </p>
             </Link>
           </li>
           <li>
             <Link to={"/video"}>
-              video
+            <p onClick={() => {setBurgerStatus(false)}}>
+              video  
+            </p>
             </Link>
           </li>
           <li>
             <Link to={"/testi"}>
+              <p onClick={() => {setBurgerStatus(false)}}>
               testi
+              </p>
             </Link>
           </li>
           <li>
-            <a href="">Shop</a>
+            <Link to={"/"}>
+            <p onClick={() => {setBurgerStatus(false)}}>Shop</p>
+            </Link>
           </li>
         </ul>
 
@@ -297,19 +305,25 @@ const BurgerNav = styled.div`
     list-style: none;
     padding: 10px;
     margin-right: 18px;
-    a {
+    p {
       color: white;
       font-size: 35px;
       font-family: "Exo 2", sans-serif;
       font-weight: bold;
       text-transform: uppercase;
     }
-    a:hover {
+    a:hover{
+      text-decoration:none;
+    }
+    p:hover {
       color: red;
       text-decoration: none;
     }
     :first-child {
       margin-top: 100px;
+    }
+    ul > li > a > p{
+      font-weight:bold;
     }
   }
   div {
