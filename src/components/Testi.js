@@ -38,7 +38,9 @@ function Testi(props) {
                   <h4>Red Family</h4>
                 </div>
 
-                <a href={titolo}>Vai al testo</a>
+                <Link to={titolo}>
+                  vai al testo
+                </Link>
               </SingleContainer>
               <Separator></Separator>
             </div>
