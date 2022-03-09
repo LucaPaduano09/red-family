@@ -23,14 +23,6 @@ body{
   }
 }
 
-a{
-  text-decoration:none;
-  color:rgba(245, 244, 244, 0.829)
-}
-a:hover{
-  opacity:70%;
-  color: red;
-}
 img{
   height:50px;
 }
