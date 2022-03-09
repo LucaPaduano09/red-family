@@ -48,7 +48,7 @@ function Newsletter() {
             />
             <button onClick={() => saveEmail(email)}>Iscriviti</button>
             <div>
-              {inviato === true && email !== "" ? (
+              {inviato === true? (
                 <p
                   style={{
                     width: 180,

@@ -46,14 +46,14 @@ function Video() {
             <MenuSocial>
               <p>share:</p>
               <a
-                href="whatsapp://send?text=Ciao Ascolta l'ultimo singolo della red http://localhost/RedFamily/video.php"
+                href="whatsapp://send?text=Ciao Ascolta l'ultimo singolo della red http://red-family.netlify.app/video"
                 data-action="share/whatsapp/share"
                 target="_blank"
               >
                 <img src="./images/Share-whatsapp.png" alt="instagram-logo" />
               </a>
               <a
-                href="https://t.me/share/url?url= http://localhost/RedFamily/video.php &text=Ciao Ascolta l'ultimo singolo della red"
+                href="https://t.me/share/url?url= http://red-family.netlify.app/video &text=Ciao Ascolta l'ultimo singolo della red"
                 target="_blank"
               >
                 <img src="./images/Share-Telegram.png" alt="facebook" />
@@ -62,7 +62,7 @@ function Video() {
                 <img src="./images/Share-copy-link.png" alt="copy" />
               </button>
 
-              <ShareLink link="https://red-fam.web.app">
+              <ShareLink link="http://red-family.netlify.app/video">
                 {(link) => (
                   <a href={link} target="_blank">
                     fb
