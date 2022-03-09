@@ -50,7 +50,7 @@ function Header() {
           </p>
           <p>
             <Link to={"/testi"}>
-              testi
+              Testi
             </Link>
           </p>
           <p>
