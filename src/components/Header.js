@@ -44,7 +44,9 @@ function Header() {
             <a href="/home">Home</a>
           </p>
           <p>
-            <a href="/video">Video</a>
+            <Link to={"/video"}>
+              Video
+            </Link>
           </p>
           <p>
             <a href="/testi">Testi</a>
