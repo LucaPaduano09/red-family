@@ -1348,8 +1348,8 @@ function App() {
 
           <Route path="/">
             <Home />
-            <Newsletter />
-            <Finalfooter />
+            {/* <Newsletter /> */}
+            {/* <Finalfooter /> */}
           </Route>
         </Switch>
       </Router>

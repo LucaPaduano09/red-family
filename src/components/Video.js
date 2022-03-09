@@ -480,7 +480,7 @@ const MenuSocial = styled.div`
       width: 20%;
     }
     @media (max-width: 375px) {
-      margin-right: -180px;
+      margin-right: 20px;
     }
   }
   button {
