@@ -185,9 +185,11 @@ const SingleContainer = styled.div`
   h3 {
     margin-left: 100px;
     text-transform: uppercase;
+    font-size: 2vw;
     color: white;
     @media (max-width: 768px) {
       margin-left: 0px;
+      font-size:4vw;
     }
   }
   .info-container {

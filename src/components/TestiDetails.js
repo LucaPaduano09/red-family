@@ -105,7 +105,8 @@ const DescriptionContainer = styled.div`
   position: relative;
   height: 90%;
   width: 60%;
-  background-color: yellow;
+  background-color: transparent;
+  color:white;
   margin-right: 20px;
   margin-top: 5px;
   display: flex;

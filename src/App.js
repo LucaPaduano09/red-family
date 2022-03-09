@@ -1341,7 +1341,7 @@ function App() {
               `}
             />
           </Route>
-
+          
           <Route path="/video">
             <Video />
           </Route>
@@ -1349,6 +1349,7 @@ function App() {
           <Route path="/">
             <Home />
             <Newsletter />
+            <Finalfooter />
           </Route>
         </Switch>
       </Router>

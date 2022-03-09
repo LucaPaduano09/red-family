@@ -65,7 +65,7 @@ function Video() {
               <ShareLink link="https://red-fam.web.app">
                 {(link) => (
                   <a href={link} target="_blank">
-                    Share this on Facebook
+                    fb
                   </a>
                 )}
               </ShareLink>
@@ -73,19 +73,26 @@ function Video() {
             <p>
               Gianni Red & Loris Bastr presentano : " In form " Ascoltalo su
               Spotify :
-              <a target="_blank" href=" https://open.spotify.com/album/6qDhmT"> https://open.spotify.com/album/6qDhmT... </a>
+              <a target="_blank" href=" https://open.spotify.com/album/6qDhmT">
+                {" "}
+                https://open.spotify.com/album/6qDhmT...{" "}
+              </a>
             </p>
+            <p>Segui RedFamily :</p>
+            <p>► Facebook:</p>
             <p>
-              Segui RedFamily : 
+              <a target="_blank" href="https://fb.com/redfamilymusic">
+                https://fb.com/redfamilymusic{" "}
+              </a>
             </p>
+            <p>► Instagram:</p>
             <p>
-              ► Facebook:
-            </p>
-            <p>
-                <a target="_blank" href="https://fb.com/redfamilymusic">https://fb.com/redfamilymusic </a>
-            </p>
-            <p>
-              ► Instagram: <a target="_blank" href="https://www.instagram.com/redfamilymusic">https://www.instagram.com/redfamilymusic </a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/redfamilymusic"
+              >
+                https://www.instagram.com/redfamilymusic{" "}
+              </a>
             </p>
           </DescriptionWrapper>
         </MainVideoWrapper>
@@ -195,12 +202,15 @@ const Container = styled.div`
   margin-top: 180px;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 768px) {
-    margin-top: 85px;
+  @media (max-width: 1024px) {
+    margin-top: 185px;
     width: 100vw;
     height: 3500px;
   }
-`;
+  @media (max-width: 768px){
+    margin-top:80px;
+  }
+  `;
 
 const TitleWrapper = styled.div`
   position: relative;
@@ -418,11 +428,13 @@ const DescriptionWrapper = styled.div`
       font-weight: normal;
     }
   }
-  p{
-    position:relative;
-    width:100%;
-    white-space:pre-line;
-
+  p {
+    position: relative;
+    width: 100%;
+    white-space: pre-line;
+  }
+  a {
+    font-size: 10px;
   }
   h2 {
     position: relative;
@@ -444,7 +456,7 @@ const MenuSocial = styled.div`
   margin-top: 20px;
   margin-bottom: 20px;
   position: relative;
-  width: 100%;
+  width:100%;
   @media (max-width: 768px) {
     justify-content: flex-start;
   }
@@ -463,8 +475,9 @@ const MenuSocial = styled.div`
     position: relative;
     font-size: 20px;
     margin-right: 10px;
+    width:20%;
     @media (max-width: 768px) {
-      width: 80%;
+      width: 20%;
     }
     @media (max-width: 375px) {
       margin-right: -180px;
