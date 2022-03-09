@@ -21,6 +21,18 @@ function TestiDetails(props) {
           <p>
             {props.desc}
           </p>
+          <p>
+          Ascoltalo su Spotify : <a href={props.spotify}> {props.spotify}</a>
+          </p>
+          <p>
+          Segui Red Family : 
+          </p>
+          <p>
+              ► Facebook: <a href="https://fb.com/redfamilymusic"> https://fb.com/redfamilymusic</a> 
+          </p>
+          <p>
+          ► Instagram: <a href="https://www.instagram.com/redfamilymusic"> https://www.instagram.com/redfamilymusic</a>
+          </p>
         </DescriptionContainer>
       </InfoContainer>
 
@@ -52,7 +64,7 @@ const Container = styled.div`
   position: relative;
   width: 70%;
   margin: 0 auto;
-  background-color: transparent;
+  background-image: linear-gradient(to right, #0f0f11ea, transparent);
   margin-top: 180px;
   display: flex;
   flex-direction: column;

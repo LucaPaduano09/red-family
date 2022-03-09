@@ -11,14 +11,13 @@ import Finalfooter from "./components/Finalfooter";
 import Video from "./components/Video";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Newsletter from "./components/Newsletter";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <div className="App">
-      {/* <LoaderBox>
-        <Loader type="box-rotate-x" bgColor={"#FFFFFF"} title={"box-rotate-x"} color={'#FFFFFF'} size={100} />
-      </LoaderBox> */}
       <Router>
+    <div className="App">
+      <ScrollToTop />
         <Header />
         <Switch>
           <Route path="/testi">
@@ -47,6 +46,7 @@ function App() {
               regia  Red Family 
               D.o.p. & camera : Marco Bruno
               Produzione video Red Family`}
+              spotify="https://goo.gl/zNtu5H"
               testo={`
                 [Ritornello: Gianni Red & Loris Bastr]
                 E pall chien, teng a uallera 'nderr (Crirem, crirem)
@@ -275,17 +275,12 @@ function App() {
               data="01/01/2022"
               immagine="./images/cover/in-form.png"
               desc={`Gianni Red & Loris Bastr presentano :  In form 
-              
-              Ascoltalo su Spotify :https://open.spotify.com/album/6qDhmT...
-              
-              Segui Red Family : 
-              
-              ► Facebook:  https://fb.com/redfamilymusic
-              
-              ► Instagram: https://www.instagram.com/redfamilymusic
-              
               Una produzione 56K Productions`}
               titolo="In form"
+              spotify="https://open.spotify.com/album/6qDhmT..."
+              facebook="https://fb.com/redfamilymusic"
+              insta="https://www.instagram.com/redfamilymusic
+              "
               testo={`
               [Intro:Loris Bastr]
               Semp in form,
@@ -469,6 +464,7 @@ function App() {
               Regia : Red Family ;
               Riprese e montaggio : FACTORY; 
               Outfit : Iovine Vintage Store;`}
+              spotify="https://goo.gl/d2Wo69"
               testo={`
               [Intro: Loris Bastr]
               Siamo sta- , siamo sta-
@@ -639,6 +635,7 @@ function App() {
               desc={`Gianni Red & Loris Bastr presentano : Guardami negli occhi
               Suoni : Neter Sound
               Regia : FACTORY`}
+              spotify="https://goo.gl/YRhrcV"
               testo={`
               [Intro: Gianni Red & Loris Bastr]
               Hey, ok, ok!
@@ -931,6 +928,7 @@ function App() {
               desc={`Gianni Red & Loris Bastr presentano : Un euro in più
               Suoni : Neter Sound
               Regia : Renato Bobyes`}
+              spotify="https://goo.gl/6v6pXY"
               testo={`
               [Intro: Loris Bastr]
               Entro dentro un posto, cerco un posto di lavoro 
@@ -1134,6 +1132,7 @@ function App() {
               Suoni : Neter Sound
               Regia : Renato Bobyes
               Con la partecipazione di Marialaura Iovino`}
+              spotify="https://goo.gl/hyq3hR"
               testo={`
               [Intro]
               No, no, no, no!
@@ -1341,7 +1340,7 @@ function App() {
               `}
             />
           </Route>
-          
+
           <Route path="/video">
             <Video />
           </Route>
@@ -1352,8 +1351,8 @@ function App() {
             {/* <Finalfooter /> */}
           </Route>
         </Switch>
-      </Router>
     </div>
+      </Router>
   );
 }
 

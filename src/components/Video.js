@@ -188,6 +188,7 @@ const ContainerContainers = styled.div`
   background: url("./images/sfondo-sito1.png");
   background-position: center center;
   background-size: cover;
+  background-repeat:repeat;
   position: absolute;
   width: 100vw;
 `;
