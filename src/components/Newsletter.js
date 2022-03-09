@@ -101,6 +101,9 @@ const TitleText = styled.h1`
   font-size: 70px;
   color: white;
   margin-bottom: 10px;
+  @media (max-width: 425px){
+      font-size:50px;
+  }
 `;
 const FormGroup = styled.div`
   position: relative;

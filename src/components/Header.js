@@ -277,8 +277,8 @@ const BurgerMenu = styled.div`
       cursor: pointer;
     }
     @media (max-width: 425px){
-        height:35px;
-        width:35px;
+        height:25px;
+        width:25px;
     }
   }
 `;
