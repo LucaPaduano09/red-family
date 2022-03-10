@@ -274,21 +274,26 @@ const BurgerMenu = styled.div`
     top: 19.8%;
     right: 4.7%;
   }
+  @media (max-width: 428px) {
+    top: 28px;
+    right: 15px;
+  }
+  @media (max-width: 426px) {
+    top: 30px;
+    right: 12px;
+  }
   @media (max-width: 375px) {
     top: 23px;
     right: 5px;
   }
-  @media (max-width: 425px) {
-    top: 25px;
-    right: 8px;
-  }
+  
   img {
     @media (max-width: 768px) {
       width: 45px;
       height: 45px;
       cursor: pointer;
     }
-    @media (max-width: 425px){
+    @media (max-width: 428px){
         height:25px;
         width:25px;
     }
@@ -323,6 +328,12 @@ const BurgerNav = styled.div`
       font-family: "Exo 2", sans-serif;
       font-weight: bold;
       text-transform: uppercase;
+      @media (max-width: 768px){
+        font-size: 35px;
+      }
+      @media (max-width: 426px){
+        font-size: 25px;
+      }
     }
     a:hover{
       text-decoration:none;
@@ -344,10 +355,13 @@ const BurgerNav = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 400px;
+    @media (max-width: 426px){
+      margin-top:20px;
+    }
     @media only screen 
     and (device-width: 428px) 
     and (device-height: 926px) {
-      margin-top:300px;
+      margin-top:200px;
     }
     a {
       img:first-child {
@@ -374,6 +388,9 @@ const CustomClose = styled.span`
     :hover {
       cursor: pointer;
       opacity: 80%;
+    }
+    @media (max-width: 428px){
+      left: 22px;
     }
   }
 `;

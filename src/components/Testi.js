@@ -181,6 +181,9 @@ const SingleContainer = styled.div`
       height: 80px;
       width: 80px;
     }
+    @media (max-width: 428px){
+      margin-left:5px;
+    }
   }
   h3 {
     margin-left: 100px;
@@ -190,7 +193,7 @@ const SingleContainer = styled.div`
     @media (max-width: 768px) {
       margin-left: 5px;
       margin-right:5px;
-      font-size:3.5vw;
+      font-size:3vw;
     }
   }
   .info-container {
@@ -219,7 +222,7 @@ const SingleContainer = styled.div`
       cursor: pointer;
     }
     @media (max-width: 768px) {
-      font-size: 18px;
+      font-size: 10px;
     }
   }
 `;

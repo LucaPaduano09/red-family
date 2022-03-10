@@ -128,7 +128,7 @@ const Container = styled.div`
   @media (max-width: 768px) {
     margin-top: 80px;
   }
-  @media (max-width: 426px) {
+  @media (max-width: 428px) {
     margin-top: 105px;
     width: 100vw;
     height: 2000px;
@@ -143,7 +143,7 @@ const MainVideoContainer = styled.div`
   justify-content:center;
   iframe{
     @media (max-width: 376px){
-      width:90%;
+      width:100%;
     }
   }
 `
@@ -157,7 +157,7 @@ const MoreVideoContainer = styled.div`
   @media (max-width: 769px){
     grid-template-columns: 1fr 1fr 1fr
   }
-  @media (max-width: 426px){
+  @media (max-width: 428px){
     grid-template-columns: 1fr;
     grid-gap:20px;
   }
@@ -169,7 +169,7 @@ const MoreVideoContainer2 = styled.div`
   grid-template-columns: 2fr 1fr;
   grid-column-gap:10px;
   margin-top:25px;
-  @media (max-width: 426px){
+  @media (max-width: 428px){
     grid-template-columns: 2fr
   }
 `
