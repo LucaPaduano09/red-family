@@ -51,6 +51,11 @@ function Header() {
             </Link>
           </p>
           <p>
+            <Link to={"/video"}>
+              Radio
+            </Link>
+          </p>
+          <p>
             <Link to={"/testi"}>
               Testi
             </Link>
@@ -76,6 +81,13 @@ function Header() {
             <Link to={"/video"}>
             <p onClick={() => {setBurgerStatus(false)}}>
               video  
+            </p>
+            </Link>
+          </li>
+          <li>
+            <Link to={"/"}>
+            <p onClick={() => {setBurgerStatus(false)}}>
+              Radio  
             </p>
             </Link>
           </li>
@@ -225,7 +237,7 @@ const ButtonGroup = styled.div`
   justify-content: flex-start;
   cursor: pointer;
   margin-right: 300px;
-  p:nth-child(4) {
+  p:nth-child(5) {
     a {
       text-decoration: line-through;
       text-decoration-color: red;

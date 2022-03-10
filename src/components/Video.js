@@ -29,8 +29,8 @@ function Video() {
           <ImageWrapper>
             <Zoom>
               <iframe
-                width="100%"
-                height="450px"
+                width="80%"
+                height="400px"
                 src="//www.youtube.com/embed/2q6PsjEPYic"
                 title="YouTube video player"
                 frameborder="0"

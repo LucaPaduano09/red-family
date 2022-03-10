@@ -128,11 +128,13 @@ const DescriptionContainer = styled.div`
   white-space: pre-line;
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    // height: 100%;
     margin-right: 0px;
   }
   h2 {
     text-transform: uppercase;
+    // line-height:5px;
+    margin-top:40px;
   }
   p {
     position: relative;
@@ -141,7 +143,12 @@ const DescriptionContainer = styled.div`
     white-space: pre-line;
     @media (max-width: 768px) {
       width: 100%;
+      margin-bottom:-10px;
     }
+  }
+  h5{
+    line-height:1px;
+    margin-bottom:-10px;
   }
 `;
 const TestoContainer = styled.div`
@@ -160,6 +167,11 @@ const TestoContainer = styled.div`
       line-height: 1.5;
       margin-top: 310px;
       font-size: 21px;
+    }
+  }
+  button{
+    @media (max-width: 769px){
+      margin-top:20px;
     }
   }
 `;

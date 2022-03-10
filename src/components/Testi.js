@@ -188,8 +188,9 @@ const SingleContainer = styled.div`
     font-size: 2vw;
     color: white;
     @media (max-width: 768px) {
-      margin-left: 0px;
-      font-size:4vw;
+      margin-left: 5px;
+      margin-right:5px;
+      font-size:3.5vw;
     }
   }
   .info-container {
