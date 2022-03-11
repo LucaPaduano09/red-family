@@ -355,8 +355,8 @@ const BurgerNav = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 400px;
-    @media (max-width: 426px){
-      margin-top:20px;
+    @media (max-width: 428px){
+      margin-top:100px;
     }
     @media only screen 
     and (device-width: 428px) 
@@ -390,7 +390,7 @@ const CustomClose = styled.span`
       opacity: 80%;
     }
     @media (max-width: 428px){
-      left: 22px;
+      left: 8px;
     }
   }
 `;

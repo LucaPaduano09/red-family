@@ -59,6 +59,9 @@ const ContainerContainers = styled.div`
   background-size: cover;
   position: absolute;
   width: 100vw;
+  @media (max-width: 4000px) {
+    margin-top:150px;
+  }
   @media (max-width: 1540px){
     margin-top:100px;
   }
@@ -75,9 +78,8 @@ const Container = styled.div`
   position: relative;
   margin: 0 auto;
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
-  
   width: 60vw;
-  // margin-top: 180px;
+  //  margin-top: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,15 +87,15 @@ const Container = styled.div`
   align-content: center;
   @media only screen and (device-width: 428px) and (device-height: 926px) {
     width: 100%;
-    // margin-top: 80px;
+     margin-top: 180px;
   }
   @media (max-width: 768px) {
     width: 100%;
     // margin-top: 57px;
   }
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 428px) {
     width: 100%;
-    // margin-top: 80px;
+     margin-top: 80px;
   }
   @media (max-width: 1024px){
     // height:calc(200vh - 100px);
@@ -103,6 +105,10 @@ const Container = styled.div`
     
     margin-top:100px;
     margin-bottom:50px;
+  }
+  @media (max-width: 4000px){
+    margin-top:60px;
+    margin-bottom:60px;
   }
 `;
 const TitleWrapper = styled.div`
@@ -120,6 +126,9 @@ const TitleWrapper = styled.div`
   @media (max-width: 768px) {
     height: 70px;
     margin-top: 0px;
+  }
+  @media (max-width: 428px){
+    margin-top: 40px;
   }
 
   h2 {
@@ -172,6 +181,20 @@ const SingleContainer = styled.div`
   }
   h4 {
     color: #778899;
+    @media (max-width: 4000px){
+      font-size:1vw;
+    }
+    @media (max-width: 1540px){
+      font-size:1.6vw;
+    }
+    @media (max-width: 769px) {
+      margin-left: 5px;
+      margin-right:5px;
+      font-size:3vw;
+    }
+    @media (max-width: 426px){
+      font-size:4vw;
+    }
   }
   img {
     height: 100px;
@@ -190,10 +213,19 @@ const SingleContainer = styled.div`
     text-transform: uppercase;
     font-size: 2vw;
     color: white;
-    @media (max-width: 768px) {
+    @media (max-width: 4000px){
+      font-size:1vw;
+    }
+    @media (max-width: 1540px){
+      font-size:2vw;
+    }
+    @media (max-width: 769px) {
       margin-left: 5px;
       margin-right:5px;
       font-size:3vw;
+    }
+    @media (max-width: 426px){
+      font-size:4vw;
     }
   }
   .info-container {
