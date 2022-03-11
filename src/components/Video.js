@@ -65,7 +65,7 @@ function Video() {
               <ShareLink link="http://red-family.netlify.app/video">
                 {(link) => (
                   <a href={link} target="_blank">
-                    fb
+                    <img src="./images/share-facebook.png"/>
                   </a>
                 )}
               </ShareLink>
@@ -201,15 +201,17 @@ const Container = styled.div`
   display: flex;
   margin: 0 auto;
   margin-top: 180px;
+  margin-bottom:50px;
   flex-direction: column;
   align-items: center;
   @media (max-width: 1024px) {
     margin-top: 185px;
     width: 100vw;
-    height: 3500px;
+    height: 1900px;
   }
   @media (max-width: 768px){
     margin-top:80px;
+    height: 3300px;
   }
   `;
 

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Finalfooter from "./Finalfooter";
 function Testi(props) {
   const titoli = props.titoli;
+  const cover = props.cover;
   console.log(titoli);
   return (
     <ContainerContainers>
@@ -14,7 +15,7 @@ function Testi(props) {
 
         {titoli.map((titolo, i) => {
           return (
-            <div
+            <Link to={titolo}
               style={{
                 position: "relative",
                 height: "150px",
@@ -27,23 +28,20 @@ function Testi(props) {
                 marginBottom: "10px",
                 marginTop: "20px",
                 borderRadius: "50px",
+                textDecoration:"none"
               }}
               key={i}
             >
               <SingleContainer>
-                <img src="./images/redd.png" alt="" />
+                <img src={cover[i]} alt="" />
 
                 <div class="info-container">
                   <h3>{titolo}</h3>
                   <h4>Red Family</h4>
                 </div>
-
-                <Link to={titolo}>
-                  vai al testo
-                </Link>
               </SingleContainer>
               <Separator></Separator>
-            </div>
+            </Link>
           );
         })}
       </Container>
@@ -180,12 +178,16 @@ const SingleContainer = styled.div`
   :hover {
   }
   h4 {
+    margin-left:0px;
+    position:relative;
+    width:100%;
+    text-align:center;
     color: #778899;
     @media (max-width: 4000px){
       font-size:1vw;
     }
     @media (max-width: 1540px){
-      font-size:1.6vw;
+      font-size:1.3vw;
     }
     @media (max-width: 769px) {
       margin-left: 5px;
@@ -209,7 +211,10 @@ const SingleContainer = styled.div`
     }
   }
   h3 {
-    margin-left: 100px;
+    position:relative;
+    width:100%;
+    margin-left:100px;
+    text-align:center;
     text-transform: uppercase;
     font-size: 2vw;
     color: white;
@@ -217,7 +222,7 @@ const SingleContainer = styled.div`
       font-size:1vw;
     }
     @media (max-width: 1540px){
-      font-size:2vw;
+      font-size:1.8vw;
     }
     @media (max-width: 769px) {
       margin-left: 5px;
@@ -236,7 +241,7 @@ const SingleContainer = styled.div`
     justify-content: flex-start;
     align-items: center;
     h4 {
-      margin-left: 100px;
+     margin-left:100px;
       @media (max-width: 768px) {
         margin-left: 0px;
       }

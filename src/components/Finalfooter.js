@@ -7,15 +7,7 @@ function Finalfooter() {
             <p>Redfamily © 2022 </p>
             <FooterMenu>
                 <SingoloItem>
-                    <p><a href="">Contattaci</a></p>
-                </SingoloItem>
-                
-                <SingoloItem>
-                    <p><a href="">Lavora con noi</a></p>
-                </SingoloItem>
-
-                <SingoloItem>
-                    <p><a href="">Focess</a></p>
+                    <a style={{color:"white"}}href='mailto:mr_shox@live.it'>mr_shox@live.it</a>
                 </SingoloItem>
             </FooterMenu>
         </Container>

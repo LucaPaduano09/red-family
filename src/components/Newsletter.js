@@ -87,7 +87,7 @@ const ContainerContainers = styled.div`
 const Container = styled.div`
   position: relative;
   width: 100vw;
-  height: 80vh;
+  height: 60vh;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -101,8 +101,9 @@ const TitleText = styled.h1`
   font-size: 70px;
   color: white;
   margin-bottom: 10px;
-  @media (max-width: 425px){
-      font-size:50px;
+  @media (max-width: 428px){
+      font-size:10vw;
+      margin-left:0px;
   }
 `;
 const FormGroup = styled.div`
