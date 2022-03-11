@@ -218,8 +218,11 @@ const SocialContainer = styled.div`
     margin-right: 10px;
   }
   a {
+    img{
+      transition: all 0.3s ease-in-out;
+    }
     img:hover {
-      opacity: 90%;
+      transform: scale(1.4);
     }
   }
 `;

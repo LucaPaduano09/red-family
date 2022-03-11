@@ -9,15 +9,14 @@ function Home() {
       <Container>
         <MainVideoContainer>
           <Zoom>
-            <iframe
-              width="100%"
-              height="500px"
-              src="//www.youtube.com/embed/2q6PsjEPYic"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-              allowfullscreen="allowFullScreen"
-            ></iframe>
+            <div
+            style={{
+              width:"100%",
+              height:"500px"
+            }}
+            >
+              <img style={{position:"realtive",width:"100%",height:"100%"}}src="./images/prova1.jpg"/>  
+            </div>
           </Zoom>
         </MainVideoContainer>
         <ItemContainer>
@@ -25,11 +24,13 @@ function Home() {
               <img src="./images/redd.png" />
               <h3>T-SHIRT RED-FAMILY ONE</h3>
               <p>29.99€</p>
+              <button>Pre-acquista</button>
             </SingleItem>
             <SingleItem>
               <img src="./images/redd.png" />
               <h3>CAPPELLO RED-FAMILY ONE</h3>
               <p>19.99€</p>
+              <button>Pre-acquista</button>
             </SingleItem>
         </ItemContainer>
       </Container>

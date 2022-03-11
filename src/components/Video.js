@@ -464,10 +464,14 @@ const MenuSocial = styled.div`
     justify-content: flex-start;
   }
   img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     padding: 5px;
     margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+    :hover{
+      transform: scale(1.2);
+    }
     @media (max-width: 375px) {
       height: 40px;
       width: 40px;

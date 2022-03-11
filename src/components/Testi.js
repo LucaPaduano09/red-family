@@ -21,12 +21,12 @@ function Testi(props) {
                 height: "150px",
                 width: "95%",
                 display: "flex",
-                justifyContent: "flex-start",
+                justifyContent: "center",
                 flexDirection: "column",
                 alignItems: "center",
                 alignContent: "center",
-                marginBottom: "10px",
-                marginTop: "20px",
+                marginBottom: "0px",
+                marginTop: "0px",
                 borderRadius: "50px",
                 textDecoration:"none"
               }}
@@ -108,6 +108,9 @@ const Container = styled.div`
     margin-top:60px;
     margin-bottom:60px;
   }
+  Link{
+    transition: all 0.3s ease-in-out; 
+  }
 `;
 const TitleWrapper = styled.div`
   position: relative;
@@ -165,9 +168,8 @@ const SingleContainer = styled.div`
   flex-direction: row;
   align-items: center;
   align-content: center;
-  margin-bottom: 10px;
-  margin-top: 20px;
   border-radius: 50px;
+  transition: all 0.3s ease-in;
   @media only screen and (device-width: 428px) and (device-height: 926px) {
     margin-bottom: 20px;
   }
@@ -261,6 +263,9 @@ const SingleContainer = styled.div`
     @media (max-width: 768px) {
       font-size: 10px;
     }
+  }
+  :hover{
+    transform: scale(1.1);
   }
 `;
 const Separator = styled.div`

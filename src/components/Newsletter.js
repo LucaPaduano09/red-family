@@ -16,7 +16,8 @@ function Newsletter() {
       },
       body: JSON.stringify({ email: email }),
     };
-    if (requestOption.body !== "") {
+    if (requestOption.body != "" ) {
+      console.log(requestOption.body,requestOption.body.length)
       const response = await fetch(
         "https://red-fam.herokuapp.com/newsletter/add",
         requestOption
@@ -47,25 +48,6 @@ function Newsletter() {
               required
             />
             <button onClick={() => saveEmail(email)}>Iscriviti</button>
-            <div>
-              {inviato === true? (
-                <p
-                  style={{
-                    width: 180,
-                    color: "black",
-                    backgroundColor: "lightgreen",
-                    border: "2px solid green",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  inviato
-                </p>
-              ) : (
-                <p></p>
-              )}
-            </div>
           </form>
         </FormGroup>
       </Fade>
