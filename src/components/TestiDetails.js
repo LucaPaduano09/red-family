@@ -21,7 +21,7 @@ function TestiDetails(props) {
           <p>
             {props.desc}
           </p>
-          <p>
+          {/* <p>
           Ascoltalo su Spotify : <a href={props.spotify}> {props.spotify}</a>
           </p>
           <p>
@@ -32,7 +32,10 @@ function TestiDetails(props) {
           </p>
           <p>
           ► Instagram: <a href="https://www.instagram.com/redfamilymusic"> https://www.instagram.com/redfamilymusic</a>
-          </p>
+          </p> 
+          */}
+          <p>Suoni : Red Family</p>
+          <p>Regia : Red Family</p>
         </DescriptionContainer>
       </InfoContainer>
 

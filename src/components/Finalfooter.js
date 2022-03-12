@@ -7,7 +7,7 @@ function Finalfooter() {
             <p>Redfamily © 2022 </p>
             <FooterMenu>
                 <SingoloItem>
-                    <a style={{color:"white"}}href='mailto:mr_shox@live.it'>mr_shox@live.it</a>
+                    <a style={{color:"white"}}href='mailto:redfamilymusic@gmail.com'>redfamilymusic@gmail.com</a>
                 </SingoloItem>
             </FooterMenu>
         </Container>

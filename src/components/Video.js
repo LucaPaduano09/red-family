@@ -41,10 +41,10 @@ function Video() {
           </ImageWrapper>
           <DescriptionWrapper>
             <h1>Red Family</h1>
-            <h2>Titolo Brano: Inform</h2>
+            <h2>Titolo Brano: In Form</h2>
             <h3>Data di pubblicazione: 01/01/2022</h3>
             <MenuSocial>
-              <p>share:</p>
+              <p>condividi:</p>
               <a
                 href="whatsapp://send?text=Ciao Ascolta l'ultimo singolo della red http://red-family.netlify.app/video"
                 data-action="share/whatsapp/share"
@@ -71,29 +71,11 @@ function Video() {
               </ShareLink>
             </MenuSocial>
             <p>
-              Gianni Red & Loris Bastr presentano : " In form " Ascoltalo su
-              Spotify :
-              <a target="_blank" href=" https://open.spotify.com/album/6qDhmT">
-                {" "}
-                https://open.spotify.com/album/6qDhmT...{" "}
-              </a>
+              Gianni Red & Loris Bastr presentano : " In Form "
             </p>
-            <p>Segui RedFamily :</p>
-            <p>► Facebook:</p>
-            <p>
-              <a target="_blank" href="https://fb.com/redfamilymusic">
-                https://fb.com/redfamilymusic{" "}
-              </a>
-            </p>
-            <p>► Instagram:</p>
-            <p>
-              <a
-                target="_blank"
-                href="https://www.instagram.com/redfamilymusic"
-              >
-                https://www.instagram.com/redfamilymusic{" "}
-              </a>
-            </p>
+              <p>Suoni : Red Family</p>
+              <p>Regia : Red Family</p>
+              <p>Produzione Video: 56K productions</p>
           </DescriptionWrapper>
         </MainVideoWrapper>
 
@@ -481,7 +463,7 @@ const MenuSocial = styled.div`
   p {
     position: relative;
     font-size: 20px;
-    margin-right: 10px;
+    margin-right: 40px;
     width:20%;
     @media (max-width: 768px) {
       width: 20%;

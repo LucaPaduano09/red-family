@@ -30,7 +30,17 @@ function App() {
                 "Guardami negli occhi",
                 "Stai con me",
                 "un euro in piu'",
-                "Amore e soldi? No!",
+                "amore e soldi? no!"
+              ]}
+              url={[
+                "in form",
+                "uapp",
+                "T' Magnat",
+                "salvini",
+                "Guardami negli occhi",
+                "Stai con me",
+                "un euro in piu'",
+                "amore e soldi no!"
               ]}
               cover={[
                 "./images/cover/in-form.png",
@@ -45,7 +55,7 @@ function App() {
             />
           </Route>
           {/* ROTTE DEI TESTI */}
-          <Route path="/T'Magnat">
+          <Route path="/T' Magnat">
             <TestiDetails
               data="20/2/2019"
               immagine="./images/tt-magnat.png"
@@ -1133,11 +1143,11 @@ function App() {
             />
           </Route>
 
-          <Route path="/amore e soldi no">
+          <Route path="/amore e soldi no!">
             <TestiDetails
               data="11/02/2018"
               immagine="./images/cover/amore-e-soldi.png"
-              titolo="Amore e Soldi No?!"
+              titolo="Amore e soldi? No!"
               desc={`Gianni Red & Loris Bastr presentano : Amore e Soldi ? No !
               Suoni : Neter Sound
               Regia : Renato Bobyes

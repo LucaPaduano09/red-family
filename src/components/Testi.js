@@ -5,6 +5,7 @@ import Finalfooter from "./Finalfooter";
 function Testi(props) {
   const titoli = props.titoli;
   const cover = props.cover;
+  const url = props.url;
   console.log(titoli);
   return (
     <ContainerContainers>
@@ -14,8 +15,9 @@ function Testi(props) {
         </TitleWrapper>
 
         {titoli.map((titolo, i) => {
+          console.log(titolo)
           return (
-            <Link to={titolo}
+            <Link to={url[i]}
               style={{
                 position: "relative",
                 height: "150px",
