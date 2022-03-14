@@ -133,11 +133,15 @@ const DescriptionContainer = styled.div`
     width: 100%;
     // height: 100%;
     margin-right: 0px;
+    margin-top:27px;
   }
   h2 {
     text-transform: uppercase;
     // line-height:5px;
     margin-top:40px;
+    @media (max-width:428px){
+      margin-left:15px;
+    }
   }
   p {
     position: relative;
@@ -148,10 +152,16 @@ const DescriptionContainer = styled.div`
       width: 100%;
       margin-bottom:-10px;
     }
+    @media (max-width:428px){
+      margin-left:15px;
+    }
   }
   h5{
     line-height:1px;
     margin-bottom:-10px;
+    @media (max-width:428px){
+      margin-left:15px;
+    }
   }
 `;
 const TestoContainer = styled.div`
@@ -170,6 +180,9 @@ const TestoContainer = styled.div`
       line-height: 1.5;
       margin-top: 310px;
       font-size: 21px;
+    }
+    @media (max-width: 428px){
+      margin-top:180px;
     }
   }
   button{
