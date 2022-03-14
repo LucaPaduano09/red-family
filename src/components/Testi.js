@@ -20,13 +20,12 @@ function Testi(props) {
             <Link to={url[i]}
               style={{
                 position: "relative",
-                height: "150px",
+                // height: "150px",
                 width: "95%",
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
                 alignItems: "center",
-                alignContent: "center",
                 marginBottom: "0px",
                 marginTop: "0px",
                 borderRadius: "50px",
