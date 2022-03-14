@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Zoom from "react-reveal";
 import Newsletter from "./Newsletter";
 import Finalfooter from "./Finalfooter";
+
 function Home() {
   return (
     <ContainerContainers>
