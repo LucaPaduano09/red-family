@@ -131,7 +131,7 @@ const TitleWrapper = styled.div`
     margin-top: 0px;
   }
   @media (max-width: 428px){
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   h2 {

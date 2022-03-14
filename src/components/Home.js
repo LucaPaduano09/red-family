@@ -71,7 +71,7 @@ const Container = styled.div`
     margin-top: 80px;
   }
   @media (max-width: 428px) {
-    margin-top: 105px;
+    margin-top: 80px;
     width: 100vw;
     height: 900px;
   }
@@ -80,11 +80,12 @@ const Container = styled.div`
 const MainVideoContainer = styled.div`
   position:relative;
   width:100%;
+  height:50%;
   display:flex;
   align-items:center;
   justify-content:center;
   iframe{
-    @media (max-width: 376px){
+    @media (max-width: 428px){
       width:100%;
     }
   }
@@ -123,7 +124,7 @@ const ItemContainer = styled.div`
   align-items:center;
   justify-content:center;
   @media (max-width:428px){
-    
+    height:50%;
   }
 
 `

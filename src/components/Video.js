@@ -317,7 +317,7 @@ const MainVideoWrapper = styled.div`
     margin-top: 50px;
   }
   @media only screen and (device-width: 428px) and (device-height: 926px) {
-    margin-top: 70px;
+    margin-top: 0px;
   }
 `;
 const ImageWrapper = styled.div`
