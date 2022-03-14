@@ -173,7 +173,7 @@ const SingleContainer = styled.div`
   border-radius: 50px;
   transition: all 0.3s ease-in;
   @media only screen and (device-width: 428px) and (device-height: 926px) {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
   }
 
   @media (max-width: 768px) {
@@ -198,7 +198,7 @@ const SingleContainer = styled.div`
       margin-right:5px;
       font-size:3vw;
     }
-    @media (max-width: 426px){
+    @media (max-width: 428px){
       font-size:4vw;
     }
   }
@@ -226,14 +226,14 @@ const SingleContainer = styled.div`
       font-size:1vw;
     }
     @media (max-width: 1540px){
-      font-size:1.8vw;
+      font-size:1.5vw;
     }
     @media (max-width: 769px) {
       margin-left: 5px;
       margin-right:5px;
       font-size:3vw;
     }
-    @media (max-width: 426px){
+    @media (max-width: 428px){
       font-size:4vw;
     }
   }

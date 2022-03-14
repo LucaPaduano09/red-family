@@ -20,14 +20,9 @@ function Newsletter() {
       console.log(requestOption.body,requestOption.body.length)
       const response = await fetch(
         "https://red-fam.herokuapp.com/newsletter/add",
-        requestOption
-      );
-      if (response) {
-        const result = await response.json();
+        requestOption)
+        let result = await response.json();
         setInviato(true);
-      } else {
-        window.alert("si e' verificato un problema ", response.statusText);
-      }
     }
   };
 
