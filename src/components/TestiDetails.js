@@ -21,19 +21,6 @@ function TestiDetails(props) {
           <p>
             {props.desc}
           </p>
-          {/* <p>
-          Ascoltalo su Spotify : <a href={props.spotify}> {props.spotify}</a>
-          </p>
-          <p>
-          Segui Red Family : 
-          </p>
-          <p>
-              ► Facebook: <a href="https://fb.com/redfamilymusic"> https://fb.com/redfamilymusic</a> 
-          </p>
-          <p>
-          ► Instagram: <a href="https://www.instagram.com/redfamilymusic"> https://www.instagram.com/redfamilymusic</a>
-          </p> 
-          */}
           <p>Suoni : Red Family</p>
           <p>Regia : Red Family</p>
         </DescriptionContainer>
@@ -97,7 +84,7 @@ const InfoContainer = styled.div`
   align-items: center;
   align-content: center;
   position: relative;
-  height: 400px;
+  // height: 400px;
   width: 100%;
   margin-top:10px;
   background-color: transparent;
@@ -182,7 +169,7 @@ const TestoContainer = styled.div`
       font-size: 21px;
     }
     @media (max-width: 428px){
-      margin-top:180px;
+      margin-top:0px;
     }
   }
   button{

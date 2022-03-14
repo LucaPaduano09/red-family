@@ -31,15 +31,15 @@ const Container = styled.div`
 `
 const FooterMenu = styled.div`
     position:relative;
-    margin:30px;
     display:flex;
     align-items:center;
 `
 const SingoloItem = styled.div`
     position:relative;
-    margin-right:30px;
+    margin-left:15px;
     p{
         margin:0px;
+        margin-left:15px;
         a{
             margin:0px;
             @media(max-width:375){
