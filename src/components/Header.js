@@ -367,8 +367,11 @@ const BurgerNav = styled.div`
       margin-top:200px;
     }
     a {
+      display:flex;
+      align-items:center;
+      justify-content:center;
       img:first-child {
-        margin-right: 8px;
+        margin-right: 3px;
       }
 
       img {
