@@ -173,8 +173,25 @@ const TestoContainer = styled.div`
     }
   }
   button{
+    animation: glow 1.5s ease-in-out infinite alternate;
+    background-color:rgb(255,34,38);
+    color:white;
+    // border-color:red;
+    border:2px solid white;
+    margin-top:10px;
+    margin-right:5px;
     @media (max-width: 769px){
       margin-top:20px;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #b10808,
+          0 0 20px #ac0909, 0 0 25px #dd0808;
+      }
+      to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #dd0808,
+          0 0 40px #dd0808, 0 0 50px #dd0808;
+      }
     }
   }
 `;

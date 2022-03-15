@@ -61,7 +61,7 @@ function Header() {
             </Link>
           </p>
           <p>
-            <a>Shop</a>
+            <a href="https://red-family-shop.netlify.app">Shop</a>
           </p>
         </ButtonGroup>
       </Menu>
@@ -359,12 +359,13 @@ const BurgerNav = styled.div`
     justify-content: center;
     margin-top: 400px;
     @media (max-width: 428px){
-      margin-top:100px;
+      position:absolute;
+      bottom:30px;
     }
     @media only screen 
     and (device-width: 428px) 
     and (device-height: 926px) {
-      margin-top:200px;
+      
     }
     a {
       display:flex;

@@ -106,10 +106,24 @@ const FormGroup = styled.div`
       }
     }
     button {
+      animation: glow 1.5s ease-in-out infinite alternate;
+      background-color:rgb(255,34,38);
+      border:2px solid white;
+      color:white;
       width: 200px;
       :hover {
         cursor: pointer;
         opacity: 80%;
+      }
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #b10808,
+          0 0 20px #ac0909, 0 0 25px #dd0808;
+      }
+      to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #dd0808,
+          0 0 40px #dd0808, 0 0 50px #dd0808;
       }
     }
   }
