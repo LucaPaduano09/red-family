@@ -83,7 +83,7 @@ function Home() {
           <AliceCarousel
             mouseTracking
             items={items}
-            disableDotsControls="true"
+            disableDotsControls="false"
             responsive={responsive}
             innerWidth="100%"
           />
