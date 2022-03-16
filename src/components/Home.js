@@ -3,65 +3,27 @@ import styled from "styled-components";
 import Zoom from "react-reveal";
 import Newsletter from "./Newsletter";
 import Finalfooter from "./Finalfooter";
-import AliceCarousel from "react-alice-carousel";
+import { Player } from "video-react";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 function Home() {
   const [show, setShow] = useState(false);
-  const videoElement = useRef();
   const handleClick = () => {
     setShow(true);
-    console.log(videoElement);
+    console.log();
   };
-  const handleDragStart = (e) => e.preventDefault();
-  const items = [
-    <video
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-      }}
-      src="./images/puntata.mp4"
-      controls="controls"
-      onDragStart={handleDragStart}
-    />,
-    <video
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-      }}
-      src="./images/semi-completo-format.mp4"
-      controls="controls"
-      onDragStart={handleDragStart}
-    />,
-    <video
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-      }}
-      src="./images/semi-completo-format.mp4"
-      controls="controls"
-      onDragStart={handleDragStart}
-    />,
-  ];
-  const responsive = {
-    0: {
-      items: 1,
-    },
-    1024: {
-      items: 1,
-    },
-  };
+  const videoElement = useRef();
+  console.log(videoElement)
+  // videoElement.current.autoplay = "true";
   return (
     <ContainerContainers>
       <Container>
         <MainVideoContainer>
-          {/* <GalleryWrapper>
+          <GalleryWrapper>
+          <video width="100%" height="540" controls>
+            <source src="./images/puntata.mp4" type="video/mp4"/>
+          </video>
+            {/* <GalleryWrapper>
             {show === false ? (
               <ShadowContainer>
                 <h1>Guarda la prima puntata di RadioRed</h1>
@@ -79,14 +41,8 @@ function Home() {
               controls="controls"
               ref={videoElement}
             />
-          </GalleryWrapper> */}
-          <AliceCarousel
-            mouseTracking
-            items={items}
-            disableDotsControls="false"
-            responsive={responsive}
-            innerWidth="100%"
-          />
+           */}
+          </GalleryWrapper>
         </MainVideoContainer>
         <ItemContainer>
           <SingleItem>
@@ -159,9 +115,9 @@ const MainVideoContainer = styled.div`
       width: 100%;
     }
   }
-  @media (max-width:428px){
-    width:100vw;
-    height:60vh;
+  @media (max-width: 428px) {
+    width: 100vw;
+    height: 100vh;
   }
 `;
 const GalleryWrapper = styled.div`
@@ -173,6 +129,12 @@ const GalleryWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
+  video{
+    @media (max-width:428px){
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
   }
 `;
 
@@ -255,6 +217,8 @@ const ItemContainer = styled.div`
   justify-content: center;
   @media (max-width: 428px) {
     height: 30%;
+    margin-top:20px;
+    margin-bottom:20px;
   }
 `;
 

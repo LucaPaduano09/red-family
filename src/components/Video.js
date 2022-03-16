@@ -193,8 +193,11 @@ const Container = styled.div`
     height: 1900px;
   }
   @media (max-width: 768px){
-    margin-top:80px;
+    margin-top:100px;
     height: 3300px;
+  }
+  @media (max-width:376px){
+    height:3500px;
   }
   `;
 
@@ -316,6 +319,9 @@ const MainVideoWrapper = styled.div`
   }
   @media screen and (max-width: 425px) {
     margin-top: 50px;
+  }
+  @media screen and (max-width: 376px){
+    margin-top:0px;
   }
   @media only screen and (device-width: 428px) and (device-height: 926px) {
     margin-top: 0px;
