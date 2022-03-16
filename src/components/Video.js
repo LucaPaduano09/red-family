@@ -172,6 +172,7 @@ const ContainerContainers = styled.div`
   background-size: cover;
   background-repeat:repeat;
   position: absolute;
+  margin-top:-24px;
   width: 100vw;
 `;
 

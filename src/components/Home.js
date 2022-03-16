@@ -1,38 +1,106 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import Zoom from "react-reveal";
 import Newsletter from "./Newsletter";
 import Finalfooter from "./Finalfooter";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 
 function Home() {
+  const [show, setShow] = useState(false);
+  const videoElement = useRef();
+  const handleClick = () => {
+    setShow(true);
+    console.log(videoElement);
+  };
+  const handleDragStart = (e) => e.preventDefault();
+  const items = [
+    <video
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+      }}
+      src="./images/semi-completo-format.mp4"
+      controls="controls"
+      onDragStart={handleDragStart}
+    />,
+    <video
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+      }}
+      src="./images/semi-completo-format.mp4"
+      controls="controls"
+      onDragStart={handleDragStart}
+    />,
+    <video
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+      }}
+      src="./images/semi-completo-format.mp4"
+      controls="controls"
+      onDragStart={handleDragStart}
+    />,
+  ];
+  const responsive = {
+    0: {
+      items: 1,
+    },
+    1024: {
+      items: 1,
+    },
+  };
   return (
     <ContainerContainers>
       <Container>
         <MainVideoContainer>
-          <Zoom>
-            <div
-            style={{
-              width:"100%",
-              height:"500px"
-            }}
-            >
-              <img style={{position:"realtive",width:"100%",height:"100%"}}src="./images/prova1.jpg"/>  
-            </div>
-          </Zoom>
+          {/* <GalleryWrapper>
+            {show === false ? (
+              <ShadowContainer>
+                <h1>Guarda la prima puntata di RadioRed</h1>
+                <div>
+                </div>
+                  <button  onClick={handleClick}>
+                    
+                  </button>
+              </ShadowContainer>
+            ) : (
+              <p></p>
+            )}
+            <video
+              src="./images/semi-completo-format.mp4"
+              controls="controls"
+              ref={videoElement}
+            />
+          </GalleryWrapper> */}
+          <AliceCarousel
+            mouseTracking
+            items={items}
+            disableDotsControls="true"
+            responsive={responsive}
+            innerWidth="100%"
+          />
         </MainVideoContainer>
         <ItemContainer>
-            <SingleItem>
-              <img src="./images/redd.png" />
-              <h3>T-SHIRT RED-FAMILY ONE</h3>
-              <p>29.99€</p>
-              <button>Pre-acquista</button>
-            </SingleItem>
-            <SingleItem>
-              <img src="./images/redd.png" />
-              <h3>CAPPELLO RED-FAMILY ONE</h3>
-              <p>19.99€</p>
-              <button>Pre-acquista</button>
-            </SingleItem>
+          <SingleItem>
+            <img src="./images/redd.png" />
+            <h3>T-SHIRT RED-FAMILY ONE</h3>
+            <p>29.99€</p>
+            <button>Pre-acquista</button>
+          </SingleItem>
+          <SingleItem>
+            <img src="./images/redd.png" />
+            <h3>CAPPELLO RED-FAMILY ONE</h3>
+            <p>19.99€</p>
+            <button>Pre-acquista</button>
+          </SingleItem>
         </ItemContainer>
       </Container>
       <Newsletter />
@@ -56,11 +124,11 @@ const Container = styled.div`
   position: relative;
   // width: 1280px;
   // height: 1200px;
-  width:85%;
+  width: 68.8%;
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   display: flex;
   margin: 0 auto;
-  margin-top: 180px;
+  margin-top: 155px;
   flex-direction: column;
   align-items: center;
   @media (max-width: 1024px) {
@@ -74,96 +142,156 @@ const Container = styled.div`
   @media (max-width: 428px) {
     margin-top: 80px;
     width: 100vw;
-    height: 900px;
+    height: 700px;
   }
 `;
 
 const MainVideoContainer = styled.div`
-  position:relative;
-  width:100%;
-  height:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  iframe{
-    @media (max-width: 428px){
-      width:100%;
+  position: relative;
+  overflow: hidden;
+  width: 960px;
+  height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  iframe {
+    @media (max-width: 428px) {
+      width: 100%;
     }
   }
-`
-const MoreVideoContainer = styled.div`
-  position:relative;
-  width:100%;
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap:10px;
-  margin-top:50px;
-  @media (max-width: 769px){
-    grid-template-columns: 1fr 1fr 1fr
-  }
-  @media (max-width: 428px){
-    grid-template-columns: 1fr;
-    grid-gap:20px;
-  }
-`
-const MoreVideoContainer2 = styled.div`
-  position:relative;
-  width:100%;
-  display:grid;
-  grid-template-columns: 2fr 1fr;
-  grid-column-gap:10px;
-  margin-top:25px;
-  @media (max-width: 428px){
-    grid-template-columns: 2fr
-  }
-`
-const ItemContainer = styled.div`
-  position:relative;
-  width:100%;
-  height:80vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   @media (max-width:428px){
-    height:50%;
+    width:100vw;
+    height:60vh;
   }
+`;
+const GalleryWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-`
+  }
+`;
+
+const ShadowContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  h1 {
+    position: absolute;
+    z-index: 300;
+    color: white;
+    left: 10%;
+    font-size: 2.6vw;
+    text-transform: uppercase;
+  }
+  div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background-color: black;
+    opacity: 70%;
+  }
+  button {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    z-index: 300;
+    height: 45px;
+    width: 45px;
+    background-image: url("./images/play.png");
+    background-size: cover;
+    background-position: center center;
+  }
+`;
+
+const RightButton = styled.div`
+  positon: absolute;
+  top: 10px;
+  z-index: 1000000;
+  font-size: 51vw;
+  color: white;
+`;
+
+const MoreVideoContainer = styled.div`
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  margin-top: 50px;
+  @media (max-width: 769px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (max-width: 428px) {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+`;
+const MoreVideoContainer2 = styled.div`
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 10px;
+  margin-top: 25px;
+  @media (max-width: 428px) {
+    grid-template-columns: 2fr;
+  }
+`;
+const ItemContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 428px) {
+    height: 30%;
+  }
+`;
 
 const SingleItem = styled.div`
-  position:relative;
-  width:50%;
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  transition: all 0.5s ease-in-out; 
-  :hover{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+  :hover {
     transform: scale(1.2);
-    cursor:pointer;
+    cursor: pointer;
   }
-  img{
-    position:relative;
-    height:300px;
-    width:300px;
-    @media (max-width:428px){
-      height:100px;
-      width:100px;
+  img {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    @media (max-width: 428px) {
+      height: 100px;
+      width: 100px;
     }
   }
-  h3{
-    color:white;
-    font-size:1vw;
-    @media (max-width:428px){
-      font-size:3vw;
+  h3 {
+    color: white;
+    font-size: 1vw;
+    @media (max-width: 428px) {
+      font-size: 3vw;
     }
   }
-  button{
+  button {
     animation: glow 1.5s ease-in-out infinite alternate;
-      background-color:rgb(255,34,38);
-      border:2px solid white;
-      color:white;
+    background-color: rgb(255, 34, 38);
+    border: 2px solid white;
+    color: white;
   }
   @keyframes glow {
     from {
@@ -175,4 +303,4 @@ const SingleItem = styled.div`
         0 0 40px #dd0808, 0 0 50px #dd0808;
     }
   }
-`
+`;

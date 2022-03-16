@@ -137,7 +137,7 @@ export default Header;
 
 const Container = styled.div`
   position: fixed;
-  z-index: 100;
+  z-index: 400;
   height: 150px;
   width: 100vw;
   display: flex;
