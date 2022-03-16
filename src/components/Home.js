@@ -22,7 +22,7 @@ function Home() {
         height: "100%",
         objectFit: "cover",
       }}
-      src="./images/semi-completo-format.mp4"
+      src="./images/puntata.mp4"
       controls="controls"
       onDragStart={handleDragStart}
     />,
