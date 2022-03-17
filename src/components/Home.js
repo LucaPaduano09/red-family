@@ -130,10 +130,10 @@ const GalleryWrapper = styled.div`
   justify-content: center;
 
   video{
+    object-fit:cover;
     @media (max-width:428px){
       width:100%;
       height:100%;
-      object-fit:cover;
     }
   }
 `;
