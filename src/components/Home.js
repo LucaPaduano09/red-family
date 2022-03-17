@@ -80,16 +80,17 @@ const Container = styled.div`
   position: relative;
   // width: 1280px;
   // height: 1200px;
-  width: 68.8%;
+  width: 66.6%;
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   display: flex;
   margin: 0 auto;
   margin-top: 155px;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content:flex-start
   @media (max-width: 1024px) {
     margin-top: 185px;
-    width: 100vw;
+    width: 960px;
     height: 1200px;
   }
   @media (max-width: 768px) {
@@ -106,14 +107,13 @@ const MainVideoContainer = styled.div`
   position: relative;
   overflow: hidden;
   width: 960px;
-  height: 540px;
+  height: 520px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  iframe {
-    @media (max-width: 428px) {
-      width: 100%;
-    }
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+  @media (max-width:3000px){
+    width:100%;
   }
   @media (max-width: 428px) {
     width: 100vw;
