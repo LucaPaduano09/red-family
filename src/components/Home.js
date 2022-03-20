@@ -66,7 +66,7 @@ function Home() {
         <ItemContainer>
           {prodotti.map((element,index) => (
             <SingleItem>
-            <img src={element.prodotti_image} />
+            <img src={"." + element.prodotti_image} />
             <h3>{element.prodotti_name}</h3>
             <p>{element.prodotti_price + " €"}</p>
             <a href={"/prodotto/" + element._id}><img src="./images/preordina-button.png"/></a>
@@ -273,6 +273,9 @@ const SingleItem = styled.div`
     color: white;
     margin-top:-40px;
     cursor:pointer;
+    &:hover{
+      opacity:60%;
+    }
     img{
       height:120px;
       width:120px;
