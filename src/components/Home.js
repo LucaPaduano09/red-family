@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import Zoom from "react-reveal";
 import Newsletter from "./Newsletter";
@@ -8,13 +8,32 @@ import "react-alice-carousel/lib/alice-carousel.css";
 
 function Home() {
   const [show, setShow] = useState(false);
+  const [prodotti, setProdotti] = useState([]);
   const handleClick = () => {
     setShow(true);
     console.log();
   };
-  const videoElement = useRef();
-  console.log(videoElement)
-  // videoElement.current.autoplay = "true";
+
+  useEffect(() => {
+    const getProduct = async () =>{
+      const response  = await fetch("https://red-family-shop.herokuapp.com/prodotti", {
+        method: "GET",
+        mode : "cors",
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+      })
+      if(!response.ok){
+        window.alert("query non andata a buon fine")
+      }
+      const result = await response.json();
+      setProdotti(result);
+    }
+    getProduct()
+  },[prodotti])
+
   return (
     <ContainerContainers>
       <Container>
@@ -45,18 +64,14 @@ function Home() {
           </GalleryWrapper>
         </MainVideoContainer>
         <ItemContainer>
-          <SingleItem>
-            <img src="./images/redd.png" />
-            <h3>T-SHIRT RED-FAMILY ONE</h3>
-            <p>29.99€</p>
-            <button>Pre-acquista</button>
+          {prodotti.map((element,index) => (
+            <SingleItem>
+            <img src={element.prodotti_image} />
+            <h3>{element.prodotti_name}</h3>
+            <p>{element.prodotti_price + " €"}</p>
+            <a href={"/prodotto/" + element._id}><img src="./images/preordina-button.png"/></a>
           </SingleItem>
-          <SingleItem>
-            <img src="./images/redd.png" />
-            <h3>CAPPELLO RED-FAMILY ONE</h3>
-            <p>19.99€</p>
-            <button>Pre-acquista</button>
-          </SingleItem>
+          ))}
         </ItemContainer>
       </Container>
       <Newsletter />
@@ -87,7 +102,7 @@ const Container = styled.div`
   margin-top: 155px;
   flex-direction: column;
   align-items: flex-start;
-  justify-content:flex-start
+  justify-content:flex-start;
   @media (max-width: 1024px) {
     margin-top: 185px;
     width: 960px;
@@ -216,7 +231,7 @@ const ItemContainer = styled.div`
   align-items: center;
   justify-content: center;
   @media (max-width: 428px) {
-    height: 30%;
+    height: 70%;
     margin-top:20px;
     margin-bottom:20px;
   }
@@ -232,13 +247,13 @@ const SingleItem = styled.div`
   flex-direction: column;
   transition: all 0.5s ease-in-out;
   :hover {
-    transform: scale(1.2);
-    cursor: pointer;
+    // transform: scale(1.2);
+    // cursor: pointer;
   }
   img {
     position: relative;
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     @media (max-width: 428px) {
       height: 100px;
       width: 100px;
@@ -247,15 +262,21 @@ const SingleItem = styled.div`
   h3 {
     color: white;
     font-size: 1vw;
+    text-transform:uppercase;
     @media (max-width: 428px) {
       font-size: 3vw;
     }
   }
-  button {
-    animation: glow 1.5s ease-in-out infinite alternate;
-    background-color: rgb(255, 34, 38);
-    border: 2px solid white;
+  a {
+    background-color:transparent;
+    border:none;
     color: white;
+    margin-top:-40px;
+    cursor:pointer;
+    img{
+      height:120px;
+      width:120px;
+    }
   }
   @keyframes glow {
     from {

@@ -32,6 +32,7 @@ function Newsletter() {
         <TitleText>Iscriviti Alla Newsletter</TitleText>
         <FormGroup>
           <form>
+            <div>
             <input
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               type="email"
@@ -42,7 +43,8 @@ function Newsletter() {
               }}
               required
             />
-            <button onClick={() => saveEmail(email)}>Iscriviti</button>
+            </div>
+            <button onClick={() => saveEmail(email)}><img src="./images/iscriviti-button.png"/></button>
           </form>
         </FormGroup>
       </Fade>
@@ -96,26 +98,45 @@ const FormGroup = styled.div`
     justify-content: center;
     align-items: center;
     input {
-      margin-bottom: 30px;
-      height: 35px;
-      width: 400px;
+      position:absolute;
+      height: 95%;
+      width:98%;
+      left:4.5px;
+      background-color:black;
       text-align: center;
       border-radius: 20px;
+      border:none;
       @media (max-width: 376px){
           width:300px;
       }
     }
     button {
       animation: glow 1.5s ease-in-out infinite alternate;
-      background-color:rgb(255,34,38);
-      border:2px solid white;
+      background-color:transparent;
+      border:none;
       color:white;
-      width: 200px;
+      width: 120px;
+      height:120px;
       :hover {
         cursor: pointer;
         opacity: 80%;
       }
+      img{
+        position:relative;
+        width:100%;
+        height:100%;
+      }
     }
+    div{
+      position:relative;
+      height: 35px;
+      width: 400px;
+      display:flex;
+      align-items:center;
+      jusitfy-content:center;
+      border-radius:20px;
+      background: rgb(232,244,240);
+background: linear-gradient(90deg, rgba(232,244,240,1) 24%, rgba(255,46,0,1) 44%, rgba(223,6,18,1) 62%);
     @keyframes glow {
       from {
         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #b10808,

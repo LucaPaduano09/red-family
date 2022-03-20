@@ -61,7 +61,8 @@ function Header() {
             </Link>
           </p>
           <p>
-            <a href="https://red-family-shop.netlify.app">Shop</a>
+            <a>Shop</a>
+            <img src="../images/out-soon-black.png"/>
           </p>
         </ButtonGroup>
       </Menu>
@@ -157,6 +158,7 @@ const Container = styled.div`
 const Logo = styled.div`
   position: relative;
   display: flex;
+  flex:1;
   justify-content: center;
   align-items: center;
   border-bottom: 0.5px solid rgb(130, 132, 132);
@@ -245,10 +247,21 @@ const ButtonGroup = styled.div`
       text-decoration: line-through;
       text-decoration-color: red;
     }
+    a:hover{
+      color:gray;
+    }
   }
   p {
     a:hover {
       color: red;
+    }
+    img{
+      position:absolute;
+      top:-46px;
+      left:330px;
+      height:50px;
+      width:50px;
+      z-index:5000;
     }
   }
 `;

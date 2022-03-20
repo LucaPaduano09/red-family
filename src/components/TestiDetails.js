@@ -5,6 +5,21 @@ import Finalfooter from "./Finalfooter";
 
 function TestiDetails(props) {
   const [traduzione, setTraduzione] = useState(false);
+  const [dialetto, setDialetto] = useState(true);
+  const [italiano, setItaliano] = useState(false);
+  
+  const handleDialettoClick = () =>{
+    setTraduzione(false);
+    setDialetto(true)
+    setItaliano(false);
+  }
+  const handleItalianoClick = () =>{
+    console.log(italiano);
+    setTraduzione(true);
+    setDialetto(false);
+    setItaliano(true);
+    console.log(italiano);
+  }
   return (
     <ContainerContainers>
     <Container>
@@ -27,8 +42,28 @@ function TestiDetails(props) {
       </InfoContainer>
 
       <TestoContainer>
-      <button style={{color:"black;",width:"100px",marginLeft:"30px"}} onClick={() => {setTraduzione(false)}}>dialetto</button>
-      <button style={{color:"black;",width:"100px"}} onClick={() => {setTraduzione(true)}}>traduzione</button>
+        <p style={{marginTop:"0px"}}>Lingue</p>
+      <button style={{color:"black;",width:"100px",marginLeft:"15px"}} onClick={() => handleDialettoClick()}>
+        {
+          dialetto === true ? (
+            <img src="./images/dialetto-font-nuovo.png" style={{opacity:"100%",height:"33px"}}/>
+          ) : (
+            
+            <img src="./images/dialetto-font-nuovo.png" style={{opacity:"60%"}}/>
+          )
+        }
+      </button>
+      <button style={{color:"black;",width:"100px"}} onClick={() => handleItalianoClick()}>
+      {
+          italiano === true ? (
+            <img src="./images/italiano-font-nuovo.png" style={{opacity:"100%",height:"33px"}}/>
+          ) : (
+            
+            <img src="./images/italiano-font-nuovo.png" style={{opacity:"60%"}}/>
+          )
+        }
+        
+      </button>
         {
           traduzione === false ? <p>{props.testo}</p>: <p>{props.traduzione}</p>
         }
@@ -55,26 +90,26 @@ const Container = styled.div`
   width: 70%;
   margin: 0 auto;
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
-  margin-top: 180px;
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
   @media (max-width: 768px) {
     width: 100%;
-    margin-top: 87px;
+     margin-top: 87px;
   }
 `;
 
 const BackButton = styled.div`
   position: absolute;
-  top:0;
+  top:20px;
   right:5px;
   width: 30px;
   height: 30px;
-  z-index:1000;
+  z-index:300;
   margin-bottom:10px;
   img {
-    height: 30px;
-    width: 30px;
+    height: 100%;
+    width: 100%;
   }
 `;
 
@@ -114,7 +149,7 @@ const DescriptionContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  padding: 15px;
+  padding: 5px;
   white-space: pre-line;
   @media (max-width: 768px) {
     width: 100%;
@@ -160,9 +195,10 @@ const TestoContainer = styled.div`
   p {
     color:white;
     line-height: 2;
-    padding: 25px;
+    padding: 20px;
     font-size: 22px;
     white-space: pre-line;
+    margin-top:-30px;
     @media (max-width: 768px) {
       line-height: 1.5;
       margin-top: 310px;
@@ -173,24 +209,42 @@ const TestoContainer = styled.div`
     }
   }
   button{
-    animation: glow 1.5s ease-in-out infinite alternate;
-    background-color:rgb(255,34,38);
-    color:white;
-    // border-color:red;
-    border:2px solid white;
-    margin-top:10px;
-    margin-right:5px;
+    animation: scale 0.3s ease-in-out;
+    background-color:transparent;
+    border:none;
+    // background:transparent
+    margin-right:10px;
+    margin-top:-20px;
+    height:30px;
+    width:100px;
+
+    img{
+      position:relative;
+      height:100%;
+      width:100%;
+      // animation: glow 0.8s ease-in-out infinite alternate;
+      // background-color:transparent;
+      animation:all 0.5s ease-in-out;
+    }
     @media (max-width: 769px){
       margin-top:20px;
     }
     @keyframes glow {
       from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #b10808,
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #b10808,
           0 0 20px #ac0909, 0 0 25px #dd0808;
       }
       to {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #dd0808,
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #dd0808,
           0 0 40px #dd0808, 0 0 50px #dd0808;
+      }
+    }
+    @keyframes scale {
+      from {
+        height:27px;
+      }
+      to{
+        height:30px;
       }
     }
   }

@@ -12,6 +12,7 @@ import Video from "./components/Video";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Newsletter from "./components/Newsletter";
 import ScrollToTop from "./components/ScrollToTop";
+import Prodotto from "./components/Prodotto";
 
 function App() {
   return (
@@ -1364,7 +1365,11 @@ function App() {
           <Route path="/video">
             <Video />
           </Route>
-
+          
+          <Route path="/prodotto/:id">
+              <Prodotto />
+          </Route>
+          
           <Route path="/">
             <Home />
             {/* <Newsletter /> */}
