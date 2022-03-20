@@ -111,7 +111,7 @@ const FormGroup = styled.div`
       }
     }
     button {
-      animation: glow 1.5s ease-in-out infinite alternate;
+      // animation: glow 1.5s ease-in-out infinite alternate;
       background-color:transparent;
       border:none;
       color:white;

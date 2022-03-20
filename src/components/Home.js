@@ -39,7 +39,7 @@ function Home() {
       <Container>
         <MainVideoContainer>
           <GalleryWrapper>
-          <video width="100%" height="540" controls>
+          <video width="100%" controls>
             <source src="./images/puntata.mp4" type="video/mp4"/>
           </video>
             {/* <GalleryWrapper>
@@ -83,7 +83,7 @@ function Home() {
 export default Home;
 
 const ContainerContainers = styled.div`
-  background: url("./images/sfondo-sito1.png");
+  background: url("../images/sfondo-sito1.png");
   background-position: center center;
   background-size: cover;
   position: absolute;
@@ -127,8 +127,9 @@ const MainVideoContainer = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   
-  @media (max-width:3000px){
+  @media (device-width:2560px){
     width:100%;
+    height:90vh;
   }
   @media (max-width: 428px) {
     width: 100vw;
@@ -146,6 +147,7 @@ const GalleryWrapper = styled.div`
 
   video{
     object-fit:cover;
+    height:100%;
     @media (max-width:428px){
       width:100%;
       height:100%;
@@ -254,8 +256,13 @@ const SingleItem = styled.div`
     position: relative;
     height: 250px;
     width: 250px;
+    transition: all 0.3s ease-in-out;
     &:hover{
       transform: scale(1.1)
+    }
+    @media screen and (min-width: 2000){
+      height:350px;
+      width:350px;
     }
     @media (max-width: 428px) {
       height: 100px;

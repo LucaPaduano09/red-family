@@ -101,7 +101,7 @@ function Header() {
           </li>
           <li>
             <Link to={"/"}>
-            <p onClick={() => {setBurgerStatus(false)}}>Shop</p>
+            <p style={{textDecoration:"line-through",textDecorationColor:"red"}} onClick={() => {setBurgerStatus(false)}}>Shop</p>
             </Link>
           </li>
         </ul>
@@ -111,22 +111,22 @@ function Header() {
             target="blank"
             href="https://www.youtube.com/channel/UCF245xSYIkQMAw-k1kJu_Mg"
           >
-            <img src="./images/youtube-icona1.png" alt="" />
+            <img src="/images/youtube-icona1.png" alt="" />
           </a>
           <a
             target="blank"
             href="https://open.spotify.com/artist/1XXWmjLKrmLfAaeAnfRYm5"
           >
-            <img src="./images/spotify-icona1.png" alt="" />
+            <img src="/images/spotify-icona1.png" alt="" />
           </a>
           <a target="blank" href="https://www.facebook.com/redfamilymusic/">
-            <img src="./images/facebook-icona1.png" alt="" />
+            <img src="/images/facebook-icona1.png" alt="" />
           </a>
           <a
             target="blank"
             href="https://www.instagram.com/redfamilymusic/?hl=it"
           >
-            <img src="./images/instagram-icona1.png" alt="" />
+            <img src="/images/instagram-icona1.png" alt="" />
           </a>
         </div>
       </BurgerNav>

@@ -96,8 +96,19 @@ const Prodotto = () => {
           {
             black === true ? (
               <div>
-                <img src={"." + immagini[0]} onClick={() => setIndex(0)}/>
-                <img src={"." + immagini[1]} onClick={() => setIndex(1)}/>
+                {
+                  index === 0 ? (
+                    <div>
+                      <img style={{opacity:"100%"}}src={"." + immagini[0]} onClick={() => setIndex(0)}/>
+                      <img src={"." + immagini[1]} onClick={() => setIndex(1)}/>
+                    </div>
+                  ) : (
+                    <div>
+                      <img src={"." + immagini[0]} onClick={() => setIndex(0)}/>
+                      <img style={{opacity:"100%"}}src={"." + immagini[1]} onClick={() => setIndex(1)}/>
+                    </div>
+                  )
+                }
               </div>
             ) : (
               <div>
@@ -134,11 +145,13 @@ const Prodotto = () => {
             <option value="L">L</option>
             <option value="XL">XL</option>
           </select>
+          <div>
           <input
             type="text"
             placeholder="inserisci la tua mail"
             onChange={(e) => setEmail(e.target.value)}
           />
+          </div>
           <button onClick={() => handleClick(email, taglia, prodotto)}>
           <img src="../images/preordina-button.png"/>
           </button>
@@ -159,8 +172,19 @@ const Container = styled.div`
   background-image: url("../images/sfondo-sito1.png");
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   overflow:hidden;
+  @media (max-width: 768px){
+    margin-top:80px;
+    height:100vh;
+  }
+
+  @media (max-width: 428px){
+    margin-top:80px;
+    flex-direction:column;
+    overflow:visible;
+    height:1200px;
+  }
 `;
 
 const ProdottoContainer = styled.div`
@@ -176,6 +200,14 @@ const ProdottoContainer = styled.div`
     height: 400px;
     width: 400px;
     margin-left:100px;
+    @media (max-width: 428px){
+      margin-left:0px;
+      margin-bottom:60px;
+    }
+    @media (max-width: 375px){
+      height:300px;
+      width:300px;
+    }
   }
 `;
 
@@ -191,19 +223,36 @@ const FotoContainer = styled.div`
   justify-content:space-evenly;
   flex-direction:column;
   margin-right:0px;
+
+  @media (max-width: 428px){
+    top:60%;
+    left:0;
+    z-index:100;
+  }
+
   div{
     display:flex;
     align-items:center;
     justify-content:space-evenly;
     flex-direction:column;
+
+    @media (max-width: 428px){
+      flex-direction: row;
+    }
+
     img{
       height:90px;
       width:90px;
       margin-bottom:10px;
       margin-left:0px;
-      opacity:70%;
+      opacity:60%;
       transition: all 0.3s ease-in-out;
       cursor: pointer;
+     
+      @media (max-width: 428px){
+        height:60px;
+        width:60px;
+      }
 
       &:hover{
         transform:scale(1.1);
@@ -225,6 +274,16 @@ const ColorsContainer = styled.div`
     width:30px;
     cursor:pointer;
     border-radius:50%;
+    opacity:80%;
+    &:hover{
+      opacity:100%;
+    }
+    @media (max-width: 428px){
+      height:20px;
+      width:20px;
+      margin-bottom:20px;
+      margin-top:-20px;
+    }
     &:first-child{
       background-color:black;
       border:1px solid white;
@@ -249,8 +308,16 @@ const FormContainer = styled.div`
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   padding: 20px;
 
+  @media (max-width: 768px){
+    width:100%;
+  }
+
   h1 {
     margin-top: 100px;
+    @media (max-width: 1024px){
+      font-size:20px;
+      margin-top:100px;
+    }
   }
   h2{
     font-size:13px;
@@ -289,8 +356,29 @@ const InputContainer = styled.div`
 
   select {
       margin-right:10px;
+      color:red;
+      background-color:transparent;
+      border-radius:20px;
+      padding:5px;
   }
-  input{
-    margin-right:20px;
+  div{
+    height:33px;
+    width:280px;
+    background: linear-gradient(90deg, rgba(232,244,240,1) 24%, rgba(255,46,0,1) 44%, rgba(223,6,18,1) 62%);
+    border-radius: 10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-right:10px;
+    input{
+      position:relative;
+      height:95%;
+      width:98%;
+      border-radius:10px;
+      border:none;
+      background-color:rgb(18, 18, 18);
+      color:white;
+      text-align:center;
+    }
   }
 `
