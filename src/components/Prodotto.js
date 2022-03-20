@@ -5,10 +5,16 @@ import { useHistory } from "react-router-dom";
 const urlQueryString = window.location.pathname;
 const id = urlQueryString.replace("/prodotto/", "");
 const Prodotto = () => {
-  const [prodotto, setProdotto] = useState([]);
+  const [prodotto, setProdotto] = useState([{}]);
   const [taglia, setTaglia] = useState("");
   const [email, setEmail] = useState("");
   const [inviato, setInviato] = useState(false);
+
+  //Variabili relative alle immagini prodotto
+  const [immagini, setImmagini] = useState([]);
+  const [immaginiWhite, setImmaginiWhite] = useState([]);
+  const [black, setBlack] = useState(true);
+  const [index, setIndex] = useState(0);
 
   //funzione che salva l'ordine nel db
   const handleClick = async (email, taglia, prodotto) => {
@@ -43,6 +49,17 @@ const Prodotto = () => {
       window.alert("seleziona una taglia");
     }
   };
+  
+  //funzioni che riempiono array immagini-bianche
+  const fillWhite = () =>{
+    immaginiWhite.push(immagini[2]);
+    immaginiWhite.push(immagini[3]);
+  }
+  const handleWhiteClick = () =>{
+    fillWhite();
+    setBlack(false);
+  }
+
   useEffect(() => {
     const getProduct = async () => {
       const response = await fetch(
@@ -62,16 +79,45 @@ const Prodotto = () => {
         window.alert("query sul db non riuscita");
       }
       const result = await response.json();
-      console.log(prodotto);
+      // console.log(prodotto);
+      setImmagini(result.prodotti_image);
       setProdotto(result);
+      console.log(immaginiWhite)
     };
 
     getProduct();
+    console.log(immagini[2])
   }, [prodotto.length]);
+  // console.log(immaginiWhite);
   return (
     <Container>
       <ProdottoContainer>
-        <img src={"." + prodotto.prodotti_image} />
+        <FotoContainer>
+          {
+            black === true ? (
+              <div>
+                <img src={"." + immagini[0]} onClick={() => setIndex(0)}/>
+                <img src={"." + immagini[1]} onClick={() => setIndex(1)}/>
+              </div>
+            ) : (
+              <div>
+                <img src={"." + immagini[2]} onClick={() => setIndex(0)}/>
+                <img src={"." + immagini[3]} onClick={() => setIndex(1)}/>
+              </div>
+            )
+          }
+        </FotoContainer>
+          {
+            black === true ? (
+              <img src={"." + immagini[index]}/>
+            ) : (
+              <img src={"." + immaginiWhite[index]}/>
+            )
+          }
+        <ColorsContainer>
+          <div onClick={() => setBlack(true)}></div>
+          <div onClick={() => handleWhiteClick()}></div>
+        </ColorsContainer>
       </ProdottoContainer>
       <FormContainer>
         <h1>{prodotto.prodotti_name}</h1>
@@ -93,10 +139,10 @@ const Prodotto = () => {
             placeholder="inserisci la tua mail"
             onChange={(e) => setEmail(e.target.value)}
           />
-        </InputContainer>
           <button onClick={() => handleClick(email, taglia, prodotto)}>
           <img src="../images/preordina-button.png"/>
           </button>
+        </InputContainer>
           {inviato === true ? <p>Pre ordine salvato !</p> : <p></p>}
       </FormContainer>
     </Container>
@@ -114,28 +160,91 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow:hidden;
 `;
 
 const ProdottoContainer = styled.div`
   position: relative;
   height: 100%;
-  width: 50%;
+  width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   img {
     position: relative;
     height: 400px;
     width: 400px;
+    margin-left:100px;
   }
 `;
+
+const FotoContainer = styled.div`
+  position: absolute;
+  top:20%;
+  left:20px;
+  background-color:none;
+  height:300px;
+  width:100px;
+  display:flex;
+  align-items:center;
+  justify-content:space-evenly;
+  flex-direction:column;
+  margin-right:0px;
+  div{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    flex-direction:column;
+    img{
+      height:90px;
+      width:90px;
+      margin-bottom:10px;
+      margin-left:0px;
+      opacity:70%;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover{
+        transform:scale(1.1);
+        opacity:100%;
+      }
+    }
+  }
+`
+const ColorsContainer = styled.div`
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  width:100%;
+  div{
+    position:relative;
+    height:30px;
+    width:30px;
+    cursor:pointer;
+    border-radius:50%;
+    &:first-child{
+      background-color:black;
+      border:1px solid white;
+      margin-right:20px;
+      margin-left:90px;
+    }
+    &:nth-child(2){
+      background-color:white;
+      border:1px solid black;
+    }
+  }
+`
+
 const FormContainer = styled.div`
   position: relative;
   height: 100%;
-  width: 50%;
+  width: 40%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   padding: 20px;
@@ -143,13 +252,18 @@ const FormContainer = styled.div`
   h1 {
     margin-top: 100px;
   }
+  h2{
+    font-size:13px;
+    line-height:45px;
+  }
   h1,
   h2,
   h3 {
     text-transform: uppercase;
     position: relative;
-    width: 50%;
+    width: 80%;
     color: white;
+    margin-bottom:20px;
   }
   button {
       background-color:transparent;
@@ -175,5 +289,8 @@ const InputContainer = styled.div`
 
   select {
       margin-right:10px;
+  }
+  input{
+    margin-right:20px;
   }
 `
