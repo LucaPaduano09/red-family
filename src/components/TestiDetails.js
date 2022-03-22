@@ -42,7 +42,7 @@ function TestiDetails(props) {
       </InfoContainer>
 
       <TestoContainer>
-        <p style={{marginTop:"30px", marginBottom:"-30px"}}>Lingue</p>
+        <p>Lingue</p>
       <button style={{color:"black;",width:"100px",marginLeft:"15px",}} onClick={() => handleDialettoClick()}>
         {
           dialetto === true ? (
@@ -198,7 +198,7 @@ const TestoContainer = styled.div`
     padding: 20px;
     font-size: 22px;
     white-space: pre-line;
-    margin-top:-30px;
+    margin-top:-10px;
     @media (max-width: 768px) {
       line-height: 1.5;
       margin-top: 310px;
@@ -206,6 +206,10 @@ const TestoContainer = styled.div`
     }
     @media (max-width: 428px){
       margin-top:0px;
+      &:first-child{
+        margin-top:30px;
+        margin-bottom:-30px;
+      }
     }
   }
   button{

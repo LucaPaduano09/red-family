@@ -16,9 +16,9 @@ import Prodotto from "./components/Prodotto";
 
 function App() {
   return (
-      <Router>
-    <div className="App">
-      <ScrollToTop />
+    <Router>
+      <div className="App">
+        <ScrollToTop />
         <Header />
         <Switch>
           <Route path="/testi">
@@ -31,7 +31,7 @@ function App() {
                 "Guardami negli occhi",
                 "Stai con me",
                 "un euro in piu'",
-                "amore e soldi? no!"
+                "amore e soldi? no!",
               ]}
               url={[
                 "in form",
@@ -41,7 +41,7 @@ function App() {
                 "Guardami negli occhi",
                 "Stai con me",
                 "un euro in piu'",
-                "amore e soldi no!"
+                "amore e soldi no!",
               ]}
               cover={[
                 "./images/cover/in-form.png",
@@ -51,7 +51,7 @@ function App() {
                 "./images/cover/guardami-negli-occhi.png",
                 "./images/cover/stai-con-me.png",
                 "./images/cover/un-euro-in-piu.png",
-                "./images/cover/amore-e-soldi.png"
+                "./images/cover/amore-e-soldi.png",
               ]}
             />
           </Route>
@@ -469,8 +469,206 @@ function App() {
               immagine="./images/uapp.jpg"
               titolo="uapp"
               testo={`
-                      
+              [Intro: Loris Bastr]
+              Quant 'e 'pparat?
+              Quant 'e 'pparat?
+              Allor 'e sgarrat
+              Quant 'e 'pparat? Ye
+              Tesò , c' sta succrenn? Ric allor c' amma fà?
+              Tu  l' 'e fatt overament  quann t' ann itt va a rubbà
+              Azz , e 'ccunciat o' vetr nuov, ma tu a cap ira accuncià
+              Primm 'e scennr tt' sbattut  uard semp chi ce stà!
+              
+              [Ritornello 1: Gianni Red & Loris Bastr]
+              Nun fà o' uapp, nun fà o' uapp 
+              Parl poc , sta tranquill , nun fà o' uapp
+              (Miezu scè!)
+              Nun fà o' uapp, nun fà o' uapp
+              Piglt na camumill nn fà o' uapp !
+              ( Pier-p-tè ! )
+              
+              [Strofa 1: Loris Bastr]
+              Ti aspetto all’altare come Tony Colombo 
+              Musica da boss in sottofondo 
+              Hai una toia con le tette grandi 
+              coi capezzoli giganti sul cell come sfondo
+              Qui la gente urla, a non sa a che va in contro 
+              Se vuoi rubare frà ci metti un millisecondo
+              Se vuoi rinunciare puoi mandare a puttane
+              Per la gente normale non c’è un pò di sconto
+              La legge non è uguale per tutti ( O saje)
+              Nasciamo e moriamo fottuti ( O saje)
+              Un ponte ti istiga , dice "ti butti?"
+              E nel mentre cadi poi tanti saluti
+              Odio le guardie, le cose le dico in faccia
+              Porca puttana mannaggia, ero sotto casa 
+              Si avvicina un SH, pistola nera puntata in faccia 
+              Cazzo ma è uscita dell' acqua?
+              Questa pistola non è mica vera, non spara  
+              'Fratello capisci devo portare mangiare a casa '
+              Ma come mangiare a casa?
+              Hai una maglietta di marca, hai un pantalone di Prada
+              Chi ruba si veste meglio di chi lavora
+              Questa è l’Italia !
+              Flow 41 bis, voglio un pò d’aria 
+              Solo un poco d’aria perché devo pensare
+               Dagli sbagli si cresce si matura e impara 
+              Meglio stare solo a quanto pare 
+              Ballo moonwalk ma non vado mai indietro
+              Metto burro saporito viene meglio 
+              Comodo comodo mi siedo 
+              Le cose ultimamente me le prendo
+              non le chiedo, fanculo!
+              
+              [Ritornello 2: Gianni Red & Loris Bastr]
+              Nun fà o' uapp, nun fà o' uapp 
+              Parl poc , sta tranquill , nun fà o' uapp
+              (Miezu scè!)
+              Nun fà o' uapp, nun fà o' uapp
+              Piglt na camumill nn fà o' uapp !
+              ( Fo uapp? )
+              
+              [Strofa 2: Gianni Red]
+              Uapp, patm ric :"nun fà o' uapp"
+              mamm ric :"nun fà o' uapp"
+              Ma 'e vot nun 'o facc a post
+              Sai è difficil a nn fà o' uapp
+              Nda nu munn tropp chin 'e uapp
+              pur tu abbì a fà o' uapp
+              Ma sul quann t' conven
+              'Nfatt facist 'o brav annanz e uardj
+              Cagnast facc
+              Crè mò nun e cacc e' pall?
+              E fatt o' giall?
+              E iamm fà stu cagn 'e marc,  fall sta strag
+              Iett subit e uardj p' l' arj e cacc sta ragg
+              Pò riman e matin 'ncopp e' giurnal nt' n fà proprj
+              Po t' bussn a cas , r'ann t' ne fà nov
+              E già ce staj pnsann acopp,  agg vist, nè
+              starrai pnsann : ''ma c' fin e merd''
+              Vogl aspirà a megl
+              Frà n' accir a gent 
+              Quala mitragliett, qual Billaden
+              Famm fà na vita bell, magn Vitasnell
+              Legg Pirandell , facc pilates
+              Ropp m' fum na sigarett
+              'ncopp a nu divanettt
+              A vit e chi vò sta quiet
+              
+              [Bridge: Loris Bastr]
+              Tesò , c' sta succrenn? Ric allor c' amma fà?
+              Tu  l' 'e fatt overament  quann t' ann itt va a rubbà
+              Azz , e 'ccunciat o' vetr nuov, ma tu a cap ira accuncià
+              Primm 'e scennr tt' sbattut  uard semp chi ce stà!
+              
+              [Ritornello 3: Gianni Red & Loris Bastr]
+              Nun fà o' uapp, nun fà o' uapp 
+              Parl poc , sta tranquill , nun fà o' uapp
+              (Miezu scè!)
+              Nun fà o' uapp, nun fà o' uapp
+              Piglt na camumill nn fà o' uapp !
+              ( Pier-p-tè ! )              
                   `}
+              traduzione={`
+              [Intro: Loris Bastr]
+Quanto hai apparato?
+Quanto hai apparato?
+Allora hai sgarrato
+Quanto hai apparato?Ye
+Tesoro , che succede? Dimmi allora cosa dobbiamo fare?
+Tu l' hai fatto sul serio quando ti hanno detto di andar a rubare
+Cazzo, hai aggiustato il vetro nuovo , ma dovevi aggiustare la testa
+Prima di scendere pieno di te , guarda sempre chi c'è intorno
+
+[Ritornello 1: Gianni Red & Loris Bastr]
+Non fare il guappo , non fare il guappo!
+Parla poco , stai tranquillo , non fare il guappo!
+(Scemo!)
+Non fare il guappo , non fare il guappo!
+Prendi una camomilla , non fare il guappo!
+( Piedi-per-terra! )
+
+[Strofa 1: Loris Bastr]
+Ti aspetto all’altare come Tony Colombo 
+Musica da boss in sottofondo 
+Hai una toia con le tette grandi 
+coi capezzoli giganti sul cell come sfondo
+Qui la gente urla, a non sa a che va in contro 
+Se vuoi rubare frà ci metti un millisecondo
+Se vuoi rinunciare puoi mandare a puttane
+Per la gente normale non c’è un pò di sconto
+La legge non è uguale per tutti ( O saje)
+Nasciamo e moriamo fottuti ( O saje)
+Un ponte ti istiga , dice "ti butti?"
+E nel mentre cadi poi tanti saluti
+Odio le guardie, le cose le dico in faccia
+Porca puttana mannaggia, ero sotto casa 
+Si avvicina un SH, pistola nera puntata in faccia 
+Cazzo ma è uscita dell' acqua?
+Questa pistola non è mica vera, non spara  
+'Fratello capisci devo portare mangiare a casa '
+Ma come mangiare a casa?
+Hai una maglietta di marca, hai un pantalone di Prada
+Chi ruba si veste meglio di chi lavora
+Questa è l’Italia !
+Flow 41 bis, voglio un pò d’aria 
+Solo un poco d’aria perché devo pensare
+ Dagli sbagli si cresce si matura e impara 
+Meglio stare solo a quanto pare 
+Ballo moonwalk ma non vado mai indietro
+Metto burro saporito viene meglio 
+Comodo comodo mi siedo 
+Le cose ultimamente me le prendo
+non le chiedo, fanculo!
+
+[Ritornello 2: Gianni Red & Loris Bastr]
+Non fare il guappo , non fare il guappo!
+Parla poco , stai tranquillo , non fare il guappo!
+(Scemo!)
+Non fare il guappo , non fare il guappo!
+Prendi una camomilla , non fare il guappo!
+( Fare il guappo?)
+
+[Strofa 2: Gianni Red]
+Guappo, mio padre dice :
+"Non fare il guappo"
+Mia madre dice: "Non fare il guappo"
+Ma a volte non lo faccio apposta
+Sai è difficile non fare il guappo
+In un mondo troppo pieno di guappi
+Pure tu inizi a fare il guappo
+Ma solo quando ti conviene
+Infatti facesti il bravo davanti le guardie
+Cambiasti faccia
+Cos'è ora non le cacci le palle? Hai paura?
+E dai fai questo cambio di marcia, fai una strage
+Butta subito le guardie per l' aria e cacccia questa rabbia!
+Poi domani mattina su tutti i giornali , non fartene proprio
+Poi ti bussano  a casa , di anni devi fartene nove
+E già ci stai ripensando,  ho visto , su
+Starai pensando: ''Ma che fine di merda,
+voglio aspirare a qualcosa di meglio"
+Frà non uccido gente
+nessuna mitraglietta, nessun Billaden
+Fammi fare una vita bella , mangio Vitasnella
+Leggo Pirandello , faccio pilates
+Dopo mi fumo una sigaretta su un divanetto
+La vita di chi vuol star quieto
+
+[Bridge: Loris Bastr]
+Tesoro , che succede? Dimmi allora cosa dobbiamo fare?
+Tu l' hai fatto sul serio quando ti hanno detto di andar a rubare
+Cazzo , hai aggiustato il vetro nuovo , ma dovevi aggiustare la testa
+Prima di scendere pieno di te , guarda sempre chi c'è intorno
+
+[Ritornello 3: Gianni Red & Loris Bastr]
+Non fare il guappo , non fare il guappo!
+Parla poco , stai tranquillo , non fare il guappo!
+(Scemo!)
+Non fare il guappo , non fare il guappo!
+Prendi una camomilla , non fare il guappo!
+( Piedi-per-terra)
+              `}
             />
           </Route>
 
@@ -941,6 +1139,188 @@ function App() {
             />
           </Route>
 
+          <Route path="/stai con me">
+            <TestiDetails
+              data="11/5/2018"
+              immagine="./images/cover/stai-con-me.png"
+              titolo="Stai Con Me"
+              desc={`Gianni Red & Loris Bastr presentano : Guardami negli occhi
+              Suoni : Neter Sound
+              Regia : FACTORY`}
+              spotify="https://goo.gl/YRhrcV"
+              testo={`
+              [Intro: Loris Bastr]
+              Ok, ok , ok
+              Red Family, premi play !
+              Ok, ok , ok
+              Red Family, premi play !
+              (Sembrava impossibile, ma ce l’ abbiamo fatta! )
+              
+              [Ritornello 1: Gianni Red & Loris Bastr]
+              Ok, frate'  guarda bene sto qua sotto
+              Scendi, presto muoviti , non fare il cagasotto
+              Tua mamma parla da lontano, sai che non l’ ascolto 
+              Red family, sai che vedo tutto rosso!
+              Uagliò , uagliò , uagliò
+              Ma pigl pall e pesc mmò 
+              Uagliò , uagliò , uagliò
+              Devi divertirti un pò
+              Tu stai con me, stai con me, stai con me 
+              Tu stai con me, stai con me, stai con me 
+              Tu fammi 'ue', fammi 'ue', fammi 'ue'
+              Tu stai con me, stai con me, stai con me 
+              
+              [Strofa 1: Loris Bastr]
+              Amore sei sempre a casa, strano 
+              Ma cosa fai a casa a parte il pesce in mano ?
+              Non ti muovi, il tuo culo ha la forma del divano 
+              e in tutto questo mamma dice ''non fare baccano ''
+              Scendi cazzo! Stiamo io e Gianni 
+              Amico quegli occhiali non li levi da vent' anni 
+              Dai ci manca solo che tu giochi con le Barbie
+              Se te ne fumi una tu  ti appaci come Ghandi!
+              Hey-yo  fratello come butta ?
+              Leva quel maglione slabbrato, metti una tuta 
+              Fotti una colombiana da 'higo de puta' 
+              Tua mamma si lamenta, mandala a fanculo 
+              Siamo noi la via di fuga 
+              Dillo in giro che frequenti sempre Loris bastr 
+              Si quello che indossa solo un paio di Vans 
+              Giuro che ti blocco se vai dai trans 
+              Non sai dove ti porto 
+              ( E ja o' Lò e bast! )
+              
+              [Ritornello 2: Gianni Red & Loris Bastr]
+              Ok, frate'  guarda bene sto qua sotto
+              Scendi, presto muoviti , non fare il cagasotto
+              Tua mamma parla da lontano, sai che non l’ ascolto 
+              Red family, sai che vedo tutto rosso!
+              Uagliò , uagliò , uagliò
+              Ma fa nu poc poc l' omm!
+              Uagliò , uagliò , uagliò
+              Devi divertirti un pò !
+              Tu stai con me, stai con me, stai con me 
+              Tu stai con me, stai con me, stai con me 
+              Tu fammi 'ue', fammi 'ue', fammi 'ue'
+              Tu stai con me, stai con me, stai con me 
+              
+              [Strofa 2: Gianni Red]
+              Piacer e  già t' facc e compliment
+              Nun t' agg mai vist 'e fà nu moviment
+              Si faciss a gar a chi s' mov 'e men :
+              'o primm post rind a tutt 'e continent
+              Jamm scitet nu poc , si! Vivet na cos , si!
+              T' vogl chiù convincent!
+              Firmt cu cocc amic , circt na porc, si !
+              Crirm che dopp è tutt godiment
+              Miettc o poc e furtun “coccinell” 
+              Miettc n' a ppoc e furtun “coincidenz “
+              Jamm c' stai quas  sul cocc accorgiment
+              E pò si che purtat tutt cos a compiment
+              Jamm , uard mo stai appost, si!
+              Uard m' stai fort o cì !
+              Ua ma chi si Johnny Depp?
+              C' cià putiv fà già 'o dicett
+              Ma nun è ca frà mò vuliss fà 'o tipett?
+              
+              [Ritornello 3: Gianni Red & Loris Bastr]
+              Uagliò , uagliò , uagliò
+              Ma pigl pall e pesc mmò !
+              Uagliò , uagliò , uagliò
+              Devi divertirti un pò!
+              Tu stai con me, stai con me, stai con me 
+              Tu stai con me, stai con me, stai con me 
+              Tu fammi 'ue', fammi 'ue', fammi 'ue'
+              Tu stai con me, stai con me, stai con me               
+                  `}
+              traduzione={`
+              [Intro: Loris Bastr]
+              Ok, ok , ok
+              Red Family, premi play !
+              Ok, ok , ok
+              Red Family, premi play !
+              (Sembrava impossibile, ma ce l’ abbiamo fatta! )
+              
+              [Ritornello 1: Gianni Red & Loris Bastr]
+              Ok, frate'  guarda bene sto qua sotto
+              Scendi, presto muoviti , non fare il cagasotto
+              Tua mamma parla da lontano, sai che non l’ ascolto 
+              Red family, sai che vedo tutto rosso!
+              Giovane, giovane, giovane
+              Ma prendi cazzo e palle in bocca
+              Giovane, giovane, giovane
+              Devi divertirti un pò
+              Tu stai con me, stai con me, stai con me 
+              Tu stai con me, stai con me, stai con me 
+              Tu fammi 'ue', fammi 'ue', fammi 'ue'
+              Tu stai con me, stai con me, stai con me 
+              
+              [Strofa 1: Loris Bastr]
+              Amore sei sempre a casa, strano 
+              Ma cosa fai a casa a parte il pesce in mano ?
+              Non ti muovi, il tuo culo ha la forma del divano 
+              e in tutto questo mamma dice ''non fare baccano ''
+              Scendi cazzo! Stiamo io e Gianni 
+              Amico quegli occhiali non li levi da vent' anni 
+              Dai ci manca solo che tu giochi con le Barbie
+              Se te ne fumi una tu  ti appaci come Ghandi!
+              Hey-yo  fratello come butta ?
+              Leva quel maglione slabbrato, metti una tuta 
+              Fotti una colombiana da 'higo de puta' 
+              Tua mamma si lamenta, mandala a fanculo 
+              Siamo noi la via di fuga 
+              Dillo in giro che frequenti sempre Loris bastr 
+              Si quello che indossa solo un paio di Vans 
+              Giuro che ti blocco se vai dai trans 
+              Non sai dove ti porto 
+              ( E dai Loris basta! )
+              
+              [Ritornello 2: Gianni Red & Loris Bastr]
+              Ok, frate'  guarda bene sto qua sotto
+              Scendi, presto muoviti , non fare il cagasotto
+              Tua mamma parla da lontano, sai che non l’ ascolto 
+              Red family, sai che vedo tutto rosso!
+              Giovane, giovane, giovane
+              Ma fai un pò l' uomo!
+              Giovane, giovane, giovane
+              Devi divertirti un pò !
+              Tu stai con me, stai con me, stai con me 
+              Tu stai con me, stai con me, stai con me 
+              Tu fammi 'ue', fammi 'ue', fammi 'ue'
+              Tu stai con me, stai con me, stai con me 
+              
+              [Strofa 2: Gianni Red]
+              Piacere e già ti faccio i complimenti
+              Non ti ho mai visto fare un movimento
+              Se tu facessi la gara a chi  si muove meno:
+              il primo posto in tutti i continenti
+              Dai svegliati un pò, si! Sorseggia qualcosa, si!
+              Ti voglio più convincente!
+              Fermati con qualche amico, cercati una donna, si !
+              Credimi che dopo , è tutto godimento!
+              Mettici un pò di fortuna “coccinelle” 
+              Mettici un altro pò di fortuna “coincidenze “
+              Dai ci sei quasi , solo qualche accorgimento
+              e poi si che hai portato tutto a compimento
+              Dai , guarda ora sei a posto, si!
+              Guarda come sei forte , si!
+              Wow, ma chi sei Johnny Depp?
+              Che potevi farcela già lo dissi
+              Ma non è che ora vorresti fare il tipett
+              
+              [Ritornello 3: Gianni Red & Loris Bastr]
+              Giovane, giovane, giovane
+              Ma prendi cazzo e palle in bocca
+              Giovane, giovane, giovane
+              Devi divertirti un pò
+              Tu stai con me, stai con me, stai con me 
+              Tu stai con me, stai con me, stai con me 
+              Tu fammi 'ue', fammi 'ue', fammi 'ue'
+              Tu stai con me, stai con me, stai con me              
+              `}
+            />
+          </Route>
+
           <Route path="/un euro in piu'">
             <TestiDetails
               data="11/03/2018"
@@ -1365,19 +1745,19 @@ function App() {
           <Route path="/video">
             <Video />
           </Route>
-          
+
           <Route path="/prodotto/:id">
-              <Prodotto />
+            <Prodotto />
           </Route>
-          
+
           <Route path="/">
             <Home />
             {/* <Newsletter /> */}
             {/* <Finalfooter /> */}
           </Route>
         </Switch>
-    </div>
-      </Router>
+      </div>
+    </Router>
   );
 }
 
