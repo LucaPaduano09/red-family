@@ -42,8 +42,8 @@ function TestiDetails(props) {
       </InfoContainer>
 
       <TestoContainer>
-        <p style={{marginTop:"0px"}}>Lingue</p>
-      <button style={{color:"black;",width:"100px",marginLeft:"15px"}} onClick={() => handleDialettoClick()}>
+        <p style={{marginTop:"30px", marginBottom:"-30px"}}>Lingue</p>
+      <button style={{color:"black;",width:"100px",marginLeft:"15px",}} onClick={() => handleDialettoClick()}>
         {
           dialetto === true ? (
             <img src="./images/dialetto-font-nuovo.png" style={{opacity:"100%",height:"33px"}}/>
@@ -53,7 +53,7 @@ function TestiDetails(props) {
           )
         }
       </button>
-      <button style={{color:"black;",width:"100px"}} onClick={() => handleItalianoClick()}>
+      <button style={{color:"black;",width:"100px",}} onClick={() => handleItalianoClick()}>
       {
           italiano === true ? (
             <img src="./images/italiano-font-nuovo.png" style={{opacity:"100%",height:"33px"}}/>
@@ -65,7 +65,7 @@ function TestiDetails(props) {
         
       </button>
         {
-          traduzione === false ? <p>{props.testo}</p>: <p>{props.traduzione}</p>
+          traduzione === false ? <p style={{marginTop:"-30px"}}>{props.testo}</p>: <p style={{marginTop:"-30px"}}>{props.traduzione}</p>
         }
         
       </TestoContainer>

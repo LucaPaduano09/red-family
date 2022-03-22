@@ -393,8 +393,10 @@ const InputContainer = styled.div`
       color: white;
       background-color: transparent;
       border-radius: 20px;
-      padding: 5px;
-      -webkit-appearance: initial;
+      // padding: 5px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
     }
     select option{
       color:black;
