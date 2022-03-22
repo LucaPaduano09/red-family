@@ -98,6 +98,11 @@ const Prodotto = () => {
         <FotoContainer>
           {black === true ? (
             <div>
+            <img src={"." + immagini[2]} onClick={() => setIndex(0)} />
+            <img src={"." + immagini[3]} onClick={() => setIndex(1)} />
+          </div>
+          ) : (
+            <div>
               {index === 0 ? (
                 <div>
                   <img
@@ -118,21 +123,24 @@ const Prodotto = () => {
                 </div>
               )}
             </div>
-          ) : (
-            <div>
-              <img src={"." + immagini[2]} onClick={() => setIndex(0)} />
-              <img src={"." + immagini[3]} onClick={() => setIndex(1)} />
-            </div>
           )}
         </FotoContainer>
         {black === true ? (
-          <img src={"." + immagini[index]} />
-        ) : (
           <img src={"." + immagini[index + 2]} />
+        ) : (
+          <img src={"." + immagini[index]} />
         )}
         <ColorsContainer>
-          <div onClick={() => setBlack(true)}></div>
-          <div onClick={() => handleWhiteClick()}></div>
+        {
+          immagini.length > 2 ? (
+            <div className="colors-container">
+              <div onClick={() => handleWhiteClick()}></div>
+              <div onClick={() => setBlack(true)}></div>
+            </div>
+          ) : (
+            console.log("2 foto nell array")
+          )
+        }
         </ColorsContainer>
       </ProdottoContainer>
       <FormContainer>
@@ -273,7 +281,13 @@ const ColorsContainer = styled.div`
   justify-content: center;
   position: relative;
   width: 100%;
-  div {
+
+  .colors-container{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+  .colors-container > div {
     position: relative;
     height: 30px;
     width: 30px;
@@ -290,14 +304,14 @@ const ColorsContainer = styled.div`
       margin-top: -20px;
     }
     &:first-child {
-      background-color: black;
-      border: 1px solid white;
+      background-color: white;
+      border: 1px solid black;
       margin-right: 20px;
       margin-left: 90px;
     }
     &:nth-child(2) {
-      background-color: white;
-      border: 1px solid black;
+      background-color: black;
+      border: 1px solid white;
     }
   }
 `;

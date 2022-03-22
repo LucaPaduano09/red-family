@@ -66,7 +66,7 @@ function Home() {
         <ItemContainer>
           {prodotti.map((element,index) => (
             <SingleItem>
-            <img src={"." + element.prodotti_image[2]} />
+            <img src={"." + element.prodotti_image[0]} />
             <h3>{element.prodotti_name}</h3>
             <p>{element.prodotti_price + " €"}</p>
             <a href={"/prodotto/" + element._id}><img src="./images/preordina-button.png"/></a>
