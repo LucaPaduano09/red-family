@@ -386,19 +386,18 @@ const InputContainer = styled.div`
     input {
       // margin-top:30px;
     }
-  }
-  .marginLeftClass{
-    margin-left: 30px;
-  }
-  select {
-    margin-right: 10px;
-    color: white;
-    background-color: transparent;
-    border-radius: 20px;
-    padding: 5px;
-  }
-  select option{
-    color:black;
+    select {
+      margin-right: 10px;
+      width:50px;
+      height:25px;
+      color: white;
+      background-color: transparent;
+      border-radius: 20px;
+      padding: 5px;
+    }
+    select option{
+      color:black;
+    }
   }
   div {
     height: 33px;
