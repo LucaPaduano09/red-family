@@ -40,7 +40,7 @@ function Home() {
         <MainVideoContainer>
           <GalleryWrapper>
           <video width="100%" controls>
-            <source src="./images/puntata.mp4" type="video/mp4"/>
+            <source src="./images/puntata-completa.mp4" type="video/mp4"/>
           </video>
             {/* <GalleryWrapper>
             {show === false ? (
@@ -66,7 +66,7 @@ function Home() {
         <ItemContainer>
           {prodotti.map((element,index) => (
             <SingleItem>
-            <img src={"." + element.prodotti_image[0]} />
+            <img src={"." + element.prodotti_image[2]} />
             <h3>{element.prodotti_name}</h3>
             <p>{element.prodotti_price + " €"}</p>
             <a href={"/prodotto/" + element._id}><img src="./images/preordina-button.png"/></a>

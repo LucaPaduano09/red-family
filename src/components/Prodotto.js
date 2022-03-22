@@ -13,7 +13,9 @@ const Prodotto = () => {
   //Variabili relative alle immagini prodotto
   const [immagini, setImmagini] = useState([]);
   const [immaginiWhite, setImmaginiWhite] = useState([]);
-  const [black, setBlack] = useState(true);
+  //variabile cambio colore maglia
+  const [black, setBlack] = useState(false);
+  //variabile fronte-retro prodotto
   const [index, setIndex] = useState(0);
 
   //funzione che salva l'ordine nel db
@@ -49,16 +51,12 @@ const Prodotto = () => {
       window.alert("seleziona una taglia");
     }
   };
-  
+
   //funzioni che riempiono array immagini-bianche
-  const fillWhite = () =>{
-    immaginiWhite.push(immagini[2]);
-    immaginiWhite.push(immagini[3]);
-  }
-  const handleWhiteClick = () =>{
+  const handleWhiteClick = () => {
     fillWhite();
     setBlack(false);
-  }
+  };
 
   useEffect(() => {
     const getProduct = async () => {
@@ -82,49 +80,56 @@ const Prodotto = () => {
       // console.log(prodotto);
       setImmagini(result.prodotti_image);
       setProdotto(result);
-      console.log(immaginiWhite)
+      console.log(immaginiWhite);
     };
 
     getProduct();
-    console.log(immagini[2])
+    fillWhite();
   }, [prodotto.length]);
-  // console.log(immaginiWhite);
+
+  const fillWhite = () => {
+    immaginiWhite.push(immagini[2]);
+    immaginiWhite.push(immagini[3]);
+  };
+  console.log(immaginiWhite);
   return (
     <Container>
       <ProdottoContainer>
         <FotoContainer>
-          {
-            black === true ? (
-              <div>
-                {
-                  index === 0 ? (
-                    <div>
-                      <img style={{opacity:"100%"}}src={"." + immagini[0]} onClick={() => setIndex(0)}/>
-                      <img src={"." + immagini[1]} onClick={() => setIndex(1)}/>
-                    </div>
-                  ) : (
-                    <div>
-                      <img src={"." + immagini[0]} onClick={() => setIndex(0)}/>
-                      <img style={{opacity:"100%"}}src={"." + immagini[1]} onClick={() => setIndex(1)}/>
-                    </div>
-                  )
-                }
-              </div>
-            ) : (
-              <div>
-                <img src={"." + immagini[2]} onClick={() => setIndex(0)}/>
-                <img src={"." + immagini[3]} onClick={() => setIndex(1)}/>
-              </div>
-            )
-          }
+          {black === true ? (
+            <div>
+              {index === 0 ? (
+                <div>
+                  <img
+                    style={{ opacity: "100%" }}
+                    src={"." + immagini[0]}
+                    onClick={() => setIndex(0)}
+                  />
+                  <img src={"." + immagini[1]} onClick={() => setIndex(1)} />
+                </div>
+              ) : (
+                <div>
+                  <img src={"." + immagini[0]} onClick={() => setIndex(0)} />
+                  <img
+                    style={{ opacity: "100%" }}
+                    src={"." + immagini[1]}
+                    onClick={() => setIndex(1)}
+                  />
+                </div>
+              )}
+            </div>
+          ) : (
+            <div>
+              <img src={"." + immagini[2]} onClick={() => setIndex(0)} />
+              <img src={"." + immagini[3]} onClick={() => setIndex(1)} />
+            </div>
+          )}
         </FotoContainer>
-          {
-            black === true ? (
-              <img src={"." + immagini[index]}/>
-            ) : (
-              <img src={"." + immaginiWhite[index]}/>
-            )
-          }
+        {black === true ? (
+          <img src={"." + immagini[index]} />
+        ) : (
+          <img src={"." + immagini[index + 2]} />
+        )}
         <ColorsContainer>
           <div onClick={() => setBlack(true)}></div>
           <div onClick={() => handleWhiteClick()}></div>
@@ -146,17 +151,17 @@ const Prodotto = () => {
             <option value="XL">XL</option>
           </select>
           <div>
-          <input
-            type="text"
-            placeholder="inserisci la tua mail"
-            onChange={(e) => setEmail(e.target.value)}
-          />
+            <input
+              type="text"
+              placeholder="inserisci la tua mail"
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <button onClick={() => handleClick(email, taglia, prodotto)}>
-          <img src="../images/preordina-button.png"/>
+            <img src="../images/preordina-button.png" />
           </button>
         </InputContainer>
-          {inviato === true ? <p>Pre ordine salvato !</p> : <p></p>}
+        {inviato === true ? <p>Pre ordine salvato !</p> : <p></p>}
       </FormContainer>
     </Container>
   );
@@ -173,17 +178,17 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  overflow:hidden;
-  @media (max-width: 768px){
-    margin-top:80px;
-    height:100vh;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    margin-top: 80px;
+    height: 100vh;
   }
 
-  @media (max-width: 428px){
-    margin-top:80px;
-    flex-direction:column;
-    overflow:visible;
-    height:1200px;
+  @media (max-width: 428px) {
+    margin-top: 80px;
+    flex-direction: column;
+    overflow: visible;
+    height: 1200px;
   }
 `;
 
@@ -199,103 +204,103 @@ const ProdottoContainer = styled.div`
     position: relative;
     height: 400px;
     width: 400px;
-    margin-left:100px;
-    @media (max-width: 428px){
-      margin-left:0px;
-      margin-bottom:60px;
+    margin-left: 100px;
+    @media (max-width: 428px) {
+      margin-left: 0px;
+      margin-bottom: 60px;
     }
-    @media (max-width: 375px){
-      height:300px;
-      width:300px;
+    @media (max-width: 375px) {
+      height: 300px;
+      width: 300px;
     }
   }
 `;
 
 const FotoContainer = styled.div`
   position: absolute;
-  top:20%;
-  left:20px;
-  background-color:none;
-  height:300px;
-  width:100px;
-  display:flex;
-  align-items:center;
-  justify-content:space-evenly;
-  flex-direction:column;
-  margin-right:0px;
+  top: 20%;
+  left: 20px;
+  background-color: none;
+  height: 300px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin-right: 0px;
 
-  @media (max-width: 428px){
-    top:60%;
-    left:0;
-    z-index:100;
+  @media (max-width: 428px) {
+    top: 60%;
+    left: 0;
+    z-index: 100;
   }
 
-  div{
-    display:flex;
-    align-items:center;
-    justify-content:space-evenly;
-    flex-direction:column;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
 
-    @media (max-width: 428px){
+    @media (max-width: 428px) {
       flex-direction: row;
     }
 
-    img{
-      height:90px;
-      width:90px;
-      margin-bottom:10px;
-      margin-left:0px;
-      opacity:60%;
+    img {
+      height: 90px;
+      width: 90px;
+      margin-bottom: 10px;
+      margin-left: 0px;
+      opacity: 60%;
       transition: all 0.3s ease-in-out;
       cursor: pointer;
-     
-      @media (max-width: 428px){
-        height:60px;
-        width:60px;
+
+      @media (max-width: 428px) {
+        height: 60px;
+        width: 60px;
       }
 
-      &:hover{
-        transform:scale(1.1);
-        opacity:100%;
+      &:hover {
+        transform: scale(1.1);
+        opacity: 100%;
       }
     }
   }
-`
+`;
 const ColorsContainer = styled.div`
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  width:100%;
-  div{
-    position:relative;
-    height:30px;
-    width:30px;
-    cursor:pointer;
-    border-radius:50%;
-    opacity:80%;
-    &:hover{
-      opacity:100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  div {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 80%;
+    &:hover {
+      opacity: 100%;
     }
-    @media (max-width: 428px){
-      height:20px;
-      width:20px;
-      margin-bottom:20px;
-      margin-top:-20px;
+    @media (max-width: 428px) {
+      height: 20px;
+      width: 20px;
+      margin-bottom: 20px;
+      margin-top: -20px;
     }
-    &:first-child{
-      background-color:black;
-      border:1px solid white;
-      margin-right:20px;
-      margin-left:90px;
+    &:first-child {
+      background-color: black;
+      border: 1px solid white;
+      margin-right: 20px;
+      margin-left: 90px;
     }
-    &:nth-child(2){
-      background-color:white;
-      border:1px solid black;
+    &:nth-child(2) {
+      background-color: white;
+      border: 1px solid black;
     }
   }
-`
+`;
 
 const FormContainer = styled.div`
   position: relative;
@@ -308,20 +313,20 @@ const FormContainer = styled.div`
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   padding: 20px;
 
-  @media (max-width: 768px){
-    width:100%;
+  @media (max-width: 768px) {
+    width: 100%;
   }
 
   h1 {
     margin-top: 100px;
-    @media (max-width: 1024px){
-      font-size:20px;
-      margin-top:100px;
+    @media (max-width: 1024px) {
+      font-size: 20px;
+      margin-top: 100px;
     }
   }
-  h2{
-    font-size:13px;
-    line-height:45px;
+  h2 {
+    font-size: 13px;
+    line-height: 45px;
   }
   h1,
   h2,
@@ -330,55 +335,60 @@ const FormContainer = styled.div`
     position: relative;
     width: 80%;
     color: white;
-    margin-bottom:20px;
+    margin-bottom: 20px;
   }
   button {
-      background-color:transparent;
-      border:none;
+    background-color: transparent;
+    border: none;
 
-        img{
-            height:120px;
-            width:120px;
-            transition: all 0.3s ease-in-out;
-            &:hover{
-                transform:scale(1.1);
-            }
-        }
+    img {
+      height: 120px;
+      width: 120px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
+  }
 `;
 
 const InputContainer = styled.div`
-  position:relative;
-  display:flex;
-  align-items:center;
-  width:40vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 40vw;
   justify-content: center;
 
   select {
-      margin-right:10px;
-      color:red;
-      background-color:transparent;
-      border-radius:20px;
-      padding:5px;
+    margin-right: 10px;
+    color: red;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 5px;
   }
-  div{
-    height:33px;
-    width:280px;
-    background: linear-gradient(90deg, rgba(232,244,240,1) 24%, rgba(255,46,0,1) 44%, rgba(223,6,18,1) 62%);
+  div {
+    height: 33px;
+    width: 280px;
+    background: linear-gradient(
+      90deg,
+      rgba(232, 244, 240, 1) 24%,
+      rgba(255, 46, 0, 1) 44%,
+      rgba(223, 6, 18, 1) 62%
+    );
     border-radius: 10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-right:10px;
-    input{
-      position:relative;
-      height:95%;
-      width:98%;
-      border-radius:10px;
-      border:none;
-      background-color:rgb(18, 18, 18);
-      color:white;
-      text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    input {
+      position: relative;
+      height: 94%;
+      width: 98%;
+      border-radius: 10px;
+      border: none;
+      background-color: rgb(18, 18, 18);
+      color: white;
+      text-align: center;
     }
   }
-`
+`;
