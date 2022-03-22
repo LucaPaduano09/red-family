@@ -394,6 +394,7 @@ const InputContainer = styled.div`
       background-color: transparent;
       border-radius: 20px;
       padding: 5px;
+      -webkit-appearance: initial;
     }
     select option{
       color:black;
