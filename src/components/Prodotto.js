@@ -96,6 +96,7 @@ const Prodotto = () => {
     <Container>
       <ProdottoContainer>
         <FotoContainer>
+          
           {black === true ? (
             <div>
             <img src={"." + immagini[2]} onClick={() => setIndex(0)} />
@@ -372,13 +373,32 @@ const InputContainer = styled.div`
   align-items: center;
   width: 40vw;
   justify-content: center;
-
+  @media (max-width: 428px){
+    flex-direction:column;
+    justify-content: space-evenly;
+    width: 100vw;
+    button{
+      margin-top:30px;
+    }
+    div{
+      margin-top:30px;
+    }
+    input {
+      // margin-top:30px;
+    }
+  }
+  .marginLeftClass{
+    margin-left: 30px;
+  }
   select {
     margin-right: 10px;
-    color: red;
+    color: white;
     background-color: transparent;
     border-radius: 20px;
     padding: 5px;
+  }
+  select option{
+    color:black;
   }
   div {
     height: 33px;
