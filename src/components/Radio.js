@@ -177,8 +177,8 @@ const MainVideoWrapper = styled.div`
   margin-bottom: 20px;
   @media (max-width: 768px) {
     flex-direction: column;
-    width: 90%;
-    height: 700px;
+    width: 100%;
+    // height: 700px;
     position: relative;
     margin-top: 0px;
   }
@@ -212,6 +212,11 @@ const ImageWrapper = styled.div`
     height: 500px;
     margin-top: 30px;
     justify-content: flex;
+
+    video{
+        width: 100%;
+
+    }
   }
   img {
     position: relative;
