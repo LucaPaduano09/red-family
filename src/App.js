@@ -1742,6 +1742,10 @@ Prendi una camomilla , non fare il guappo!
               `}
             />
           </Route>
+          
+          <Route path="/radio">
+            <Radio />
+          </Route>
 
           <Route path="/video">
             <Video />
@@ -1749,10 +1753,6 @@ Prendi una camomilla , non fare il guappo!
 
           <Route path="/prodotto/:id">
             <Prodotto />
-          </Route>
-
-          <Route path="/radio">
-            <Radio />
           </Route>
 
           <Route path="/">

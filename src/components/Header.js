@@ -86,7 +86,7 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link to={"/"}>
+            <Link to={"/radio"}>
             <p onClick={() => {setBurgerStatus(false)}}>
               Radio  
             </p>
