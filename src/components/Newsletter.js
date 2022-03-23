@@ -16,13 +16,14 @@ function Newsletter() {
       },
       body: JSON.stringify({ email: email }),
     };
-    if (requestOption.body != "" ) {
-      console.log(requestOption.body,requestOption.body.length)
+    if (requestOption.body != "") {
+      console.log(requestOption.body, requestOption.body.length);
       const response = await fetch(
         "https://red-fam.herokuapp.com/newsletter/add",
-        requestOption)
-        let result = await response.json();
-        setInviato(true);
+        requestOption
+      );
+      let result = await response.json();
+      setInviato(true);
     }
   };
 
@@ -33,18 +34,20 @@ function Newsletter() {
         <FormGroup>
           <form>
             <div>
-            <input
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              type="email"
-              name="email-field"
-              placeholder="inserisci la tua email"
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-              required
-            />
+              <input
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                type="email"
+                name="email-field"
+                placeholder="inserisci la tua email"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                required
+              />
             </div>
-            <button onClick={() => saveEmail(email)}><img src="./images/iscriviti-button.png"/></button>
+            <button onClick={() => saveEmail(email)}>
+              <img src="./images/iscriviti-button.png" />
+            </button>
           </form>
         </FormGroup>
       </Fade>
@@ -80,9 +83,9 @@ const TitleText = styled.h1`
   font-size: 70px;
   color: white;
   margin-bottom: 10px;
-  @media (max-width: 428px){
-      font-size:10vw;
-      margin-left:0px;
+  @media (max-width: 428px) {
+    font-size: 10vw;
+    margin-left: 0px;
   }
 `;
 const FormGroup = styled.div`
@@ -107,7 +110,7 @@ const FormGroup = styled.div`
       border-radius: 20px;
       border:none;
       @media (max-width: 376px){
-          width:300px;
+          left: 0;
       }
     }
     button {
@@ -136,7 +139,10 @@ const FormGroup = styled.div`
       jusitfy-content:center;
       border-radius:20px;
       background: rgb(232,244,240);
-background: linear-gradient(90deg, rgba(232,244,240,1) 24%, rgba(255,46,0,1) 44%, rgba(223,6,18,1) 62%);
+      background: linear-gradient(90deg, rgba(232,244,240,1) 24%, rgba(255,46,0,1) 44%, rgba(223,6,18,1) 62%);
+      @media (max-width: 376px){
+        width: 300px;
+      }
     @keyframes glow {
       from {
         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #b10808,

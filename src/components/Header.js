@@ -51,7 +51,7 @@ function Header() {
             </Link>
           </p>
           <p>
-            <Link to={"/video"}>
+            <Link to={"/radio"}>
               Radio
             </Link>
           </p>

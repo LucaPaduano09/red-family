@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Newsletter from "./components/Newsletter";
 import ScrollToTop from "./components/ScrollToTop";
 import Prodotto from "./components/Prodotto";
+import Radio from "./components/Radio";
 
 function App() {
   return (
@@ -1748,6 +1749,10 @@ Prendi una camomilla , non fare il guappo!
 
           <Route path="/prodotto/:id">
             <Prodotto />
+          </Route>
+
+          <Route path="/radio">
+            <Radio />
           </Route>
 
           <Route path="/">
