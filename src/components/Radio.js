@@ -15,7 +15,7 @@ const Radio = () => {
             <Zoom>
               <video width="80%" controls>
                 <source
-                  src="./images/pt-completa.mp4#t=0.001"
+                  src="./images/puntata-2.mp4#t=0.001"
                   preload="metadata"
                   type="video/mp4"
                 />
@@ -23,6 +23,24 @@ const Radio = () => {
             </Zoom>
           </ImageWrapper>
         </MainVideoWrapper>
+
+         <TitleWrapper>
+          <h2>Altre Puntate</h2>
+        </TitleWrapper>
+
+        <MoreVideoWrapper>
+          <ImageWrapper>
+              <Zoom>
+                <video width="80%" controls>
+                  <source
+                    src="./images/pt-completa.mp4#t=0.001"
+                    preload="metadata"
+                    type="video/mp4"
+                  />
+                </video>
+              </Zoom>
+            </ImageWrapper> 
+        </MoreVideoWrapper> 
       </Container>
     </ContainerContainers>
   );
@@ -43,7 +61,7 @@ const ContainerContainers = styled.div`
 const Container = styled.div`
   position: relative;
   width: 1180px;
-  height: 900px;
+  min-height:1200px;
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   display: flex;
   margin: 0 auto;
@@ -363,7 +381,7 @@ const MoreVideoWrapper = styled.div`
   position: relative;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-column-gap: 0px;
   grid-gap: 2px;
 
@@ -373,11 +391,8 @@ const MoreVideoWrapper = styled.div`
   @media (max-width: 992px) {
     grid-template-columns: auto;
   }
-  iframe {
-    text-align: center;
-    font-size: 30px;
-    @media (max-width: 768px) {
-      width: 100vw;
-    }
+  Video{
+    margin-top:50px;
+  }
   }
 `;
