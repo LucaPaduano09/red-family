@@ -15,7 +15,7 @@ const Radio = () => {
             <Zoom>
               <video width="80%" controls>
                 <source
-                  src="./images/puntata-2.mp4#t=0.001"
+                  src="./images/puntata-3.mp4#t=0.001"
                   preload="metadata"
                   type="video/mp4"
                 />
@@ -29,7 +29,7 @@ const Radio = () => {
         </TitleWrapper>
 
         <MoreVideoWrapper>
-          <ImageWrapper>
+          <ImageWrapper2>
               <Zoom>
                 <video width="80%" controls>
                   <source
@@ -39,7 +39,18 @@ const Radio = () => {
                   />
                 </video>
               </Zoom>
-            </ImageWrapper> 
+            </ImageWrapper2> 
+            <ImageWrapper2>
+              <Zoom>
+                <video width="80%" controls>
+                  <source
+                    src="./images/puntata-2.mp4#t=0.001"
+                    preload="metadata"
+                    type="video/mp4"
+                  />
+                </video>
+              </Zoom>
+            </ImageWrapper2> 
         </MoreVideoWrapper> 
       </Container>
     </ContainerContainers>
@@ -54,19 +65,21 @@ const ContainerContainers = styled.div`
   background-size: cover;
   background-repeat: repeat;
   position: absolute;
-  margin-top: -24px;
+  // margin-top: -24px;
   width: 100vw;
+  min-height:1450px;
 `;
 
 const Container = styled.div`
   position: relative;
   width: 1180px;
-  min-height:1200px;
+  // min-height:1200px;
+  // height:100%;
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   display: flex;
   margin: 0 auto;
-  margin-top: 180px;
-  margin-bottom: 50px;
+  margin-top: 155px;
+  margin-bottom: 150px;
   flex-direction: column;
   align-items: center;
   @media (max-width: 1024px) {
@@ -216,9 +229,63 @@ const ImageWrapper = styled.div`
   align-content: center;
   justify-content: center;
   position: relative;
+  margin-top:10px;
   width: 100%;
-  height:400px;
+  // height:400px;
+  video{
+      position: relative;
+      height: 100%;
+      width: 75%;
+      object-fit: cover;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
+    justify-content: flex;
 
+    video{
+        width: 100%;
+
+    }
+  }
+  img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+  iframe {
+    margin-right: 10px;
+    @media (max-width: 768px) {
+      border: 2px solid white;
+      height: 300px;
+      width: 650px;
+      margin-top: 30px;
+    }
+    @media (max-width: 375px) {
+      width: 100%;
+      height: 250px;
+    }
+  }
+`;
+const ImageWrapper2 = styled.div`
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  margin-top:30px;
+  width: 100%;
+  // height:400px;
+  &:last-child{
+    margin-bottom:50px;
+  }
+  &:first-child{
+    margin-top:20px;
+  }
   video{
       position: relative;
       height: 100%;

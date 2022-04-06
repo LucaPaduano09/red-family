@@ -45,7 +45,10 @@ const Prodotto = () => {
       }
 
       const result = await response.json();
-      setInviato(true);
+      if(result){
+        setInviato(true);
+        window.alert("grazie del tuo preordine, verrai avvisato in anticipo quando partirà la vendita")
+      }
     }
     if (email !== "" && taglia === "") {
       window.alert("seleziona una taglia");
@@ -163,6 +166,7 @@ const Prodotto = () => {
             <input
               type="text"
               placeholder="inserisci la tua mail"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
