@@ -89,10 +89,10 @@ const Container = styled.div`
   }
   @media (max-width: 768px) {
     margin-top: 100px;
-    height: 3300px;
+    // height: 3300px;
   }
   @media (max-width: 376px) {
-    height: 3500px;
+    // height: 3500px;
   }
 `;
 
