@@ -14,6 +14,9 @@ import Newsletter from "./components/Newsletter";
 import ScrollToTop from "./components/ScrollToTop";
 import Prodotto from "./components/Prodotto";
 import Radio from "./components/Radio";
+import Login from "./components/admin/Login";
+import AdminHome from "./components/admin/AdminHome";
+import AdminSottoscrizioni from "./components/admin/AdminSottoscrizioni";
 
 function App() {
   return (
@@ -22,6 +25,15 @@ function App() {
         <ScrollToTop />
         <Header />
         <Switch>
+          <Route path="/admin/login">
+            <Login />
+          </Route>
+          <Route path="/admin/home">
+            <AdminHome />
+          </Route>
+          <Route path="/admin/sottoscrizioni">
+            <AdminSottoscrizioni />
+          </Route>
           <Route path="/testi">
             <Testi
               titoli={[

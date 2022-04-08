@@ -61,6 +61,10 @@ const Prodotto = () => {
     setBlack(false);
   };
 
+  const handleBlackClick = () =>{
+    setBlack(true);
+    setIndex(0);
+  }
   useEffect(() => {
     const getProduct = async () => {
       const response = await fetch(
@@ -100,8 +104,9 @@ const Prodotto = () => {
       <ProdottoContainer>
         <FotoContainer>
           
-          {black === true ? (
+          {black === true ?(
             <div>
+              
             <img src={"." + immagini[2]} onClick={() => setIndex(0)} />
             <img src={"." + immagini[3]} onClick={() => setIndex(1)} />
           </div>
@@ -139,7 +144,7 @@ const Prodotto = () => {
           immagini.length > 2 ? (
             <div className="colors-container">
               <div onClick={() => handleWhiteClick()}></div>
-              <div onClick={() => setBlack(true)}></div>
+              <div onClick={() => handleBlackClick()}></div>
             </div>
           ) : (
             console.log("2 foto nell array")

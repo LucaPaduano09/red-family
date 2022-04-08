@@ -65,6 +65,10 @@ function Header() {
             <img src="../images/out-soon-black.png"/>
           </p>
         </ButtonGroup>
+        <Link to="/admin/login"style={{fontSize:"12px"}}>
+            {/* <img src="./images/admin.png" alt="admin-button"/>*/}
+            admin
+        </Link>
       </Menu>
       <BurgerNav show={BurgerStatus}>
         <CustomClose onClick={() => setBurgerStatus(false)}>
@@ -128,6 +132,10 @@ function Header() {
           >
             <img src="/images/instagram-icona1.png" alt="" />
           </a>
+          <Link to="/admin/login"style={{fontSize:"12px"}} onClick={() => setBurgerStatus(false)}>
+            {/* <img src="./images/admin.png" alt="admin-button"/>*/}
+            admin
+          </Link>
         </div>
       </BurgerNav>
     </Container>
