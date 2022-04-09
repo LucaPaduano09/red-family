@@ -4,6 +4,27 @@ import { useState, useEffect } from "react";
 
 const AdminSottoscrizioni = () => {
   const [sottoscrizioni, setSottoscrizioni] = useState([]);
+  
+  const handleDelete = async (id) => {
+    const response = await fetch(
+      "https://red-fam.herokuapp.com/sottoscrizione/" + id,
+      {
+        method: "DELETE",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (!response.ok) {
+      window.alert("query non andata a buon fine");
+    }
+    const result = await response.json();
+    window.alert("ordine cancellato");
+  }
+
   useEffect(() => {
     const getSottoscrizioni = async () => {
       const response = await fetch(
@@ -38,6 +59,8 @@ const AdminSottoscrizioni = () => {
                 <th>Email</th>
                 <th>Prodotto</th>
                 <th>Taglia</th>
+                <th>Colore</th>
+                <th>Azioni</th>
               </tr>
             </thead>
             <tbody>
@@ -47,6 +70,13 @@ const AdminSottoscrizioni = () => {
                   <td>{st.email}</td>
                   <td>{st.prodotto}</td>
                   <td>{st.taglia}</td>
+                  <td>{st.colore}</td>
+                  <td>
+                    <button onClick={() => handleDelete(st._id)}>delete</button>
+                    <button>
+                      <a style={{color:"black"}}href={`mailto:`+st.email+`?subject=`+st.prodotto+`&body=Gentile Cliente ti inviamo questa mail per confermarti che il prodotto: `+st.prodotto +` è disponibile per la vendita.Clicca su questo link per confermare la tua prenotazione!`}>Mail</a>
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -75,7 +105,7 @@ const Container = styled.div`
   position: relative;
   // width: 1280px;
   // height: 1200px;
-  width: 66.6%;
+  width: 100%;
 //   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   display: flex;
   margin: 0 auto;
@@ -131,10 +161,11 @@ const TableContainer = styled.div`
               font-size:30px;
               text-align:center;
               position:relative;
-              width:33%;
+              width:20%;
               height:100px;
               @media screen and (max-width: 428px) {
-                font-size:15px;
+                font-size:12px;
+                width:10%;
               }
           }
       }
@@ -146,7 +177,19 @@ const TableContainer = styled.div`
             td{
                 text-align:center;
                 @media screen and (max-width: 428px) {
-                  font-size:10px;
+                  font-size:8px;
+                  width:15%;
+                }
+                button{
+                  width:80px;
+                  height:40px;
+                  margin-left:5px;
+                  color:black;
+                  @media screen and (max-width: 428px){
+                    font-size:8px;
+                    width:20px;
+                    height:40px;
+                  }
                 }
             }
         }

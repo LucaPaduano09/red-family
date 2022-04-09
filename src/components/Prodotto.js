@@ -20,6 +20,8 @@ const Prodotto = () => {
 
   //funzione che salva l'ordine nel db
   const handleClick = async (email, taglia, prodotto) => {
+    let color = "";
+    black === true ? color = "black" : color = "white";
     if (email !== "" && taglia !== "") {
       const response = await fetch(
         "https://red-fam.herokuapp.com/sottoscrizione/add",
@@ -32,6 +34,7 @@ const Prodotto = () => {
             email: email,
             taglia: taglia,
             prodotto: prodotto.prodotti_name,
+            colore: color,
           }),
           headers: {
             "Content-Type": "application/json",
