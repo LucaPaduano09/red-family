@@ -314,7 +314,7 @@ const ColorsContainer = styled.div`
       height: 20px;
       width: 20px;
       margin-bottom: 20px;
-      margin-top: 20px;
+      margin-top: 30px;
     }
     &:first-child {
       background-color: white;
@@ -413,6 +413,7 @@ const InputContainer = styled.div`
       display:flex;
       justify-content:center;
       align-items:center;
+      text-align:center;
     }
     select option{
       color:black;
