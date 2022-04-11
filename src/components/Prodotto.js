@@ -343,6 +343,10 @@ const FormContainer = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
+  @media (max-width: 428px) {
+    width: 100%;
+    margin-top:50px;
+  }
 
   h1 {
     margin-top: 100px;
