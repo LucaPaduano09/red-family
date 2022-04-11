@@ -453,17 +453,17 @@ const MenuSocial = styled.div`
     justify-content: flex-start;
   }
   img {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     padding: 5px;
     margin-right: 10px;
     transition: all 0.3s ease-in-out;
     :hover{
       transform: scale(1.2);
     }
-    @media (max-width: 375px) {
-      height: 40px;
-      width: 40px;
+    @media (max-width: 428px) {
+      height: 35px;
+      width: 35px;
       margin-right: 5px;
     }
   }
@@ -475,8 +475,8 @@ const MenuSocial = styled.div`
     @media (max-width: 768px) {
       width: 20%;
     }
-    @media (max-width: 375px) {
-      margin-right: 20px;
+    @media (max-width: 428px) {
+      margin-right: 50px;
     }
   }
   button {

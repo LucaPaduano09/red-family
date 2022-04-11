@@ -109,8 +109,8 @@ const FormGroup = styled.div`
       text-align: center;
       border-radius: 20px;
       border:none;
-      @media (max-width: 376px){
-          left: 0;
+      @media (max-width: 428px){
+          left: 4.5px;
       }
     }
     button {
