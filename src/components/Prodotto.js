@@ -229,6 +229,7 @@ const ProdottoContainer = styled.div`
     @media (max-width: 428px) {
       margin-left: 0px;
       margin-bottom: 60px;
+      margin-top:80px;
     }
     @media (max-width: 375px) {
       height: 300px;
