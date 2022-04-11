@@ -28,6 +28,9 @@ const Container = styled.div`
     align-items:center;
     p{
         margin:0px;
+        @media screen and (max-width: 428px){
+            font-size:10px;
+        }
     }
 `
 const FooterMenu = styled.div`
@@ -38,14 +41,13 @@ const FooterMenu = styled.div`
 const SingoloItem = styled.div`
     position:relative;
     margin-left:15px;
-    p{
-        margin:0px;
-        margin-left:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
         a{
             margin:0px;
-            @media(max-width:375){
-                font-size:15px;
-            }
+            @media(max-width: 428px){
+                font-size:10px;
+            }   
         }
-    }
 `
