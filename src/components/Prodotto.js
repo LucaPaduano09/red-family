@@ -314,7 +314,7 @@ const ColorsContainer = styled.div`
       height: 20px;
       width: 20px;
       margin-bottom: 20px;
-      margin-top: -20px;
+      margin-top: 20px;
     }
     &:first-child {
       background-color: white;
