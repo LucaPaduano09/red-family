@@ -209,7 +209,7 @@ const Container = styled.div`
     margin-top: 80px;
     flex-direction: column;
     overflow: visible;
-    height: 1200px;
+    height: 1400px;
   }
 `;
 

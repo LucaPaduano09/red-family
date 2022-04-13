@@ -836,7 +836,7 @@ Prendi una camomilla , non fare il guappo!
               Bum, Bam! I colpi fanno prima 
               Ma non è cosi che si risolvono i problemi, scusa eh?! 
               Sto cercando di frenare la cazzimma,  ma quest' altro incomincia
-              Sto cercando si svegliare i fraccomodi che stanno dormendo! 
+              Sto cercando di svegliare i fraccomodi che stanno dormendo! 
               Boom bap! sono cantante! 
               Non sono politico, non voglio fare il maestro
               Sto raccontando soltanto quello che vedo
