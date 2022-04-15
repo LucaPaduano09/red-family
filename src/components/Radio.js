@@ -24,45 +24,45 @@ const Radio = () => {
           </ImageWrapper>
         </MainVideoWrapper>
 
-         <TitleWrapper>
+        <TitleWrapper>
           <h2>Altre Puntate</h2>
         </TitleWrapper>
 
         <MoreVideoWrapper>
           <ImageWrapper2>
-              <Zoom>
-                <video width="80%" controls>
-                  <source
-                    src="./images/pt-completa.mp4#t=0.001"
-                    preload="metadata"
-                    type="video/mp4"
-                  />
-                </video>
-              </Zoom>
-            </ImageWrapper2> 
-            <ImageWrapper2>
-              <Zoom>
-                <video width="80%" controls>
-                  <source
-                    src="./images/puntata-2.mp4#t=0.001"
-                    preload="metadata"
-                    type="video/mp4"
-                  />
-                </video>
-              </Zoom>
-            </ImageWrapper2> 
-            <ImageWrapper2>
             <Zoom>
-                <video width="80%" controls>
-                  <source
-                    src="./images/puntata-3.mp4#t=0.001"
-                    preload="metadata"
-                    type="video/mp4"
-                  />
-                </video>
-              </Zoom>
-            </ImageWrapper2>
-        </MoreVideoWrapper> 
+              <video width="80%" controls>
+                <source
+                  src="./images/pt-completa.mp4#t=0.001"
+                  preload="metadata"
+                  type="video/mp4"
+                />
+              </video>
+            </Zoom>
+          </ImageWrapper2>
+          <ImageWrapper2>
+            <Zoom>
+              <video width="80%" controls>
+                <source
+                  src="./images/puntata-2.mp4#t=0.001"
+                  preload="metadata"
+                  type="video/mp4"
+                />
+              </video>
+            </Zoom>
+          </ImageWrapper2>
+          <ImageWrapper2>
+            <Zoom>
+              <video width="80%" controls>
+                <source
+                  src="./images/puntata-3.mp4#t=0.001"
+                  preload="metadata"
+                  type="video/mp4"
+                />
+              </video>
+            </Zoom>
+          </ImageWrapper2>
+        </MoreVideoWrapper>
       </Container>
     </ContainerContainers>
   );
@@ -78,14 +78,14 @@ const ContainerContainers = styled.div`
   position: absolute;
   // margin-top: -24px;
   width: 100vw;
-  min-height:1450px;
+  min-height: 1850px;
 `;
 
 const Container = styled.div`
   position: relative;
   width: 1180px;
   // min-height:1200px;
-  // height:100%;
+   height:100%;
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   display: flex;
   margin: 0 auto;
@@ -96,7 +96,7 @@ const Container = styled.div`
   @media (max-width: 1024px) {
     margin-top: 185px;
     width: 100vw;
-    height: 1900px;
+    height: 100%;
   }
   @media (max-width: 768px) {
     margin-top: 100px;
@@ -117,7 +117,7 @@ const TitleWrapper = styled.div`
   border-bottom: 3px solid rgb(168, 11, 11);
   color: white;
   text-align: center;
-  height: 80px;
+  // height: 80px;
   overflow-y: hidden;
 
   @media (max-width: 768px) {
@@ -208,7 +208,7 @@ const TitleWrapper2 = styled.div`
 const MainVideoWrapper = styled.div`
   position: relative;
   width: 100%;
-//   height: 573px;
+  //   height: 573px;
   margin: 0 auto;
   margin-top: 20px;
   display: -moz-flex;
@@ -240,14 +240,14 @@ const ImageWrapper = styled.div`
   align-content: center;
   justify-content: center;
   position: relative;
-  margin-top:10px;
+  margin-top: 10px;
   width: 100%;
   // height:400px;
-  video{
-      position: relative;
-      height: 100%;
-      width: 75%;
-      object-fit: cover;
+  video {
+    position: relative;
+    height: 100%;
+    width: 75%;
+    object-fit: cover;
   }
   @media (max-width: 768px) {
     width: 100%;
@@ -255,9 +255,8 @@ const ImageWrapper = styled.div`
     margin-top: 30px;
     justify-content: flex;
 
-    video{
-        width: 100%;
-
+    video {
+      width: 100%;
     }
   }
   img {
@@ -288,20 +287,20 @@ const ImageWrapper2 = styled.div`
   align-content: center;
   justify-content: center;
   position: relative;
-  margin-top:30px;
+  margin-top: 30px;
   width: 100%;
   // height:400px;
-  &:last-child{
-    margin-bottom:50px;
+  &:last-child {
+    margin-bottom: 50px;
   }
-  &:first-child{
-    margin-top:20px;
+  &:first-child {
+    margin-top: 20px;
   }
-  video{
-      position: relative;
-      height: 100%;
-      width: 75%;
-      object-fit: cover;
+  video {
+    position: relative;
+    height: 100%;
+    width: 75%;
+    object-fit: cover;
   }
   @media (max-width: 768px) {
     width: 100%;
@@ -309,9 +308,8 @@ const ImageWrapper2 = styled.div`
     margin-top: 30px;
     justify-content: flex;
 
-    video{
-        width: 100%;
-
+    video {
+      width: 100%;
     }
   }
   img {
