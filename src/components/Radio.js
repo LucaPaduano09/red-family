@@ -51,6 +51,7 @@ const Radio = () => {
                 </video>
               </Zoom>
             </ImageWrapper2> 
+            <ImageWrapper2>
             <Zoom>
                 <video width="80%" controls>
                   <source
@@ -60,6 +61,7 @@ const Radio = () => {
                   />
                 </video>
               </Zoom>
+            </ImageWrapper2>
         </MoreVideoWrapper> 
       </Container>
     </ContainerContainers>
