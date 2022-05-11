@@ -15,7 +15,7 @@ const Radio = () => {
             <Zoom>
               <video width="80%" controls>
                 <source
-                  src="./images/puntata-6.mp4#t=0.001"
+                  src="./images/puntata-7.mp4#t=0.001"
                   preload="metadata"
                   type="video/mp4"
                 />
@@ -78,6 +78,17 @@ const Radio = () => {
               <video width="80%" controls>
                 <source
                   src="./images/puntata-5.mp4#t=0.001"
+                  preload="metadata"
+                  type="video/mp4"
+                />
+              </video>
+            </Zoom>
+          </ImageWrapper2>
+          <ImageWrapper2>
+            <Zoom>
+              <video width="80%" controls>
+                <source
+                  src="./images/puntata-6.mp4#t=0.001"
                   preload="metadata"
                   type="video/mp4"
                 />

@@ -40,7 +40,7 @@ function Home() {
         <MainVideoContainer>
           <GalleryWrapper>
           <video width="100%" controls>
-            <source src="./images/puntata-6.mp4#t=0.001" preload="metadata" type="video/mp4"/>
+            <source src="./images/puntata-7.mp4#t=0.001" preload="metadata" type="video/mp4"/>
           </video>
             {/* <GalleryWrapper>
             {show === false ? (
