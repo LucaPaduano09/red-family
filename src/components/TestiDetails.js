@@ -161,6 +161,7 @@ const DescriptionContainer = styled.div`
     text-transform: uppercase;
     // line-height:5px;
     margin-top:40px;
+    margin-left:50px;
     @media (max-width:428px){
       margin-left:15px;
     }
@@ -170,6 +171,7 @@ const DescriptionContainer = styled.div`
     width: 100%;
     margin-top: 20px;
     white-space: pre-line;
+    margin-left:50px;
     @media (max-width: 768px) {
       width: 100%;
       margin-bottom:-10px;
@@ -181,6 +183,7 @@ const DescriptionContainer = styled.div`
   h5{
     line-height:1px;
     margin-bottom:-10px;
+    margin-left:50px;
     @media (max-width:428px){
       margin-left:15px;
     }

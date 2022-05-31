@@ -37,6 +37,7 @@ function App() {
           <Route path="/testi">
             <Testi
               titoli={[
+                "Pippat",
                 "in form",
                 "uapp",
                 "T' Magnat",
@@ -47,6 +48,7 @@ function App() {
                 "amore e soldi? no!",
               ]}
               url={[
+                "pippat",
                 "in form",
                 "uapp",
                 "T' Magnat",
@@ -57,6 +59,7 @@ function App() {
                 "amore e soldi no!",
               ]}
               cover={[
+                "./images/cover/pippat.png",
                 "./images/cover/in-form.png",
                 "./images/cover/uapp.png",
                 "./images/cover/t-magnat.png",
@@ -69,237 +72,338 @@ function App() {
             />
           </Route>
           {/* ROTTE DEI TESTI */}
-          <Route path="/T' Magnat">
+          <Route path="/pippat">
             <TestiDetails
               data="20/2/2019"
-              immagine="./images/tt-magnat.png"
-              titolo="t'magnat"
-              desc={`Gianni Red & Loris Bastr presentano : " T magnat "
-              Produzione musicale di Alexander 808 
-              Suoni Neter Sound
-              regia  Red Family 
+              immagine="./images/cover/pippat.png"
+              titolo="Pippat"
+              desc={`Gianni Red & Loris Bastr presentano : "Pippat" 
+              Suoni Red Family
+              Regia  Red Family 
               D.o.p. & camera : Marco Bruno
               Produzione video Red Family`}
-              spotify="https://goo.gl/zNtu5H"
+              spotify="https://open.spotify.com/track/6mAWFi5vgqwiquV1kKFrtq?si=Y1QUc0BuQhyyRwSQjd877Q"
               testo={`
-                [Ritornello: Gianni Red & Loris Bastr]
-                E pall chien, teng a uallera 'nderr (Crirem, crirem)
-                Sa-sacc buon c' song e saittell (ne, ne)
-                Sord cuntat rind a sacc e me speng (giret, giret)
-                C' ogni cristian cagg' a che fa me fraintend (bang, bang, bang!)
-                Arap l' uocchie log stann t' magnat (fratm, fratm)
-                Stai cu na faccia a pest rimm che passat (uanm, uanm)
-                Arap l' uocchie log stann t' magnat (fratm, fratm)
-                Stai cu na faccia a pest rimm che passat (Ma ch'e fatt?)
-                
-                [Strofa 1: Gianni Red]
-                Ammo teng e pall chien
-                Stat t' magnat ma ne iat fier
-                Parlavn e success c' m par aier
-                Mo vat arravugliat buon man e pier
-                I magg arravugliat overament ma nun è c' mo nascong, o dico apertament facc' o camerier
-                Mic comm e chisti muort e famm c' parln e puttan e de renar ma e t' chest n' fann nient
-                O' rap mi nascev già tr' e banc e scol
-                Chierl e' cumpagn mi n' sann e storj
-                O' teng rind o' sang, rind o' DNA
-                Comm' sti puttane quann' fann e corn
-                P fo figl e bucchin lissa vatter bon
-                Me piace a malavit pcchè a cap n' m apport
-                Cuginm me facett vre o' fierr
-                E ra la ricett a chiavass na bott
-                Ma qual bott, ja fo brav!
-                Nun f'o fort ca po o' pav!
-                So a cuscienz toj: n' avvocat
-                O sentier tuoj é calcolat
-                Megl na magnata o' Lago Patria
-                Ca te fann' na puntat a Quarto Grado
-                Gianni, o' mal t' appasionat
-                Ma to dic nfa p te, è assodat!
-                P chest c facc rap
-                Fra nun o vir ch' facc teng
-                Po rap m accir so pazz né
-                Comm nde film cu Schwarzenegger
-                E tu parlm parlm e quant stann magnat t quant gio' saj (gio' saj, gio' saj)
-                Fratm, fratm lavt a facc ma si a tien a pest é nu uaj
-
-                [Ritornello: Gianni Red & Loris Bastr]
-                E pall chien, teng a uallera 'nderr (Crirem, crirem)
-                Sa-sacc buon c' song e saittell (ne, ne)
-                Sord cuntat rind a sacc e me speng (giret, giret)
-                C' ogni cristian cagg' a che fa me fraintend (bang, bang, bang!)
-                Arap l' uocchie log stann t' magnat (fratm, fratm)
-                Stai cu na faccia a pest rimm che passat (uanm, uanm)
-                Arap l' uocchie log stann t' magnat (fratm, fratm)
-                Stai cu na faccia a pest rimm che passat (O magnà)
-                
-                [Strofa 2: Loris Bastr]
-                Non ho mai leccato un culo
-                Per questo non sono ancora nessuno
-                Perché quando parlo non mi capisci
-                Mi vorrebbero ordinato coi capelli lisci
-                Ho mandato a fare in culo certi meccanismi
-                Perché se apro gli occhi vedo esibizionismi
-                Hai fatto una foto con una Ferrari, hai preso mille like
-                Peccato che il Ferrari non ce l'hai
-                Quest'anno poi l' hai preso in culo
-                L'anno prossimo ti rifarai
-                Tesoro i tipi come te li butto nei pollai
-                Voglio fare un cacatone per voi talmente grosso giuro ve lo dedico col cuore
-                Spegnete queste belle candeline, esprimete un desiderio, fate presto prima che si sente il tanfone
-                Hai preso una macchina a leasing
-                Anelli sulle mani, iniziali incise
-                Uomini e donne, cuori felici
-                Mano nella mano ma non siamo a Parigi
-                (O' par o pesc, pesc mman)
-                Calci nelle palle tutti puniti
-                Non mi ispiro né a 2Pac né a Biggie
-                Ma al numero uno Massimo Troisi
-                Amico mio forse è meglio che sto nel deserto
-                Come un fottuto cammello
-                Ho detto a Gianni alziamo il livello
-                Flow macellaio ti apro, vitello
-                Dimmi quanto vali, quanti soldi mi regali
-                Eri li che l' aspettavi, ma solo preliminari
-                Io mai stato alla pari, alla faccia dei mangiati
-                Bevo Red Bull, mi mette le ali
-                [Ritornello: Gianni Red & Loris Bastr]
-                E pall chien, teng a uallera 'nderr (Crirem, crirem)
-                Sa-sacc buon c' song e saittell (ne, ne)
-                Sord cuntat rind a sacc e me speng (giret, giret)
-                C' ogni cristian cagg' a che fa me fraintend (bang, bang, bang!)
-                Arap l' uocchie log stann t' magnat (fratm, fratm)
-                Stai cu na faccia a pest rimm che passat (uanm, uanm)
-                Arap l' uocchie log stann t' magnat (fratm, fratm)
-                Stai cu na faccia a pest rimm che passat
-                `}
+              [Intro]
+              Ok,ok famm sentì là mò comm s'sent chest
+              
+              [Ritornello 1: Gianni Red & Loris Bastr]
+              Uagliò ma che te pippat?
+              (Fratm, fratm)
+              T' vec tutt ingrippat
+              (Simm e chiù fort 'ro munn)
+              Staj tutt e juorn nda bas
+              Uagliò ma che te pippat
+              T' vec tutt ingrippat
+              (Nun m' fa pensà mammamì)
+              Staj t'e juorn nda bas
+              (Simm e chiu' fort 'ro munn)
+              Ce rat aint co nas
+              
+              [Strofa 1: Gianni Red]
+              É megl ch' riman a cas
+              Azz ce rat aind co nas
+              E sord comm le 'pparat?
+              Chissà a chi ce le domandat
+              Azz gir rind a na cabrio
+              I t'vec rind na gabbia
+              Tu staj rind a machin 'e babb
+              I nda machin chin 'e inciarm
+              E tu nda stu gir o' saj ch' nn' c' appizz
+              Fann na guerr p' apparà nu cinq
+              Spiennl meglio e pavm nu Spritz
+              
+              [Strofa 1: Loris Bastr]
+              Hanno fatt 50 blitz
+              Hanno pigliat a nu uaglion p'nat
+              E infatti nn' er iss
+              Gir p' tutt Napoli co' DR 350
+              Si m' gir m' chiammn 'fratm'
+              Ma io e chist nun c'salutamm
+              Si s'avvicinano semp chiù e guardie
+              Nun vò ricr ca c'stann fermann
+              Te pippat tutt a mesat!
+              A semman 150!
+              Noi veniamo dal buco del culo
+              Quella parte del corpo non protetta
+              Ho mangiato pastina invisibile
+              Ho respirato secchi di merda
+              Con le rime siamo killer
+              Chiusa la faccenda
+              Non fotti col mister
+              Soprattutto se hai quella squadretta!
+              
+              [Strofa 1: Gianni Red]
+              Staj tt' fus po' bianc
+              I m' fum na cann
+              Ce n' jamm in Afghanistan
+              Arò nisciun ce uard
+              Pure che fatt nu figl, bucchinà
+              M' chier sulament ch' ce staj 'nsignann
+              Cazz m' ric si o' boss
+              O' boss 'e sta capocchia, nda bucchin 'e mammt
+              
+              [Bridge 1: Gianni Red & Loris Bastr]
+              Liev nu poc man
+              Pcchè nun è arta toj
+              Liev nu poc man
+              Statt nu poc a casa toj
+              Liev nu poc man
+              Nun vogl' sentì a voce toja
+              Liev nu poc man
+              Stamm trasenn nda capa toj
+              
+              [Ritornello 2: Gianni Red & Loris Bastr]
+              Uagliò ma che te pippat?
+              T' vec tutt ingrippat
+              (Nun m' fa pensà mammamì)
+              Staj tutt e juorn nda bas
+              (Simm e chiu' fort 'ro munn)
+              Ce rat aint co nas
+              Uagliò ma che te pippat
+              T' vec tutt ingrippat
+              Staj t'e juorn nda bas
+              Ce rat aint co nas
+              
+              [Strofa 2: Loris Bastr]
+              Bast! Miettece nu punt
+              Miettece ruj punt
+              No nu punt e virgl
+              O' frà si ridicl, crirm
+              É pop o' minim ch' m' mett a rirer
+              E' itt ca vuò scrivr vivr
+              A drog fa fà sti discors, t' capisc
+              Lievt stu vizj
+              T'o torn a ripeter tutt e juorn
+              T' faj na pell e manc t' arrizz
+              
+              
+              [Strofa 2: Gianni Red]
+              Nun tien nu punt fiss
+              Nun tien na fess
+              Tien na fiss
+              E o' sacc ca na bott le fatt
+              E infatti ngopp o' nas è rimast na strisc
+              Si comm a piramid egizia
+              A tomb ce sta, ce manc sul tu aint
+              Stu piezz è fatt a Freestyle
+              E tu ra pippat nemmanc ce crir
+              
+              [Bridge 2: Gianni Red & Loris Bastr]
+              Liev nu poc man
+              Pcchè nun è arta toj
+              Liev nu poc man
+              Statt nu poc a casa toj
+              Liev nu poc man
+              Nun vogl' sentì a voce toja
+              Liev nu poc man
+              Stamm trasenn nda capa toj
+              
+              [Ritornello 3: Gianni Red & Loris Bastr]
+              Uagliò ma che te pippat?
+              T' vec tutt ingrippat
+              (Nun m' fa pensà mammamì)
+              Staj tutt e juorn nda bas
+              (Simm e chiu' fort 'ro munn)
+              Ce rat aint co nas
+              Uagliò ma che te pippat
+              T' vec tutt ingrippat
+              Staj t'e juorn nda bas
+              Ce rat aint co nas
+              
+              [Strofa 3: Gianni Red]
+              E fin 'ra storj
+              Bast mument chin 'e baldorj
+              Critc ancor
+              Chiamm'm "Gianni Discriminatorj"
+              Tirt a robb
+              Cu figlt a scol
+              
+              [Strofa 3: Loris Bastr]
+              Ancora, ancora, ancora
+              Questo pezzo è per tutti i drogati d'Italia
+              Ah! Mi manca l'aria
+              Mi manca casa, mi manca cosa?
+              Salteresti in aria
+              
+              [Strofa 3: Gianni Red]
+              Azzicct 'e pont fin e a fin
+              Assiett buon e nun fà casin
+              Vivt o' vin e vir ch' vit
+              Circl o' sang 'nde vas sanguign
+              
+              [Strofa 3: Loris Bastr]
+              Dimmi se è A POSITIVO
+              Dimmi se sei recidivo
+              Dimmi se sei più deciso
+              Dimmi che sei come ti ho descritto
+              
+              [Outro: Gianni Red & Loris Bastr]
+              Liev nu poc
+              Fatt a là Giuà mo' vec io
+              Nn' o' vir che e facc vulà senza cucain Lorì
+              NA-NA-Napoli              
+              `}
               traduzione={`
-                [Ritornello: Gianni Red & Loris Bastr]
-                Le palle piene, ho i coglioni per terra
-                (Credimi, Credimi)
-                So-so bene cosa sono le fogne
-                (ok, ok)
-                Soldi contati in tasca e li spendo
-                (Girati, Girati)
-                Con ogni cristiano con cui ho a che fare mi fraintendo
-                (Bang, bang ,bang!)
-                Apri gli occhi , qua stanno 'tutti mangiati'
-                (Fratello, Fratello)
-                Stai con una faccia 'a peste', dimmi che hai passato
-                (Diamine, Diamine)
-                Apri gli occhi , qua stanno 'tutti mangiati'
-                (Fratello, fratello)
-                Stai con una faccia 'a peste', dimmi che hai passato
-                (Ma che hai fatto?)
-
-                [Strofa 1: Gianni Red]
-                Fratello ho le palle piene
-                State 'tutti mangiati' , ma ne andate fieri
-                Parlavate di successo che sembrava ieri
-                Ora vi siete legati bene mani e piedi
-                Io mi sono 'legato' veramente ma non lo nascondo, 
-                Lo dico apertamente, faccio il cameriere
-                Mica come questi morti di fame
-                Che mi parlano di puttane e di denaro , 
-                ma di tutto ciò non fanno nulla
-                Il mio rap nasceva già tra i banchi di scuola
-                Chiedilo ai miei compagni , ne conoscono di storie
-                Ce l' ho nel sangue , nel DNA
-                Come queste puttane quando fanno le corna
-                Per fare il figlio di puttana la dovresti picchiare bene
-                Mi piace la malavita perchè la testa non mi funziona
-                Mio cugino mi fece vedere una pistola
-                E da lì in poi dissi  ''Lo sparerei un colpo''
-                Ma quale colpo, su , fa il bravo!
-                Non fare il duro che poi la paghi!
-                Sono la tua coscienza: un avvocato
-                il tuo sentiero è calcolato
-                Meglio una mangiata al Lago Patria 
-                piuttosto che ti fanno un puntata a Quarto Grado
-                Gianni, il male ti ha appassionato
-                Ma ti dico ''Non fa per te'', è assodato !
-                Per questo che faccio rap
-                Fratello non lo vedi che faccia ho 
-                Per il rap mi uccido, sono pazzo, ok?
-                Come nei film con Schwarzenegger
-                E tu parlami parlami di quanto stanno mangiati tutti quanti , già lo sai
-                (Già lo sai, Già lo sai)
-                Fratello , fratello , lavati la faccia , ma se la hai 'a peste' è un guaio!
-
-                [Ritornello 2: Gianni Red & Loris Bastr]
-                Le palle piene, ho i coglioni per terra
-                (Credimi, Credimi)
-                So-so bene cosa sono le fogne
-                (ok, ok)
-                Soldi contati in tasca e li spendo
-                (Girati, Girati)
-                Con ogni cristiano che ho a che fare mi fraintendo
-                (Bang, bang ,bang!)
-                Apri gli occhi , qua stanno 'tutti mangiati'
-                (Fratello, Fratello)
-                Stai con una faccia a peste, dimmi che hai passato
-                (Diamine, Diamine)
-                Apri gli occhi , qua stanno 'tutti mangiati'
-                (Fratello, fratello)
-                Stai con una faccia a peste, dimmi che hai passato
-                (Ma che hai fatto?)
-
-                [Strofa 2: Loris Bastr]
-                Non ho mai leccato un culo
-                Per questo non sono ancora nessuno
-                Perché quando parlo non mi capisci
-                Mi vorrebbero ordinato coi capelli lisci
-                Ho mandato a fare in culo certi meccanismi
-                Perché se apro gli occhi vedo esibizionisti
-                Hai fatto una foto con una Ferrari, 
-                Hai preso mille like
-                Peccato che il Ferrari non ce l'hai
-                Quest'anno poi l' hai preso in culo
-                L'anno prossimo ti rifarai
-                Tesoro i tipi come te li butto nei pollai
-                Voglio fare un cacatone per voi talmente grande 
-                Giuro ve lo dedico col cuore
-                Spegnete queste belle candeline, esprimete un desiderio,
-                Fate presto prima che si sente il tanfone
-                Hai preso una macchina a leasing
-                Anelli sulle mani, iniziali incise
-                Uomini e donne, cuori felici
-                Mano nella mano ma non siamo a Parigi
-                (ohh sembri il cazzo, mezza sega)
-                Calci nelle palle tutti puniti
-                Non mi ispiro né a 2Pac né a Biggie
-                Ma al numero uno Massimo Troisi
-                Amico mio forse è meglio che sto nel deserto
-                Come un fottuto cammello
-                Ho detto a Gianni alziamo il livello
-                Flow macellaio ti apro, vitello
-                Dimmi quanto vali, quanti soldi mi regali
-                Eri li che l' aspettavi, ma solo preliminari
-                Io mai stato alla pari, alla faccia dei mangiati
-                Bevo Red Bull, mi mette le ali
-
-                [Ritornello 3: Gianni Red & Loris Bastr]
-                Le palle piene, ho i coglioni per terra
-                (Credimi, Credimi)
-                So-so bene cosa sono le fogne
-                (ok, ok)
-                Soldi contati in tasca e li spendo
-                (Girati, Girati)
-                Con ogni cristiano che ho a che fare mi fraintendo
-                (Bang, bang ,bang!)
-                Apri gli occhi , qua stanno 'tutti mangiati'
-                (Fratello, Fratello)
-                Stai con una faccia a peste, dimmi che hai passato
-                (Diamine, Diamine)
-                Apri gli occhi , qua stanno 'tutti mangiati'
-                (Fratello, fratello)
-                Stai con una faccia a peste, dimmi che hai passato
-
-                [Outro: Gianni Red]
-                Ridi , ridi , ridi ogni tanto
-                Potresti ridere ogni tanto !
-                Ridi , ridi , ridi ogni tanto
-                Potresti ridere ogni tanto !
-                E ridi , non fare il 'mangiato', fratello
+              [Intro]
+              Ok,ok fammi sentire lì come si sente questa
+              
+              [Ritornello 1: Gianni Red & Loris Bastr]
+              Ragazzo ma che ti sei pippato?
+              (Fratello, fratello)
+              Ti vedo molto ingrippato
+              (Siamo i più forti del mondo)
+              Sei tutti i giorni nella base
+              Ragazzo ma che ti sei pippato?
+              Ti vedo molto ingrippato
+              (Non mi far pensare, mamma mia!)
+              Sei tutti i giorni nella base
+              (Siamo i più forti del mondo)
+              Ci hai dato dentro col naso
+              
+              [Strofa 1: Gianni Red]
+              Meglio che resti a casa
+              Addirittura, ci hai dentro col naso
+              I soldi come li hai trovati?
+              Chissà a chi li hai domandati
+              Addirittura giri dentro una cabrio
+              Io ti vedo dentro una gabbia
+              Tu sei nella macchina di babbo
+              Io in una macchina pieno di inciarmi
+              E tu in questo giro lo sai che non c' entri
+              Fanno una guerra per comprare un cinque
+              Spendili meglio e pagami uno Spritz
+              
+              [Strofa 1: Loris Bastr]
+              Hanno fatto 50 blitz
+              Hanno preso un ragazzo per un altro
+              E infatti non era lui
+              Giro per tutta Napoli con il DR 350
+              Se mi giro mi chiamano 'fratello'
+              Ma io e questo non ci salutiamo
+              Se si avvicinano sempre più le guardie
+              Non vuol dire che ci stanno fermando
+              Ti sei pippato l' intera mesata!
+              La paga settimanale 150!
+              Noi veniamo dal buco del culo
+              Quella parte del corpo non protetta
+              Ho mangiato pastina invisibile
+              Ho respirato secchi di merda
+              Con le rime siamo killer
+              Chiusa la faccenda
+              Non fotti col mister
+              Soprattutto se hai quella squadretta!
+              
+              [Strofa 1: Gianni Red]
+              Sei completamente fuso per il bianco
+              Io mi fumo una canna
+              Ce ne andiamo in Afghanistan
+              Dove nessuno ci scruta
+              Anche se hai fatto un figlio, 
+              Mi chiedo solamente cosa gli stai insegnando
+              Cazzo mi dici che sei il boss , figlio di puttana
+              Il boss di sto cazzo, la puttana di tua madre
+              
+              [Bridge 1: Gianni Red & Loris Bastr]
+              Leva un pò mano
+              Perchè non è arte tua
+              Leva un pò mano
+              Resta un pò a casa tua
+              Leva un pò mano
+              Non voglio sentire la tua voce
+              Leva un pò mano
+              Stiamo entrando nella tua casa
+              
+              [Ritornello 2: Gianni Red & Loris Bastr]
+              Ragazzo ma che ti sei pippato?
+              Ti vedo molto ingrippato
+              (Non mi far pensare, mamma mia!)
+              Sei tutti i giorni nella base
+              (Siamo i più forti del mondo)
+              Ci hai dato dentro col naso
+              Ragazzo ma che ti sei pippato?
+              Ti vedo molto ingrippato
+              Sei tutti i giorni nella base
+              Ci hai dato dentro col naso
+              
+              [Strofa 2: Loris Bastr]
+              Basta! Mettici un punto
+              Mettici due punti
+              Non un punto e virgola
+              Fra' sei ridicolo, credimi
+              É proprio il minimo che mi metto a ridere
+              Hai detto che vuoi scrivere, vivere
+              La droga fa fare questi discorsi,ti capisco
+              Levati questo vizio
+              Ti torno a ripetere tutti i giorni
+              Ti fai una scopata e neanche indurisci
+              
+              
+              [Strofa 2: Gianni Red]
+              Non hai un punto fisso
+              Non hai una fessa
+              Hai una fissa
+              E lo so che una botta l' hai fatta
+              E infatti sul naso è rimasta una striscia
+              Sei come la piramide egizia
+              La tomba c'è, ci manchi tu dentro
+              Questo pezzo è fatto a Freestyle
+              E tu da pippato neanche ci credi
+              
+              [Bridge 2: Gianni Red & Loris Bastr]
+              Leva un pò mano
+              Perchè non è arte tua
+              Leva un pò mano
+              Resta un pò a casa tua
+              Leva un pò mano
+              Non voglio sentire la tua voce
+              Leva un pò mano
+              Stiamo entrando nella tua casa
+              
+              [Ritornello 3: Gianni Red & Loris Bastr]
+              Ragazzo ma che ti sei pippato?
+              Ti vedo molto ingrippato
+              (Non mi far pensare, mamma mia!)
+              Sei tutti i giorni nella base
+              (Siamo i più forti del mondo)
+              Ci hai dato dentro col naso
+              Ragazzo ma che ti sei pippato?
+              Ti vedo molto ingrippato
+              Sei tutti i giorni nella base
+              Ci hai dato dentro col naso
+              
+              [Strofa 3: Gianni Red]
+              E fine della storia
+              Basta momenti pieni di baldoria
+              Critico ancora
+              Chiamami "Gianni Discriminatorio"
+              Tirati la roba
+              Con tuo figlio a scuola
+              
+              [Strofa 3: Loris Bastr]
+              Ancora, ancora, ancora
+              Questo pezzo è per tutti i drogati d'Italia
+              Ah! Mi manca l'aria
+              Mi manca casa, mi manca cosa?
+              Salteresti in aria
+              
+              [Strofa 3: Gianni Red]
+              Rovinati fino alla fine
+              Siediti per bene e non fare casino
+              Bevi del vino e vedi che vita
+              Circola sangue nei vasi sanguigni
+              
+              [Strofa 3: Loris Bastr]
+              Dimmi se è A POSITIVO
+              Dimmi se sei recidivo
+              Dimmi se sei più deciso
+              Dimmi che sei come ti ho descritto
+              
+              [Outro: Gianni Red & Loris Bastr]
+              Leva un pò
+              Spostati , Gianni ci penso io
+              Non vedi che li faccio esaltare senza cocaina,Loris
+              NA-NA-Napoli              
               `}
             />
           </Route>
@@ -1754,7 +1858,7 @@ Prendi una camomilla , non fare il guappo!
               `}
             />
           </Route>
-          
+
           <Route path="/radio">
             <Radio />
           </Route>

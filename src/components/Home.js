@@ -38,29 +38,13 @@ function Home() {
     <ContainerContainers>
       <Container>
         <MainVideoContainer>
+        <TitleWrapper>
+          <h2>Ultima Uscita</h2>
+        </TitleWrapper>
           <GalleryWrapper>
           <video width="100%" controls>
             <source src="./images/puntata-7.mp4#t=0.001" preload="metadata" type="video/mp4"/>
           </video>
-            {/* <GalleryWrapper>
-            {show === false ? (
-              <ShadowContainer>
-                <h1>Guarda la prima puntata di RadioRed</h1>
-                <div>
-                </div>
-                  <button  onClick={handleClick}>
-                    
-                  </button>
-              </ShadowContainer>
-            ) : (
-              <p></p>
-            )}
-            <video
-              src="./images/semi-completo-format.mp4"
-              controls="controls"
-              ref={videoElement}
-            />
-           */}
           </GalleryWrapper>
         </MainVideoContainer>
         <ItemContainer>
@@ -122,10 +106,10 @@ const MainVideoContainer = styled.div`
   position: relative;
   overflow: hidden;
   width: 960px;
-  height: 520px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-direction:column;
   
   @media (device-width:2560px){
     width:100%;
@@ -146,11 +130,56 @@ const GalleryWrapper = styled.div`
   justify-content: center;
 
   video{
-    object-fit:cover;
-    height:100%;
+    position:relative;
+    object-fit:contain;
+    height:400px;
     @media (max-width:428px){
       width:100%;
       height:100%;
+    }
+  }
+`;
+const TitleWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 3px solid rgb(168, 11, 11);
+  color: white;
+  text-align: center;
+  height: 80px;
+  overflow-y: hidden;
+
+  @media (max-width: 768px) {
+    height: 70px;
+  }
+
+  h2 {
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    font-family: "Exo 2", sans-serif;
+    animation: glow 1.5s ease-in-out infinite alternate;
+    @media (max-width: 768px) {
+      font-size: 23px;
+      letter-spacing: 3px;
+    }
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #b10808,
+        0 0 20px #ac0909, 0 0 25px #dd0808;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #dd0808,
+        0 0 40px #dd0808, 0 0 50px #dd0808;
     }
   }
 `;
