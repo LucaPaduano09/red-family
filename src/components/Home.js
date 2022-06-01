@@ -15,46 +15,55 @@ function Home() {
   };
 
   useEffect(() => {
-    const getProduct = async () =>{
-      const response  = await fetch("https://red-family-shop.herokuapp.com/prodotti", {
-        method: "GET",
-        mode : "cors",
-        cache: 'no-cache',
-        credentials: 'same-origin',
-        headers: {
-        'Content-Type': 'application/json'
-        },
-      })
-      if(!response.ok){
-        window.alert("query non andata a buon fine")
+    const getProduct = async () => {
+      const response = await fetch(
+        "https://red-family-shop.herokuapp.com/prodotti",
+        {
+          method: "GET",
+          mode: "cors",
+          cache: "no-cache",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (!response.ok) {
+        window.alert("query non andata a buon fine");
       }
       const result = await response.json();
       setProdotti(result);
-    }
-    getProduct()
-  },[prodotti])
+    };
+    getProduct();
+  }, [prodotti]);
 
   return (
     <ContainerContainers>
       <Container>
         <MainVideoContainer>
-        <TitleWrapper>
-          <h2>Ultima Uscita</h2>
-        </TitleWrapper>
-          <GalleryWrapper>
-          <video width="100%" controls>
-            <source src="./images/puntata-7.mp4#t=0.001" preload="metadata" type="video/mp4"/>
-          </video>
+          <TitleWrapper>
+            <h2>Ultima Uscita</h2>
+          </TitleWrapper>
+         <GalleryWrapper>
+            <iframe
+              src="https://www.youtube.com/embed/t_BbtC6px3c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </GalleryWrapper>
         </MainVideoContainer>
         <ItemContainer>
-          {prodotti.map((element,index) => (
+          {prodotti.map((element, index) => (
             <SingleItem>
-            <img src={"." + element.prodotti_image[0]} />
-            <h3>{element.prodotti_name}</h3>
-            <p>{element.prodotti_price + " €"}</p>
-            <a href={"/prodotto/" + element._id}><img src="./images/preordina-button.png"/></a>
-          </SingleItem>
+              <img src={"." + element.prodotti_image[0]} />
+              <h3>{element.prodotti_name}</h3>
+              <p>{element.prodotti_price + " €"}</p>
+              <a href={"/prodotto/" + element._id}>
+                <img src="./images/preordina-button.png" />
+              </a>
+            </SingleItem>
           ))}
         </ItemContainer>
       </Container>
@@ -86,7 +95,7 @@ const Container = styled.div`
   margin-top: 155px;
   flex-direction: column;
   align-items: flex-start;
-  justify-content:flex-start;
+  justify-content: flex-start;
   @media (max-width: 1024px) {
     margin-top: 185px;
     width: 960px;
@@ -98,7 +107,7 @@ const Container = styled.div`
   @media (max-width: 428px) {
     margin-top: 80px;
     width: 100vw;
-    height: 700px;
+    height: 800px;
   }
 `;
 
@@ -109,33 +118,152 @@ const MainVideoContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-direction:column;
-  
-  @media (device-width:2560px){
-    width:100%;
-    height:90vh;
+  flex-direction: column;
+
+  @media (device-width: 2560px) {
+    width: 100%;
+    height: 90vh;
   }
   @media (max-width: 428px) {
     width: 100vw;
-    height: 100vh;
+    justify-content:center;
+    height:220vh;
   }
 `;
 const GalleryWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 500px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  video{
+  margin-top: 10px;
+  video {
+    position: relative;
+    object-fit: contain;
+    height: 400px;
+    @media (max-width: 428px) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  iframe{
     position:relative;
-    object-fit:contain;
-    height:400px;
-    @media (max-width:428px){
-      width:100%;
-      height:100%;
+    height:100%;
+    width:100%;
+  }
+`;
+const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  width: 70%;
+
+  height: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
+    justify-content: flex;
+  }
+  img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+  iframe {
+    margin-right: 10px;
+    @media (max-width: 768px) {
+      border: 2px solid white;
+      height: 300px;
+      width: 650px;
+      margin-top: 30px;
+    }
+    @media (max-width: 375px) {
+      width: 100%;
+      height: 250px;
+    }
+  }
+`;
+const DescriptionWrapper = styled.div`
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  width: 30%;
+  text-align: left;
+  color: white;
+  padding: 15px;
+  margin-top: 210px;
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 15px;
+    margin-top: 170px;
+    padding: 0px;
+    float: none;
+    text-align: left;
+  }
+  h1 {
+    // margin-bottom:30px;
+    position: relative;
+    width: 100%;
+    margin-top: -200px;
+    font-size: 25px;
+    padding: 2px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-top: -140px;
+    }
+  }
+  h3 {
+    padding: 2px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 15px;
+    @media (max-width: 768px) {
+      font-size: 15px;
+    }
+  }
+  h4 {
+    padding: 2px;
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.8;
+    @media (max-width: 768px) {
+      width: 100%;
+      font-size: 15px;
+      font-weight: normal;
+    }
+  }
+  p {
+    position: relative;
+    width: 100%;
+    white-space: pre-line;
+  }
+  a {
+    font-size: 10px;
+  }
+  h2 {
+    position: relative;
+    width: 100%;
+    font-size: 18px;
+    padding: 2px;
+    @media (max-width: 768px) {
+      width: 100%;
+      font-size: 18px;
+      font-weight: normal;
     }
   }
 `;
@@ -263,8 +391,8 @@ const ItemContainer = styled.div`
   justify-content: center;
   @media (max-width: 428px) {
     height: 70%;
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -286,12 +414,12 @@ const SingleItem = styled.div`
     height: 250px;
     width: 250px;
     transition: all 0.3s ease-in-out;
-    &:hover{
-      transform: scale(1.1)
+    &:hover {
+      transform: scale(1.1);
     }
-    @media screen and (min-width: 2000){
-      height:350px;
-      width:350px;
+    @media screen and (min-width: 2000) {
+      height: 350px;
+      width: 350px;
     }
     @media (max-width: 428px) {
       height: 100px;
@@ -301,23 +429,23 @@ const SingleItem = styled.div`
   h3 {
     color: white;
     font-size: 1vw;
-    text-transform:uppercase;
+    text-transform: uppercase;
     @media (max-width: 428px) {
       font-size: 3vw;
     }
   }
   a {
-    background-color:transparent;
-    border:none;
+    background-color: transparent;
+    border: none;
     color: white;
-    margin-top:-40px;
-    cursor:pointer;
-    &:hover{
-      opacity:60%;
+    margin-top: -40px;
+    cursor: pointer;
+    &:hover {
+      opacity: 60%;
     }
-    img{
-      height:120px;
-      width:120px;
+    img {
+      height: 120px;
+      width: 120px;
     }
   }
   @keyframes glow {

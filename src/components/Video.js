@@ -31,7 +31,7 @@ function Video() {
               <iframe
                 width="80%"
                 height="400px"
-                src="//www.youtube.com/embed/2q6PsjEPYic"
+                src="https://www.youtube.com/embed/t_BbtC6px3c"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
@@ -41,8 +41,8 @@ function Video() {
           </ImageWrapper>
           <DescriptionWrapper>
             <h1>Red Family</h1>
-            <h2>Titolo Brano: In Form</h2>
-            <h3>Data di pubblicazione: 01/01/2022</h3>
+            <h2>Titolo Brano: Pippat</h2>
+            <h3>Data di pubblicazione: 31/05/2022</h3>
             <MenuSocial>
               <p>condividi:</p>
               <a
@@ -71,11 +71,12 @@ function Video() {
               </ShareLink>
             </MenuSocial>
             <p>
-              Gianni Red & Loris Bastr presentano : " In Form "
+              Gianni Red & Loris Bastr presentano : " Pippat"
             </p>
               <p>Suoni : Red Family</p>
               <p>Regia : Red Family</p>
-              <p>Produzione Video: 56K productions</p>
+              <p>D.o.p. & camera : Marco Bruno</p>
+              <p>Produzione video Red Family</p>
           </DescriptionWrapper>
         </MainVideoWrapper>
 
@@ -84,6 +85,15 @@ function Video() {
         </TitleWrapper2>
         <MoreVideoWrapper>
           <Zoom>
+          <iframe
+              width="100%"
+              height="300"
+              src="https://www.youtube.com/embed/2q6PsjEPYic"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen="allowFullScreen"
+            ></iframe>
             <iframe
               width="100%"
               height="300"
@@ -194,7 +204,7 @@ const Container = styled.div`
   }
   @media (max-width: 768px){
     margin-top:100px;
-    height: 3300px;
+    height: 3500px;
   }
   @media (max-width:376px){
     height:3500px;
@@ -503,6 +513,7 @@ const MoreVideoWrapper = styled.div`
     font-size: 30px;
     @media (max-width: 768px) {
       width: 100vw;
+      margin-bottom:5px;
     }
   }
 `;
