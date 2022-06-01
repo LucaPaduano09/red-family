@@ -4,9 +4,22 @@ import Zoom from "react-reveal";
 import Newsletter from "./Newsletter";
 import Finalfooter from "./Finalfooter";
 import { Player } from "video-react";
+import ShareLink from "react-facebook-share-link";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 function Home() {
+  const [copied, setCopied] = useState(false);
+
+  function copy() {
+    const el = document.createElement("input");
+    el.value = window.location.href;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+    setCopied(true);
+    alert("URL Copied.");
+  }
   const [show, setShow] = useState(false);
   const [prodotti, setProdotti] = useState([]);
   const handleClick = () => {
@@ -40,19 +53,62 @@ function Home() {
   return (
     <ContainerContainers>
       <Container>
-        <MainVideoContainer>
           <TitleWrapper>
             <h2>Ultima Uscita</h2>
           </TitleWrapper>
-         <GalleryWrapper>
-            <iframe
-              src="https://www.youtube.com/embed/t_BbtC6px3c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </GalleryWrapper>
+        <MainVideoContainer>
+          <ImageWrapper>
+            <Zoom>
+              <iframe
+                width="80%"
+                height="400px"
+                src="https://www.youtube.com/embed/t_BbtC6px3c"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                allowfullscreen="allowFullScreen"
+              ></iframe>
+            </Zoom>
+          </ImageWrapper>
+          <DescriptionWrapper>
+            <h1>Red Family</h1>
+            <h2>Titolo Brano: Pippat</h2>
+            <h3>Data di pubblicazione: 31/05/2022</h3>
+            <MenuSocial>
+              <p>condividi:</p>
+              <a
+                href="whatsapp://send?text=Ciao Ascolta l'ultimo singolo della red http://red-family.netlify.app/video"
+                data-action="share/whatsapp/share"
+                target="_blank"
+              >
+                <img src="./images/Share-whatsapp.png" alt="instagram-logo" />
+              </a>
+              <a
+                href="https://t.me/share/url?url= http://red-family.netlify.app/video &text=Ciao Ascolta l'ultimo singolo della red"
+                target="_blank"
+              >
+                <img src="./images/Share-Telegram.png" alt="facebook" />
+              </a>
+              <button onClick={copy} href="">
+                <img src="./images/Share-copy-link.png" alt="copy" />
+              </button>
+
+              <ShareLink link="http://red-family.netlify.app/video">
+                {(link) => (
+                  <a href={link} target="_blank">
+                    <img src="./images/share-facebook.png"/>
+                  </a>
+                )}
+              </ShareLink>
+            </MenuSocial>
+            <p>
+              Gianni Red & Loris Bastr presentano : " Pippat"
+            </p>
+              <p>Suoni : Red Family</p>
+              <p>Regia : Red Family</p>
+              <p>D.o.p. & camera : Marco Bruno</p>
+              <p>Produzione video Red Family</p>
+          </DescriptionWrapper>
         </MainVideoContainer>
         <ItemContainer>
           {prodotti.map((element, index) => (
@@ -107,7 +163,7 @@ const Container = styled.div`
   @media (max-width: 428px) {
     margin-top: 80px;
     width: 100vw;
-    height: 800px;
+    height: 1200px;
   }
 `;
 
@@ -118,7 +174,7 @@ const MainVideoContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-direction: column;
+
 
   @media (device-width: 2560px) {
     width: 100%;
@@ -128,6 +184,7 @@ const MainVideoContainer = styled.div`
     width: 100vw;
     justify-content:center;
     height:220vh;
+    flex-direction:column;
   }
 `;
 const GalleryWrapper = styled.div`
@@ -136,8 +193,8 @@ const GalleryWrapper = styled.div`
   height: 500px;
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flext-start;
+  justify-content: flex-start;
   margin-top: 10px;
   video {
     position: relative;
@@ -150,8 +207,8 @@ const GalleryWrapper = styled.div`
   }
   iframe{
     position:relative;
-    height:100%;
-    width:100%;
+    height:50%;
+    width:50%;
   }
 `;
 const ImageWrapper = styled.div`
@@ -167,7 +224,7 @@ const ImageWrapper = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     height: 500px;
-    margin-top: 30px;
+    margin-top: 10px;
     justify-content: flex;
   }
   img {
@@ -185,6 +242,7 @@ const ImageWrapper = styled.div`
       height: 300px;
       width: 650px;
       margin-top: 30px;
+      margin-left:10px;
     }
     @media (max-width: 375px) {
       width: 100%;
@@ -209,7 +267,7 @@ const DescriptionWrapper = styled.div`
     width: 100%;
     font-size: 15px;
     margin-top: 170px;
-    padding: 0px;
+    padding: 10px;
     float: none;
     text-align: left;
   }
@@ -265,6 +323,49 @@ const DescriptionWrapper = styled.div`
       font-size: 18px;
       font-weight: normal;
     }
+  }
+`;
+const MenuSocial = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  width:100%;
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+  img {
+    height: 35px;
+    width: 35px;
+    padding: 5px;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+    :hover{
+      transform: scale(1.2);
+    }
+    @media (max-width: 428px) {
+      height: 35px;
+      width: 35px;
+      margin-right: 5px;
+    }
+  }
+  p {
+    position: relative;
+    font-size: 20px;
+    margin-right: 40px;
+    width:20%;
+    @media (max-width: 768px) {
+      width: 20%;
+    }
+    @media (max-width: 428px) {
+      margin-right: 50px;
+    }
+  }
+  button {
+    background: none;
+    border: none;
   }
 `;
 const TitleWrapper = styled.div`
@@ -390,7 +491,7 @@ const ItemContainer = styled.div`
   align-items: center;
   justify-content: center;
   @media (max-width: 428px) {
-    height: 70%;
+    height: 50%;
     margin-top: 20px;
     margin-bottom: 20px;
   }
