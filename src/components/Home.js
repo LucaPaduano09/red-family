@@ -217,7 +217,7 @@ const ImageWrapper = styled.div`
   align-content: center;
   justify-content: center;
   position: relative;
-  width: 70%;
+  width: 60%;
 
   height: 50%;
 
@@ -258,7 +258,7 @@ const DescriptionWrapper = styled.div`
   align-items: center;
   align-content: center;
   flex-direction: column;
-  width: 30%;
+  width: 40%;
   text-align: left;
   color: white;
   padding: 15px;
