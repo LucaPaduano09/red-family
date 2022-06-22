@@ -511,6 +511,7 @@ const MoreVideoWrapper = styled.div`
   iframe {
     text-align: center;
     font-size: 30px;
+    
     @media (max-width: 768px) {
       width: 100vw;
       margin-bottom:5px;

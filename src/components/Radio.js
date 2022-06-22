@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import styled from "styled-components";
 import { Zoom } from "react-reveal";
+import Finalfooter from "./Finalfooter";
 
 const Radio = () => {
   return (
@@ -15,7 +16,7 @@ const Radio = () => {
             <Zoom>
               <video width="80%" controls>
                 <source
-                  src="./images/puntata-7.mp4#t=0.001"
+                  src="./images/puntata-8.mp4#t=0.001"
                   preload="metadata"
                   type="video/mp4"
                 />
@@ -30,6 +31,7 @@ const Radio = () => {
 
         <MoreVideoWrapper>
           <ImageWrapper2>
+            <h1>Puntata 1</h1>
             <Zoom>
               <video width="80%" controls>
                 <source
@@ -41,6 +43,7 @@ const Radio = () => {
             </Zoom>
           </ImageWrapper2>
           <ImageWrapper2>
+            <h1>Puntata 2</h1>
             <Zoom>
               <video width="80%" controls>
                 <source
@@ -52,6 +55,7 @@ const Radio = () => {
             </Zoom>
           </ImageWrapper2>
           <ImageWrapper2>
+            <h1>Puntata 3</h1>
             <Zoom>
               <video width="80%" controls>
                 <source
@@ -63,6 +67,7 @@ const Radio = () => {
             </Zoom>
           </ImageWrapper2>
           <ImageWrapper2>
+            <h1>Puntata 4</h1>
             <Zoom>
               <video width="80%" controls>
                 <source
@@ -74,6 +79,7 @@ const Radio = () => {
             </Zoom>
           </ImageWrapper2>
           <ImageWrapper2>
+            <h1>Puntata 5</h1>
             <Zoom>
               <video width="80%" controls>
                 <source
@@ -85,6 +91,7 @@ const Radio = () => {
             </Zoom>
           </ImageWrapper2>
           <ImageWrapper2>
+            <h1>Puntata 6</h1>
             <Zoom>
               <video width="80%" controls>
                 <source
@@ -95,8 +102,21 @@ const Radio = () => {
               </video>
             </Zoom>
           </ImageWrapper2>
+          <ImageWrapper2>
+            <h1>Puntata 7</h1>
+            <Zoom>
+              <video width="80%" controls>
+                <source
+                  src="./images/puntata-7.mp4#t=0.001"
+                  preload="metadata"
+                  type="video/mp4"
+                />
+              </video>
+            </Zoom>
+          </ImageWrapper2>
         </MoreVideoWrapper>
       </Container>
+      <Finalfooter />
     </ContainerContainers>
   );
 };
@@ -118,7 +138,7 @@ const Container = styled.div`
   position: relative;
   width: 1180px;
   // min-height:1200px;
-   height:100%;
+  height: 100%;
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   display: flex;
   margin: 0 auto;
@@ -319,6 +339,7 @@ const ImageWrapper2 = styled.div`
   align-items: center;
   align-content: center;
   justify-content: center;
+  flex-direction: column;
   position: relative;
   margin-top: 30px;
   width: 100%;
@@ -334,6 +355,11 @@ const ImageWrapper2 = styled.div`
     height: 100%;
     width: 75%;
     object-fit: cover;
+  }
+  h1 {
+    text-transform: uppercase;
+    margin-bottom: -20px;
+    color: #fff;
   }
   @media (max-width: 768px) {
     width: 100%;
