@@ -165,7 +165,7 @@ const Container = styled.div`
 const MainVideoContainer = styled.div`
   position: relative;
   overflow: hidden;
-  width: 960px;
+  width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
