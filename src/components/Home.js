@@ -59,18 +59,16 @@ function Home() {
         <MainVideoContainer>
           <ImageWrapper>
             <Zoom>
-              <iframe
-                width="80%"
-                height="400px"
-                src="https://www.youtube.com/embed/t_BbtC6px3c"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-                allowfullscreen="allowFullScreen"
-              ></iframe>
+            <video width="80%" controls>
+                <source
+                  src="./images/puntata-9.mp4#t=0.001"
+                  preload="metadata"
+                  type="video/mp4"
+                />
+              </video>
             </Zoom>
           </ImageWrapper>
-          <DescriptionWrapper>
+          {/* <DescriptionWrapper>
             <h1>Red Family</h1>
             <h2>Titolo Brano: Pippat</h2>
             <h3>Data di pubblicazione: 31/05/2022</h3>
@@ -108,7 +106,7 @@ function Home() {
               <p>Regia : Red Family</p>
               <p>D.o.p. & camera : Marco Bruno</p>
               <p>Produzione video Red Family</p>
-          </DescriptionWrapper>
+          </DescriptionWrapper> */}
         </MainVideoContainer>
         <ItemContainer>
           {prodotti.map((element, index) => (
@@ -143,7 +141,6 @@ const ContainerContainers = styled.div`
 const Container = styled.div`
   position: relative;
   // width: 1280px;
-  // height: 1200px;
   width: 66.6%;
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   display: flex;
@@ -155,7 +152,6 @@ const Container = styled.div`
   @media (max-width: 1024px) {
     margin-top: 185px;
     width: 960px;
-    height: 1200px;
   }
   @media (max-width: 768px) {
     margin-top: 80px;
@@ -163,7 +159,6 @@ const Container = styled.div`
   @media (max-width: 428px) {
     margin-top: 80px;
     width: 100vw;
-    height: 1200px;
   }
 `;
 
@@ -183,7 +178,6 @@ const MainVideoContainer = styled.div`
   @media (max-width: 428px) {
     width: 100vw;
     justify-content:center;
-    height:220vh;
     flex-direction:column;
   }
 `;
@@ -217,15 +211,24 @@ const ImageWrapper = styled.div`
   align-content: center;
   justify-content: center;
   position: relative;
-  width: 60%;
-
-  height: 50%;
-
+  margin-top: 10px;
+  width: 100%;
+  // height:400px;
+  video {
+    position: relative;
+    height: 100%;
+    width: 75%;
+    object-fit: cover;
+  }
   @media (max-width: 768px) {
     width: 100%;
     height: 500px;
-    margin-top: 10px;
+    margin-top: 30px;
     justify-content: flex;
+
+    video {
+      width: 100%;
+    }
   }
   img {
     position: relative;
@@ -242,7 +245,6 @@ const ImageWrapper = styled.div`
       height: 300px;
       width: 650px;
       margin-top: 30px;
-      margin-left:10px;
     }
     @media (max-width: 375px) {
       width: 100%;
@@ -492,8 +494,8 @@ const ItemContainer = styled.div`
   justify-content: center;
   @media (max-width: 428px) {
     height: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
   }
 `;
 
