@@ -4,6 +4,52 @@ import { Zoom } from "react-reveal";
 import Finalfooter from "./Finalfooter";
 
 const Radio = () => {
+  const puntate = [
+    {
+      titolo: "puntata 1",
+      src: "./images/pt-completa.mp4#t=0.001",
+    },
+    {
+      titolo: "puntata 2",
+      src: "./images/puntata-2.mp4#t=0.001",
+    },
+    {
+      titolo: "puntata 3",
+      src: "./images/puntata-3.mp4#t=0.001",
+    },
+    {
+      titolo: "puntata 4",
+      src: "./images/puntata-4.mp4#t=0.001",
+    },
+    {
+      titolo: "puntata 5",
+      src: "./images/puntata-5.mp4#t=0.001",
+    },
+    {
+      titolo: "puntata 6",
+      src: "./images/puntata-6.mp4#t=0.001",
+    },
+    {
+      titolo: "puntata 7",
+      src: "./images/puntata-7.mp4#t=0.001",
+    },
+    {
+      titolo: "puntata 8",
+      src: "./images/puntata-8.mp4#t=0.001",
+    },
+    {
+      titolo: "puntata 9",
+      src: "./images/puntata-9.mp4#t=0.001",
+    },
+    {
+      titolo: "puntata 10",
+      src: "./images/puntata-10.mp4#t=0.001",
+    },
+  ];
+  const [max, setMax] = useState(4);
+  const handleLoadMore = () => {
+    setMax(puntate.length);
+  };
   return (
     <ContainerContainers>
       <Container>
@@ -16,7 +62,7 @@ const Radio = () => {
             <Zoom>
               <video width="80%" controls>
                 <source
-                  src="./images/puntata-10.mp4#t=0.001"
+                  src={puntate[puntate.length - 1].src}
                   preload="metadata"
                   type="video/mp4"
                 />
@@ -30,115 +76,26 @@ const Radio = () => {
         </TitleWrapper>
 
         <MoreVideoWrapper>
-          <ImageWrapper2>
-            <h1>Puntata 1</h1>
-            <Zoom>
-              <video width="80%" controls>
-                <source
-                  src="./images/pt-completa.mp4#t=0.001"
-                  preload="metadata"
-                  type="video/mp4"
-                />
-              </video>
-            </Zoom>
-          </ImageWrapper2>
-          <ImageWrapper2>
-            <h1>Puntata 2</h1>
-            <Zoom>
-              <video width="80%" controls>
-                <source
-                  src="./images/puntata-2.mp4#t=0.001"
-                  preload="metadata"
-                  type="video/mp4"
-                />
-              </video>
-            </Zoom>
-          </ImageWrapper2>
-          <ImageWrapper2>
-            <h1>Puntata 3</h1>
-            <Zoom>
-              <video width="80%" controls>
-                <source
-                  src="./images/puntata-3.mp4#t=0.001"
-                  preload="metadata"
-                  type="video/mp4"
-                />
-              </video>
-            </Zoom>
-          </ImageWrapper2>
-          <ImageWrapper2>
-            <h1>Puntata 4</h1>
-            <Zoom>
-              <video width="80%" controls>
-                <source
-                  src="./images/puntata-4.mp4#t=0.001"
-                  preload="metadata"
-                  type="video/mp4"
-                />
-              </video>
-            </Zoom>
-          </ImageWrapper2>
-          <ImageWrapper2>
-            <h1>Puntata 5</h1>
-            <Zoom>
-              <video width="80%" controls>
-                <source
-                  src="./images/puntata-5.mp4#t=0.001"
-                  preload="metadata"
-                  type="video/mp4"
-                />
-              </video>
-            </Zoom>
-          </ImageWrapper2>
-          <ImageWrapper2>
-            <h1>Puntata 6</h1>
-            <Zoom>
-              <video width="80%" controls>
-                <source
-                  src="./images/puntata-6.mp4#t=0.001"
-                  preload="metadata"
-                  type="video/mp4"
-                />
-              </video>
-            </Zoom>
-          </ImageWrapper2>
-          <ImageWrapper2>
-            <h1>Puntata 7</h1>
-            <Zoom>
-              <video width="80%" controls>
-                <source
-                  src="./images/puntata-7.mp4#t=0.001"
-                  preload="metadata"
-                  type="video/mp4"
-                />
-              </video>
-            </Zoom>
-          </ImageWrapper2>
-          <ImageWrapper2>
-            <h1>Puntata 8</h1>
-            <Zoom>
-              <video width="80%" controls>
-                <source
-                  src="./images/puntata-8.mp4#t=0.001"
-                  preload="metadata"
-                  type="video/mp4"
-                />
-              </video>
-            </Zoom>
-          </ImageWrapper2>
-          <ImageWrapper2>
-            <h1>Puntata 9</h1>
-            <Zoom>
-              <video width="80%" controls>
-                <source
-                  src="./images/puntata-9.mp4#t=0.001"
-                  preload="metadata"
-                  type="video/mp4"
-                />
-              </video>
-            </Zoom>
-          </ImageWrapper2>
+          {puntate.map(
+            (p, index) =>
+              index <= max && (
+                <ImageWrapper2>
+                  <h1>{p.titolo}</h1>
+                  <Zoom>
+                    <video width="80%" controls>
+                      <source src={p.src} preload="metadata" type="video/mp4" />
+                    </video>
+                  </Zoom>
+                </ImageWrapper2>
+              )
+          )}
         </MoreVideoWrapper>
+        {max !== puntate.length && (
+          <button onClick={() => handleLoadMore()}>Carica altre</button>
+        )}
+        {max === puntate.length && (
+          <button onClick={() => setMax(4)}>Carica meno</button>
+        )}
       </Container>
       <Finalfooter />
     </ContainerContainers>
@@ -181,6 +138,17 @@ const Container = styled.div`
   }
   @media (max-width: 376px) {
     // height: 3500px;
+  }
+  button {
+    background: url("./images/sfondo-sito1.png");
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    color: white;
+    width:120px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
   }
 `;
 
