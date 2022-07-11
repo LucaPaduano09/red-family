@@ -11,6 +11,7 @@ const HomeFinal = () => {
   ];
   const [indexVideo, setIndexVideo] = useState(0);
   const [playing, setPlaying] = useState(false);
+  const [loader, setLoader] = useState(true);
   const handleArrowClick = (direction) => {
     if (direction === "right") {
       switch (indexVideo) {
@@ -89,11 +90,20 @@ const HomeFinal = () => {
       const result = await response.json();
       setProdotti(result);
     };
+    setTimeout(()=>{
+      setLoader(false)
+    },1500)
     getProduct();
   }, [prodotti]);
 
   return (
     <div className="Home__container">
+      
+      <div className={"Home__container__loader"} style={loader ? {width:"100%"} : {width:0}}>
+        <Fade>
+        <img src="/images/web-rti.jpg" alt="Logo" style={loader ===false && {display:"none"}}/>
+        </Fade>
+      </div>
       <div className="Home__container__gallery">
         <div
           className="Home__container__gallery__leftArrow"
