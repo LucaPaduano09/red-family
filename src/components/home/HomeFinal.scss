@@ -1,0 +1,190 @@
+.Home {
+  *::-webkit-media-controls-start-playback-button {
+
+    display: none!important;
+  
+    -webkit-appearance: none;
+  
+  }
+  video::-webkit-media-controls-enclosure {
+    display:none !important;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("sfondo-sito1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__gallery {
+      height: 88vh;
+      width: 100vw;
+      margin-top: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      // transform: translateX(-100vw);
+      &__leftArrow {
+        position: absolute;
+        top: 45%;
+        left: 50px;
+        z-index: 100;
+        font-size: 50px;
+        color: white;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          text-decoration: none;
+          cursor: pointer;
+          opacity: 80%;
+          transform: scale(1.1);
+        }
+        @media screen and (max-width:1000px) {
+          left: 15px;
+          display: none;
+        }
+      }
+      &__rightArrow {
+        position: absolute;
+        top: 45%;
+        right: 50px;
+        z-index: 100;
+        font-size: 50px;
+        color: white;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          text-decoration: none;
+          cursor: pointer;
+          opacity: 80%;
+          transform: scale(1.1);
+        }
+        @media screen and (max-width:1000px) {
+          right: 15px;
+          display: none;
+        }
+      }
+      &__slide {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100vw;
+        & #desktopVideo {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          // transition: all 0.5s ease-in-out;
+          object-fit: cover;
+          @media screen and (max-width:1000px) {
+            // display: none;
+          }
+        }
+        &__title {
+          position: absolute;
+          bottom: 160px;
+          left: 50px;
+          z-index: 10;
+          font-size: 50px;
+          color: #ee1c25;
+          font-weight: 900;
+          text-transform: uppercase;
+          @media screen and (max-width:1000px) {
+            font-size: 15px;
+            top: 10px;
+            left: 25%;
+            height: 50px;
+          }
+        }
+      }
+      @media screen and (max-width:1000px) {
+        height: 60vh;
+      }
+    }
+
+    &__dots {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 7%;
+      margin-top: 20px;
+      &__dot {
+        min-height: 10px;
+        min-width: 10px;
+        list-style: none;
+        display: block;
+        background-color: gray;
+        border-radius: 50%;
+        transition: all 0.2s ease-in-out;
+        &__active {
+          min-height: 13px;
+          min-width: 13px;
+          background-color: white !important;
+          border-radius: 50%;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+      @media screen and (max-width:1000px){
+        width: 60vw;
+      }
+    }
+
+    &__products {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      margin-top: 100px;
+      &__product {
+        position: relative;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &__productImage {
+          height: 500px;
+          @media screen and (max-width:1000px) {
+            height: 120px;
+          }
+        }
+        &__buttonImage {
+          height: 200px;
+          margin-top: -50px;
+          @media screen and (max-width:1000px) {
+            height: 100px;
+          }
+        }
+        &__title {
+          color: white;
+          font-size: 25px;
+          font-weight: 700;
+          text-transform: uppercase;
+          @media screen and (max-width:1000px) {
+            font-size: 10px;
+          }
+        }
+        &__price {
+          color: white;
+          font-size: 25px;
+          font-weight: 700;
+          text-transform: uppercase;
+          @media screen and (max-width:1000px) {
+            font-size: 15px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+.Active {
+  opacity: 100%;
+}
+.Disabled {
+  opacity: 70%;
+}

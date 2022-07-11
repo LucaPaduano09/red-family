@@ -7,7 +7,7 @@ import Fotografie from "./components/Fotografie";
 import Testi from "./components/Testi";
 import TestiDetails from "./components/TestiDetails";
 import Finalfooter from "./components/Finalfooter";
-
+import NewHeader from "./components/headers/NewHeader";
 import Video from "./components/Video";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Newsletter from "./components/Newsletter";
@@ -17,13 +17,14 @@ import Radio from "./components/Radio";
 import Login from "./components/admin/Login";
 import AdminHome from "./components/admin/AdminHome";
 import AdminSottoscrizioni from "./components/admin/AdminSottoscrizioni";
+import HomeFinal from "./components/home/HomeFinal";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <ScrollToTop />
-        <Header />
+        <NewHeader />
         <Switch>
           <Route path="/admin/login">
             <Login />
@@ -1872,9 +1873,8 @@ Prendi una camomilla , non fare il guappo!
           </Route>
 
           <Route path="/">
-            <Home />
-            {/* <Newsletter /> */}
-            {/* <Finalfooter /> */}
+            <HomeFinal />
+            <Finalfooter /> 
           </Route>
         </Switch>
       </div>

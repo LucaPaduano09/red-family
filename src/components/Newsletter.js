@@ -86,6 +86,7 @@ const TitleText = styled.h1`
   @media (max-width: 428px) {
     font-size: 10vw;
     margin-left: 0px;
+    margin-top:60px;
   }
 `;
 const FormGroup = styled.div`
@@ -110,7 +111,6 @@ const FormGroup = styled.div`
       border-radius: 20px;
       border:none;
       @media (max-width: 428px){
-          left: 2.5px;
       }
     }
     button {

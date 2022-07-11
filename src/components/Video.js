@@ -189,7 +189,7 @@ const ContainerContainers = styled.div`
 const Container = styled.div`
   position: relative;
   width: 1280px;
-  height: 2200px;
+  // height: 2200px;
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   display: flex;
   margin: 0 auto;
@@ -200,14 +200,14 @@ const Container = styled.div`
   @media (max-width: 1024px) {
     margin-top: 185px;
     width: 100vw;
-    height: 1900px;
+    // height: 1900px;
   }
   @media (max-width: 768px){
     margin-top:100px;
-    height: 3600px;
+    // height: 3600px;
   }
   @media (max-width:376px){
-    height:3500px;
+    // height:3500px;
   }
   `;
 
@@ -323,7 +323,7 @@ const MainVideoWrapper = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     width: 90%;
-    height: 700px;
+    // height: 700px;
     position: relative;
     margin-top: 0px;
   }

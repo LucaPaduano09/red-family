@@ -192,8 +192,8 @@ export default Prodotto;
 
 const Container = styled.div`
   position: relative;
-  height: calc(100vh - 100px);
-  margin-top: 100px;
+  height: 100vh;
+  // margin-top: 100px;
   width: 100vw;
   background-image: url("../images/sfondo-sito1.png");
   display: flex;
@@ -201,12 +201,12 @@ const Container = styled.div`
   justify-content: space-evenly;
   overflow: hidden;
   @media (max-width: 768px) {
-    margin-top: 80px;
+    // margin-top: 80px;
     height: 100vh;
   }
 
   @media (max-width: 428px) {
-    margin-top: 80px;
+    // margin-top: 80px;
     flex-direction: column;
     overflow: visible;
     height: 1400px;

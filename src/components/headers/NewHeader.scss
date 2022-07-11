@@ -1,0 +1,152 @@
+.NewHeader{
+    &__container{
+        position: fixed;
+        width: 100vw;
+        height: 70px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-decoration: none !important;
+        z-index: 1000;
+        &__logo{
+            position: absolute;
+            right: 45%;
+            top: 0px;
+
+            & img{
+                height: 70px;
+            }
+            @media screen and (max-width:768px) {
+                left: 30%;
+            }
+        }
+
+        &__menu{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: row;
+            width: 20%;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-left: 50px;
+            &__option{
+                background-color: #ee1c25;
+                width: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                transition: all 0.3s ease-in-out;
+                text-decoration: none;
+                font-size: 15px;
+                letter-spacing: 0.7px;
+                &:hover{
+                    background-color: white;
+                    color: #ee1c25;
+                    text-decoration: none;
+                }
+            }
+            @media screen and (max-width:768px) {
+                display: none;
+            }
+        }
+
+        &__social{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 15%;
+            position: absolute;
+            right: 1px;
+            margin-right: 50px;
+            &__option{
+                & img{
+                    height: 25px;
+                    transition: all 0.2s ease-in-out;
+                    &:hover{
+                        opacity: 60%;
+                    }
+                }
+            }
+            @media screen and (max-width:768px) {
+                display: none;
+            }
+        }
+
+        &__hamburgerMenu{
+            margin-left: 10px;
+            &__container{
+                position: absolute !important;
+                top: 0 ;
+                left: 0 ;
+                width: 100vw;
+                height: 100vh;
+                z-index: 100000;
+                background-color: black;
+                transition: all 0.5s ease-in-out;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                &__menu{
+                    position: relative;
+                    height: 50%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    flex-direction: column;
+                    padding-right: 20px;
+                    margin-top: 20px;
+                    &__option{
+                        position: relative;
+                        width: 100%;
+                        text-align: right;
+                        list-style: none;
+                        color: white;
+                        font-size: 25px;
+                        text-transform: uppercase;
+                        margin-bottom: 20px;
+                        font-weight: 700;
+                    }
+                }
+                &__close{
+                    position: absolute;
+                    top: 8px;
+                    left: 8px;
+                    & img{
+                        height: 25px;
+                        width: 25px;
+                    }
+                }
+                &__social{
+                    position: absolute;
+                    bottom: 20px;
+                    left: 25%;
+                    height: 100px;
+                    width: 50vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    &__link{
+                        text-decoration: none;
+                        color: white;
+                        &__image{
+                            height: 25px;
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+            & img{
+                height: 25px;
+                width: 25px;
+            }
+            @media screen and (min-width:1000px) {
+                display: none;
+            }
+        }
+    }
+    
+}

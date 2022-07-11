@@ -59,7 +59,7 @@ const ContainerContainers = styled.div`
   position: absolute;
   width: 100vw;
   @media (max-width: 4000px) {
-    margin-top:150px;
+    margin-top:68px;
   }
   @media (max-width: 1540px){
     margin-top:100px;
