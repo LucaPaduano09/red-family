@@ -45,6 +45,7 @@ const HomeFinal = () => {
     }
   };
   const handleDotClick = (index) => {
+    setPlaying(false);
     setIndexVideo(index);
   };
   const togglePlaying = (e) => {
