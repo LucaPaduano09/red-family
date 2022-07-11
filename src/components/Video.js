@@ -232,7 +232,8 @@ const TitleWrapper = styled.div`
     font-weight: bold;
     height: 100%;
     width: 100%;
-    font-size: 23px;
+    font-size: 30px;
+    text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -283,7 +284,8 @@ const TitleWrapper2 = styled.div`
     font-weight: bold;
     height: 100%;
     width: 100%;
-    font-size: 23px;
+    font-size: 30px;
+    text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;

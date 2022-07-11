@@ -2,6 +2,10 @@ import { useState, React, useEffect } from "react";
 import "./HomeFinal.scss";
 import { Fade } from "react-reveal";
 import Newsletter from "../Newsletter";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { update } from "../../redux/loaderSlice";
+
 const HomeFinal = () => {
   const videos = [
     { src: "/images/puntata-10.mp4", title: "red radio puntata 10" },
@@ -11,7 +15,9 @@ const HomeFinal = () => {
   ];
   const [indexVideo, setIndexVideo] = useState(0);
   const [playing, setPlaying] = useState(false);
-  const [loader, setLoader] = useState(true);
+  const [tempLoader, setTempLoader] = useState(true);
+  const loader = useSelector(state=>state.loader.loading);
+  const dispatch = useDispatch();
   const handleArrowClick = (direction) => {
     if (direction === "right") {
       switch (indexVideo) {
@@ -91,8 +97,9 @@ const HomeFinal = () => {
       setProdotti(result);
     };
     setTimeout(()=>{
-      setLoader(false)
-    },1500)
+      setTempLoader(false);
+      dispatch(update(tempLoader))
+    },1700)
     getProduct();
   }, [prodotti]);
 
@@ -101,7 +108,7 @@ const HomeFinal = () => {
       
       <div className={"Home__container__loader"} style={loader ? {width:"100%"} : {width:0}}>
         <Fade>
-        <img src="/images/web-rti.jpg" alt="Logo" style={loader ===false && {display:"none"}}/>
+        <img src="/images/web-rti.jpg" alt="Logo" style={loader ? {width:"350px"} : {width:0}}/>
         </Fade>
       </div>
       <div className="Home__container__gallery">

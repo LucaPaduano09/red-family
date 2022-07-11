@@ -173,7 +173,8 @@ const TitleWrapper = styled.div`
     font-weight: bold;
     height: 100%;
     width: 100%;
-    font-size: 23px;
+    font-size: 30px;
+    text-transform:uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,7 +216,7 @@ const TitleWrapper2 = styled.div`
   }
   @media (max-width: 768px) {
     height: 70px;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   @media screen and (max-width: 425px) {
     margin-top: 55px;
@@ -255,12 +256,10 @@ const MainVideoWrapper = styled.div`
   width: 100%;
   //   height: 573px;
   margin: 0 auto;
-  margin-top: 20px;
   display: -moz-flex;
   display: flex;
   align-items: center;
   justify-content: center;
-  // margin-top:20px;
   margin-bottom: 20px;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -270,7 +269,7 @@ const MainVideoWrapper = styled.div`
     margin-top: 0px;
   }
   @media screen and (max-width: 425px) {
-    margin-top: 50px;
+    margin-top: 0px;
   }
   @media screen and (max-width: 376px) {
     margin-top: 0px;
@@ -285,19 +284,19 @@ const ImageWrapper = styled.div`
   align-content: center;
   justify-content: center;
   position: relative;
-  margin-top: 10px;
+  margin-top: 0px;
   width: 100%;
   // height:400px;
   video {
     position: relative;
     height: 100%;
-    width: 75%;
+    width: 100%;
     object-fit: cover;
   }
   @media (max-width: 768px) {
     width: 100%;
     height: 500px;
-    margin-top: 30px;
+    margin-top: 0px;
     justify-content: flex;
 
     video {
@@ -345,7 +344,7 @@ const ImageWrapper2 = styled.div`
   video {
     position: relative;
     height: 100%;
-    width: 75%;
+    width: 100%;
     object-fit: cover;
   }
   h1 {

@@ -76,18 +76,20 @@ const NewHeader = () => {
         )}
         {burgerStatus && (
           <div className="NewHeader__container__hamburgerMenu__container__menu">
-            <a href="/"className="NewHeader__container__hamburgerMenu__container__menu__option">
+            <Link to="/" onClick={() => setBurgerStatus(false)} className="NewHeader__container__hamburgerMenu__container__menu__option">
               Home
-            </a>
-            <a href="/video"className="NewHeader__container__hamburgerMenu__container__menu__option">
+            </Link>
+            {/* <a href="/"className="NewHeader__container__hamburgerMenu__container__menu__option">
+            </a> */}
+            <Link to="/video" onClick={() => setBurgerStatus(false)} className="NewHeader__container__hamburgerMenu__container__menu__option">
               Video
-            </a>
-            <a href="/radio"className="NewHeader__container__hamburgerMenu__container__menu__option">
+            </Link>
+            <Link to="/radio" onClick={() => setBurgerStatus(false)} className="NewHeader__container__hamburgerMenu__container__menu__option">
               Radio
-            </a>
-            <a href="/testi"className="NewHeader__container__hamburgerMenu__container__menu__option">
+            </Link>
+            <Link to="/testi" onClick={() => setBurgerStatus(false)} className="NewHeader__container__hamburgerMenu__container__menu__option">
               Testi
-            </a>
+            </Link>
           </div>
         )}
         {burgerStatus && (
