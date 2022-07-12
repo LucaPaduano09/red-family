@@ -64,16 +64,7 @@ const HomeFinal = () => {
       setPlaying(false);
     }
   };
-  // useEffect(() => {
-  //   const playGallery = () => {
-  //     console.log(playing);
-  //     let timeout = setTimeout(() => handleArrowClick("right"), 9500);
-  //     if (playing) {
-  //       clearTimeout(timeout);
-  //     }
-  //   };
-  //   playGallery();
-  // }, []);
+ 
 
   const [prodotti, setProdotti] = useState([]);
   useEffect(() => {
@@ -108,7 +99,7 @@ const HomeFinal = () => {
       
       <div className={"Home__container__loader"} style={loader ? {width:"100%"} : {width:0}}>
         <Fade>
-        <img src="/images/web-rti.jpg" alt="Logo" style={loader ? {width:"350px"} : {width:0}}/>
+        <img id="desktop-loader"src="/images/web-rti.jpg" alt="Logo" style={loader ? {width:"350px"} : {width:0}}/>
         </Fade>
       </div>
       <div className="Home__container__gallery">

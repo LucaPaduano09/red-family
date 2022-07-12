@@ -21,7 +21,7 @@ const Container = styled.div`
     position:relative;
     height:80px;
     width:100vw;
-    background-color:rgba(3, 3, 3, 0.829);
+    background-color:black;
     color:white;
     display:flex;
     justify-content:center;

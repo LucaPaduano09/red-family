@@ -79,8 +79,6 @@ const NewHeader = () => {
             <Link to="/" onClick={() => setBurgerStatus(false)} className="NewHeader__container__hamburgerMenu__container__menu__option">
               Home
             </Link>
-            {/* <a href="/"className="NewHeader__container__hamburgerMenu__container__menu__option">
-            </a> */}
             <Link to="/video" onClick={() => setBurgerStatus(false)} className="NewHeader__container__hamburgerMenu__container__menu__option">
               Video
             </Link>

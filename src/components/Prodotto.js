@@ -1,6 +1,8 @@
 import { React, useState, useEffect } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { update } from "../redux/loaderSlice";
 
 const urlQueryString = window.location.pathname;
 const id = urlQueryString.replace("/prodotto/", "");
@@ -17,7 +19,8 @@ const Prodotto = () => {
   const [black, setBlack] = useState(false);
   //variabile fronte-retro prodotto
   const [index, setIndex] = useState(0);
-
+  const loader = useSelector((state) => state.loader.loading);
+  const dispatch = useDispatch();
   //funzione che salva l'ordine nel db
   const handleClick = async (email, taglia, prodotto) => {
     let color = "";
@@ -95,6 +98,8 @@ const Prodotto = () => {
 
     getProduct();
     fillWhite();
+    console.log(loader);
+    dispatch(update(false));
   }, [prodotto.length]);
 
   const fillWhite = () => {
