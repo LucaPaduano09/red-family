@@ -6,12 +6,13 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { update } from "../../redux/loaderSlice";
 import { play, stop } from "../../redux/playerSlice";
+import HammerComponent from "react-hammerjs";
 
 const HomeFinal = () => {
   const videos = [
-    { src: "/images/puntata-10.mp4", title: "red radio puntata 10" },
-    { src: "/images/puntata-9.mp4", title: "red radio puntata 9" },
-    { src: "/images/puntata-8.mp4", title: "red radio puntata 8" },
+    { src: "/images/puntata-10.mp4", title: "red radio pt 10" },
+    { src: "/images/puntata-9.mp4", title: "red radio pt 9" },
+    { src: "/images/puntata-8.mp4", title: "red radio pt 8" },
     { src: "https://youtu.be/t_BbtC6px3c", title: "red family pippat" },
   ];
   const [indexVideo, setIndexVideo] = useState(0);
@@ -19,6 +20,7 @@ const HomeFinal = () => {
   const loader = useSelector((state) => state.loader.loading);
   const player = useSelector((state) => state.player.playing);
   const dispatch = useDispatch();
+  var hammer = new HammerComponent();
   const handleArrowClick = (direction) => {
     if (direction === "right") {
       switch (indexVideo) {
@@ -56,7 +58,10 @@ const HomeFinal = () => {
     dispatch(stop())
     setIndexVideo(index);
   };
-  
+  const handleSwipe = (e) => {
+    let pointer = e.originalEvent.changedTouches[0].clientX
+    console.log(pointer);
+  }
   const handleToggleVideo = (player) => {
     !player ? dispatch(play()) : dispatch(stop());
   };
@@ -136,17 +141,19 @@ const HomeFinal = () => {
             ></iframe>
           )}
           {indexVideo !== 3 && (
-            <video
-              id="desktopVideo"
-              controls
-              src={videos[indexVideo].src + "#t=0.001"}
-              preload="metadata"
-              type="video/mp4"
-              onPlay={() => handleToggleVideo(player) }
-              onPause={() => handleToggleVideo(player) }
-              className={player === false ? "Disabled" : "Active"}
-              onS
-            />
+            <HammerComponent>
+              <video
+                id="desktopVideo"
+                controls
+                src={videos[indexVideo].src + "#t=0.001"}
+                preload="metadata"
+                type="video/mp4"
+                onPlay={() => handleToggleVideo(player) }
+                onPause={() => handleToggleVideo(player) }
+                className={player === false ? "Disabled" : "Active"}
+              />
+            </HammerComponent>
+           
           )}
           {player === false && (
             <p className="Home__container__gallery__slide__title">

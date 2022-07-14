@@ -130,15 +130,17 @@
           bottom: 160px;
           left: 50px;
           z-index: 10;
-          font-size: 50px;
-          color: #ee1c25;
+          font-size: 120px;
           font-weight: 900;
+          color: white;
+          font-family: "Stick No Bills",sans-serif;
           text-transform: uppercase;
           @media screen and (max-width:1000px) {
-            font-size: 15px;
+            font-size: 80px;
             top: 10px;
-            left: 25%;
+            left: 5px;
             height: 50px;
+            width: 80%;
           }
         }
       }

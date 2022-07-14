@@ -17,6 +17,7 @@
     "react-alice-carousel": "^2.5.1",
     "react-dom": "^17.0.2",
     "react-facebook-share-link": "^1.0.4",
+    "react-hammerjs": "^1.0.1",
     "react-js-loader": "^0.1.0",
     "react-redux": "^7.2.8",
     "react-reveal": "^1.2.2",
