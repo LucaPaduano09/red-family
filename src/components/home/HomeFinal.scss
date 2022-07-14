@@ -60,6 +60,7 @@
         }
         @media screen and (max-width:1000px) {
           left: 15px;
+          top: 50%;
           &:hover {
             text-decoration: none;
             cursor: pointer;
@@ -92,6 +93,7 @@
         }
         @media screen and (max-width:1000px) {
           right: 15px;
+          top: 50%;
           &:hover {
             text-decoration: none;
             cursor: pointer;
@@ -136,11 +138,11 @@
           font-family: "Stick No Bills",sans-serif;
           text-transform: uppercase;
           @media screen and (max-width:1000px) {
-            font-size: 80px;
-            top: 10px;
+            font-size: 60px;
+            top: 0px;
             left: 5px;
             height: 50px;
-            width: 80%;
+            width: 90%;
           }
         }
       }
@@ -230,5 +232,5 @@
   opacity: 1;
 }
 .Disabled {
-  opacity: 0.7;
+  opacity: 0.5;
 }

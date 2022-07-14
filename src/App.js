@@ -795,6 +795,7 @@ Prendi una camomilla , non fare il guappo!
 
           <Route path="/salvini">
             <TestiDetails
+              mp3="./songs/salvini.wav"
               data="11/7/2018"
               immagine="./images/cover/salvini.png"
               titolo="Salvini"
