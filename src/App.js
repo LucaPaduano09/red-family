@@ -75,6 +75,7 @@ function App() {
           {/* ROTTE DEI TESTI */}
           <Route path="/pippat">
             <TestiDetails
+              mp3="./songs/pippat.wav"
               data="20/2/2019"
               immagine="./images/cover/pippat.png"
               titolo="Pippat"
@@ -411,6 +412,7 @@ function App() {
 
           <Route path="/in form">
             <TestiDetails
+              mp3="./songs/inform.mp3"
               data="01/01/2022"
               immagine="./images/cover/in-form.png"
               desc={`Gianni Red & Loris Bastr presentano :  In form 
@@ -583,6 +585,7 @@ function App() {
 
           <Route path="/uapp">
             <TestiDetails
+              mp3="./songs/uapp.wav"
               data="11/7/2019"
               immagine="./images/uapp.jpg"
               titolo="uapp"
@@ -966,6 +969,7 @@ Prendi una camomilla , non fare il guappo!
 
           <Route path="/guardami negli occhi">
             <TestiDetails
+              mp3="./songs/guardami-negli-occhi.mp3"
               data="11/5/2018"
               immagine="./images/cover/guardami-negli-occhi.png"
               titolo="Guardami Negli Occhi"
@@ -1259,6 +1263,7 @@ Prendi una camomilla , non fare il guappo!
 
           <Route path="/stai con me">
             <TestiDetails
+              mp3="./songs/stai-con-me.mp3"
               data="11/5/2018"
               immagine="./images/cover/stai-con-me.png"
               titolo="Stai Con Me"
@@ -1441,6 +1446,7 @@ Prendi una camomilla , non fare il guappo!
 
           <Route path="/un euro in piu'">
             <TestiDetails
+              mp3="./songs/un-euro-in-piu.mp3"
               data="11/03/2018"
               immagine="./images/cover/un-euro-in-piu.png"
               titolo="Un euro in piu'"
@@ -1642,8 +1648,281 @@ Prendi una camomilla , non fare il guappo!
             />
           </Route>
 
+          <Route path="/T' Magnat">
+            <TestiDetails
+              mp3="./songs/t-magnat.mp3"
+              data="20/02/2019"
+              immagine="./images/cover/t-magnat.png"
+              titolo="T' Magnat"
+              desc={`Gianni Red & Loris Bastr presentano : T' Magnat
+              Suoni : Neter Sound
+              Regia : Marco Bruno`}
+              spotify="https://open.spotify.com/track/57o6EZaVkzq3MiKymHNyqk?autoplay=true"
+              testo={`
+              [Ritornello: Gianni Red & Loris Bastr]
+              E pall chien, teng a uallera 'nderr
+              (Crirem, crirem)
+              Sa-sacc buon c' song e saittell 
+              (Ne, ne)
+              Sord cuntat rind a sacc e me speng
+              (Girt, girt)
+              C' ogni cristian cagg' a che fa me fraintend 
+              (Bang, bang ,bang!)
+              Arap l' uocchie log stann t' magnat
+              (Fratm, fratm)
+              Stai cu na faccia a pest rimm che passat 
+              (Uanm, uanm)
+              Arap l' uocchie log stann t' magnat 
+              (Fratm, fratm)
+              Stai cu na faccia a pest rimm che passat 
+              (Ma ch'e fatt?)
+              
+              [Strofa 1: Gianni Red]
+              Ammò teng e pall chien
+              Stat t' magnat ma n' iat fier
+              Parlavn 'e success c' m par aier
+              Mo vat arravugliat buon man e pier
+              I magg' arravugliat overament ma nun è c' mo nascong 
+              O dico apertament facc' o camerier
+              Mic comm' e' chisti muort e famm 
+              C' m parln 'e puttan e d' renar ma 'e t' chest nn' fann nient
+              O' rap mi nascev già tr' e' banc 'e scol
+              Chierl e' cumpagn mi n' sann 'e storj
+              O' teng rind o' sang, rind o' DNA
+              Comme sti puttane quann' fann e' corn
+              P' fà o' figl 'e bucchin l' issa vattr bon
+              M' piace a malavit pcchè a cap nn' m' apport
+              Cuginm m' facett vrè o' fierr
+              E ra llà ricett a chiavass na bott
+              Ma qual bott, ja fà o' brav!
+              Nun fà o' fort ch' a pò 'o pav!
+              So a' cuscienz toj: n' avvocat
+              O' sentier tuoj é calcolat
+              Megl' na magnata o' Lago Patria
+              Ca te fann' na puntat a Quarto Grado
+              Gianni, o' mal t' appasionat
+              Ma to dic nn' fà p te, è assodat!
+              P' chest c' facc rap
+              Frà nun o vir ch' facc teng
+              P' o' rap m accir so pazz , né
+              Comm nde film cu Schwarzenegger
+              E tu parlam parlam 'e quant stann magnat t' quant ggià 'o saj 
+              (ggià 'o saj , ggià 'o saj )
+              Fratm, fratm lavt a' facc ma si a tien a pest é nu guaie
+              
+              [Ritornello 2: Gianni Red & Loris Bastr]
+              E pall chien, teng a uallera 'nderr 
+              (Crirm, crirm)
+              Sa-sacc buon c' song e saittell 
+              (Ne, ne)
+              Sord cuntat rind a sacc e me speng
+              (Girt, girt)
+              C' ogni cristian cagg' a che fa me fraintend
+              (Bang, bang, bang!)
+              Arap l' uocchie log stann t' magnat 
+              (Fratm, fratm)
+              Stai cu na faccia a pest rimm che passat 
+              (Uanm, uanm)
+              Arap l' uocchie log stann t' magnat
+              (Fratm, fratm)
+              Stai cu na faccia a pest rimm che passat 
+              (O magnà)
+              
+              [Strofa 2: Loris Bastr]
+              Non ho mai leccato un culo
+              Per questo non sono ancora nessuno
+              Perché quando parlo non mi capisci
+              Mi vorrebbero ordinato coi capelli lisci
+              Ho mandato a fare in culo certi meccanismi
+              Perché se apro gli occhi vedo esibizionisti
+              Hai fatto una foto con una Ferrari, 
+              Hai preso mille like
+              Peccato che il Ferrari non ce l'hai
+              Quest'anno poi l' hai preso in culo
+              L'anno prossimo ti rifarai
+              Tesoro i tipi come te li butto nei pollai
+              Voglio fare un cacatone per voi talmente grande 
+              Giuro ve lo dedico col cuore
+              Spegnete queste belle candeline, esprimete un desiderio,
+              Fate presto prima che si sente il tanfone
+              Hai preso una macchina a leasing
+              Anelli sulle mani, iniziali incise
+              Uomini e donne, cuori felici
+              Mano nella mano ma non siamo a Parigi
+              (Ohh par o' pesc, pesc mmà)
+              Calci nelle palle tutti puniti
+              Non mi ispiro né a 2Pac né a Biggie
+              Ma al numero uno Massimo Troisi
+              Amico mio forse è meglio che sto nel deserto
+              Come un fottuto cammello
+              Ho detto a Gianni alziamo il livello
+              Flow macellaio ti apro, vitello
+              Dimmi quanto vali, quanti soldi mi regali
+              Eri li che l' aspettavi, ma solo preliminari
+              Io mai stato alla pari, alla faccia dei mangiati
+              Bevo Red Bull, mi mette le ali
+              
+              [Ritornello 3: Gianni Red & Loris Bastr]
+              E pall chien, teng a uallera 'nderr
+              (Crirm, crirm)
+              Sa-sacc buon c' song e saittell 
+              (Ne, ne)
+              Sord cuntat rind a sacc e me speng
+              (Girt, girt)
+              C' ogni cristian cagg' a che fa me fraintend 
+              (Bang, bang ,bang!)
+              Arap l' uocchie log stann t' magnat
+               (Fratm, fratm)
+              Stai cu na faccia a pest rimm che passat 
+              (Uanm, uanm)
+              Arap l' uocchie log stann t' magnat 
+              (Fratm, fratm)
+              Stai cu na faccia a pest rimm che passat 
+              
+              [Outro: Gianni Red]
+              Rir , rir , rir ogni tant
+              Putiss rirer ogni tant
+              Rir , rir , rir ogni tant
+              Putiss rirer ogni tant
+              E rir , nun fà o' magnat , ammò
+              
+              `}
+              traduzione={`
+              [Ritornello: Gianni Red & Loris Bastr]
+              Le palle piene, ho i coglioni per terra
+              (Credimi, Credimi)
+              So-so bene cosa sono le fogne
+              (ok, ok)
+              Soldi contati in tasca e li spendo
+               (Girati, Girati)
+              Con ogni cristiano con cui ho a che fare mi fraintendo
+              (Bang, bang ,bang!)
+              Apri gli occhi , qua stanno 'tutti mangiati'
+              (Fratello, Fratello)
+              Stai con una faccia 'a peste', dimmi che hai passato
+              (Diamine, Diamine)
+              Apri gli occhi , qua stanno 'tutti mangiati'
+              (Fratello, fratello)
+              Stai con una faccia 'a peste', dimmi che hai passato
+              (Ma che hai fatto?)
+              
+              [Strofa 1: Gianni Red]
+              Fratello ho le palle piene
+              State 'tutti mangiati' , ma ne andate fieri
+              Parlavate di successo che sembrava ieri
+              Ora vi siete legati bene mani e piedi
+              Io mi sono 'legato' veramente ma non lo nascondo, 
+              Lo dico apertamente, faccio il cameriere
+              Mica come questi morti di fame
+              Che mi parlano di puttane e di denaro , 
+              ma di tutto ciò non fanno nulla
+              Il mio rap nasceva già tra i banchi di scuola
+              Chiedilo ai miei compagni , ne conoscono di storie
+              Ce l' ho nel sangue , nel DNA
+              Come queste puttane quando fanno le corna
+              Per fare il figlio di puttana la dovresti picchiare bene
+              Mi piace la malavita perchè la testa non mi funziona
+              Mio cugino mi fece vedere una pistola
+              E da lì in poi dissi  ''Lo sparerei un colpo''
+              Ma quale colpo, su , fa il bravo!
+              Non fare il duro che poi la paghi!
+              Sono la tua coscienza: un avvocato
+              il tuo sentiero è calcolato
+              Meglio una mangiata al Lago Patria 
+              piuttosto che ti fanno un puntata a Quarto Grado
+              Gianni, il male ti ha appassionato
+              Ma ti dico ''Non fa per te'', è assodato !
+              Per questo che faccio rap
+              Fratello non lo vedi che faccia ho 
+              Per il rap mi uccido, sono pazzo, ok?
+              Come nei film con Schwarzenegger
+              E tu parlami parlami di quanto stanno mangiati tutti quanti , già lo sai
+              (Già lo sai, Già lo sai)
+              Fratello , fratello , lavati la faccia , ma se la hai 'a peste' è un guaio!
+              
+              [Ritornello 2: Gianni Red & Loris Bastr]
+              Le palle piene, ho i coglioni per terra
+              (Credimi, Credimi)
+              So-so bene cosa sono le fogne
+              (ok, ok)
+              Soldi contati in tasca e li spendo
+              (Girati, Girati)
+              Con ogni cristiano che ho a che fare mi fraintendo
+              (Bang, bang ,bang!)
+              Apri gli occhi , qua stanno 'tutti mangiati'
+               (Fratello, Fratello)
+              Stai con una faccia a peste, dimmi che hai passato
+              (Diamine, Diamine)
+              Apri gli occhi , qua stanno 'tutti mangiati'
+              (Fratello, fratello)
+              Stai con una faccia a peste, dimmi che hai passato
+              (Ma che hai fatto?)
+              
+              [Strofa 2: Loris Bastr]
+              Non ho mai leccato un culo
+              Per questo non sono ancora nessuno
+              Perché quando parlo non mi capisci
+              Mi vorrebbero ordinato coi capelli lisci
+              Ho mandato a fare in culo certi meccanismi
+              Perché se apro gli occhi vedo esibizionisti
+              Hai fatto una foto con una Ferrari, 
+              Hai preso mille like
+              Peccato che il Ferrari non ce l'hai
+              Quest'anno poi l' hai preso in culo
+              L'anno prossimo ti rifarai
+              Tesoro i tipi come te li butto nei pollai
+              Voglio fare un cacatone per voi talmente grande 
+              Giuro ve lo dedico col cuore
+              Spegnete queste belle candeline, esprimete un desiderio,
+              Fate presto prima che si sente il tanfone
+              Hai preso una macchina a leasing
+              Anelli sulle mani, iniziali incise
+              Uomini e donne, cuori felici
+              Mano nella mano ma non siamo a Parigi
+              (ohh sembri il cazzo, mezza sega)
+              Calci nelle palle tutti puniti
+              Non mi ispiro né a 2Pac né a Biggie
+              Ma al numero uno Massimo Troisi
+              Amico mio forse è meglio che sto nel deserto
+              Come un fottuto cammello
+              Ho detto a Gianni alziamo il livello
+              Flow macellaio ti apro, vitello
+              Dimmi quanto vali, quanti soldi mi regali
+              Eri li che l' aspettavi, ma solo preliminari
+              Io mai stato alla pari, alla faccia dei mangiati
+              Bevo Red Bull, mi mette le ali
+              
+              [Ritornello 3: Gianni Red & Loris Bastr]
+              Le palle piene, ho i coglioni per terra
+              (Credimi, Credimi)
+              So-so bene cosa sono le fogne
+              (ok, ok)
+              Soldi contati in tasca e li spendo
+              (Girati, Girati)
+              Con ogni cristiano che ho a che fare mi fraintendo
+              (Bang, bang ,bang!)
+              Apri gli occhi , qua stanno 'tutti mangiati'
+               (Fratello, Fratello)
+              Stai con una faccia a peste, dimmi che hai passato
+              (Diamine, Diamine)
+              Apri gli occhi , qua stanno 'tutti mangiati'
+              (Fratello, fratello)
+              Stai con una faccia a peste, dimmi che hai passato
+              
+              [Outro: Gianni Red]
+              Ridi , ridi , ridi ogni tanto
+              Potresti ridere ogni tanto !
+              Ridi , ridi , ridi ogni tanto
+              Potresti ridere ogni tanto !
+              E ridi , non fare il 'mangiato', fratello
+              
+              `}
+            />
+          </Route>
+
           <Route path="/amore e soldi no!">
             <TestiDetails
+              mp3="./songs/amore-e-soldi.mp3"
               data="11/02/2018"
               immagine="./images/cover/amore-e-soldi.png"
               titolo="Amore e soldi? No!"
@@ -1874,7 +2153,7 @@ Prendi una camomilla , non fare il guappo!
 
           <Route path="/">
             <HomeFinal />
-            <Finalfooter /> 
+            <Finalfooter />
           </Route>
         </Switch>
       </div>

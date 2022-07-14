@@ -5,6 +5,7 @@ import Newsletter from "../Newsletter";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { update } from "../../redux/loaderSlice";
+import { play, stop } from "../../redux/playerSlice";
 
 const HomeFinal = () => {
   const videos = [
@@ -14,9 +15,9 @@ const HomeFinal = () => {
     { src: "https://youtu.be/t_BbtC6px3c", title: "red family pippat" },
   ];
   const [indexVideo, setIndexVideo] = useState(0);
-  const [playing, setPlaying] = useState(false);
   const [tempLoader, setTempLoader] = useState(true);
-  const loader = useSelector(state=>state.loader.loading);
+  const loader = useSelector((state) => state.loader.loading);
+  const player = useSelector((state) => state.player.playing);
   const dispatch = useDispatch();
   const handleArrowClick = (direction) => {
     if (direction === "right") {
@@ -52,20 +53,13 @@ const HomeFinal = () => {
     }
   };
   const handleDotClick = (index) => {
-    setPlaying(false);
+    dispatch(stop())
     setIndexVideo(index);
   };
-  const togglePlaying = (e) => {
-    if (playing === false) {
-      // e.target.play();
-      setPlaying(true);
-    } else {
-      // e.target.pause();
-      setPlaying(false);
-    }
+  
+  const handleToggleVideo = (player) => {
+    !player ? dispatch(play()) : dispatch(stop());
   };
- 
-
   const [prodotti, setProdotti] = useState([]);
   useEffect(() => {
     const getProduct = async () => {
@@ -87,19 +81,39 @@ const HomeFinal = () => {
       const result = await response.json();
       setProdotti(result);
     };
-    setTimeout(()=>{
-      setTempLoader(false);
-      dispatch(update(tempLoader))
-    },1700)
+    tempLoader === true &&
+      setTimeout(() => {
+        setTempLoader(false);
+        dispatch(update(tempLoader));
+      }, 1700);
     getProduct();
   }, [prodotti]);
 
+  // useEffect(()=>{
+  //   const handlePlayGallery = (player) => {
+  //     if(player === false) {
+  //       setTimeout(indexVideo <= 2 ? setIndexVideo(indexVideo + 1) : setIndexVideo(0) ,6000)
+  //     } else {
+  //       console.log(player);
+  //     }
+  //   };
+  //   handlePlayGallery(player)
+
+  // },[])
+
   return (
     <div className="Home__container">
-      
-      <div className={"Home__container__loader"} style={loader ? {width:"100%"} : {width:0}}>
+      <div
+        className={"Home__container__loader"}
+        style={loader ? { width: "100%" } : { width: 0 }}
+      >
         <Fade>
-        <img id="desktop-loader"src="/images/web-rti.jpg" alt="Logo" style={loader ? {width:"350px"} : {width:0}}/>
+          <img
+            id="desktop-loader"
+            src="/images/web-rti.jpg"
+            alt="Logo"
+            style={loader ? { width: "350px" } : { width: 0 }}
+          />
         </Fade>
       </div>
       <div className="Home__container__gallery">
@@ -107,7 +121,7 @@ const HomeFinal = () => {
           className="Home__container__gallery__leftArrow"
           onClick={() => handleArrowClick("left")}
         >
-          {"<"}
+          <img className="Home__container__gallery__leftArrow__img" src="/images/l-arrow.png" alt="" />
         </div>
         <li className="Home__container__gallery__slide">
           {indexVideo === 3 && (
@@ -128,12 +142,13 @@ const HomeFinal = () => {
               src={videos[indexVideo].src + "#t=0.001"}
               preload="metadata"
               type="video/mp4"
-              onPlay={(e) => togglePlaying(e)}
-              onPause={() => setPlaying(false)}
-              className={playing === false ? "Disabled" : "Active"}
+              onPlay={() => handleToggleVideo(player) }
+              onPause={() => handleToggleVideo(player) }
+              className={player === false ? "Disabled" : "Active"}
+              onS
             />
-          )} 
-          {playing === false && (
+          )}
+          {player === false && (
             <p className="Home__container__gallery__slide__title">
               {videos[indexVideo].title}
             </p>
@@ -143,7 +158,7 @@ const HomeFinal = () => {
           className="Home__container__gallery__rightArrow"
           onClick={() => handleArrowClick("right")}
         >
-          {">"}
+          <img className="Home__container__gallery__rightArrow__img" src="/images/r-arrow.png" alt="" />
         </div>
       </div>
       <div className="Home__container__dots">

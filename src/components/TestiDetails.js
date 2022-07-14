@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Finalfooter from "./Finalfooter";
+import "./TestiDetails.scss";
 
 function TestiDetails(props) {
   const [traduzione, setTraduzione] = useState(false);
@@ -36,12 +37,19 @@ function TestiDetails(props) {
           <p>
             {props.desc}
           </p>
-          <p>Suoni : Red Family</p>
-          <p>Regia : Red Family</p>
+          {/* <p>Suoni : Red Family</p>
+          <p>Regia : Red Family</p> */}
         </DescriptionContainer>
       </InfoContainer>
 
       <TestoContainer>
+      <div className="Mediaplayer__container">
+            <audio controls>
+              <source 
+                src={props.mp3? props.mp3 : null}
+              />
+            </audio>
+          </div>
         <p>Lingue</p>
       <button style={{color:"black;",width:"100px",marginLeft:"15px",}} onClick={() => handleDialettoClick()}>
         {
