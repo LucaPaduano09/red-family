@@ -31,7 +31,7 @@ function Video() {
               <iframe
                 width="80%"
                 height="400px"
-                src="https://www.youtube.com/embed/t_BbtC6px3c"
+                src="https://www.youtube.com/embed/01QbeS4G8FM"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
@@ -41,8 +41,8 @@ function Video() {
           </ImageWrapper>
           <DescriptionWrapper>
             <h1>Red Family</h1>
-            <h2>Titolo Brano: Pippat</h2>
-            <h3>Data di pubblicazione: 31/05/2022</h3>
+            <h2>Titolo Brano: Tranquill</h2>
+            <h3>Data di pubblicazione: 29 / 07 / 2022</h3>
             <MenuSocial>
               <p>condividi:</p>
               <a
@@ -65,18 +65,16 @@ function Video() {
               <ShareLink link="http://red-family.netlify.app/video">
                 {(link) => (
                   <a href={link} target="_blank">
-                    <img src="./images/share-facebook.png"/>
+                    <img src="./images/share-facebook.png" />
                   </a>
                 )}
               </ShareLink>
             </MenuSocial>
-            <p>
-              Gianni Red & Loris Bastr presentano : " Pippat"
-            </p>
-              <p>Suoni : Red Family</p>
-              <p>Regia : Red Family</p>
-              <p>D.o.p. & camera : Marco Bruno</p>
-              <p>Produzione video Red Family</p>
+            <p>Gianni Red & Loris Bastr presentano : " Tranquill "</p>
+            <p>Prod by Red Family</p>
+            <p>Mix & Master by Yakikoji</p>
+            <p>Regia by Red Family</p>
+            <p>Filmed and edited by Tony Becher</p>
           </DescriptionWrapper>
         </MainVideoWrapper>
 
@@ -85,7 +83,16 @@ function Video() {
         </TitleWrapper2>
         <MoreVideoWrapper>
           <Zoom>
-          <iframe
+            <iframe
+              width="100%"
+              height="300"
+              src="https://www.youtube.com/embed/t_BbtC6px3c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen="allowFullScreen"
+            ></iframe>
+            <iframe
               width="100%"
               height="300"
               src="https://www.youtube.com/embed/2q6PsjEPYic"
@@ -180,9 +187,9 @@ const ContainerContainers = styled.div`
   background: url("./images/sfondo-sito1.png");
   background-position: center center;
   background-size: cover;
-  background-repeat:repeat;
+  background-repeat: repeat;
   position: absolute;
-  margin-top:-24px;
+  margin-top: -24px;
   width: 100vw;
 `;
 
@@ -193,8 +200,8 @@ const Container = styled.div`
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
   display: flex;
   margin: 0 auto;
-  margin-top: 180px;
-  margin-bottom:50px;
+  margin-top: 150px;
+  margin-bottom: 50px;
   flex-direction: column;
   align-items: center;
   @media (max-width: 1024px) {
@@ -202,14 +209,14 @@ const Container = styled.div`
     width: 100vw;
     // height: 1900px;
   }
-  @media (max-width: 768px){
-    margin-top:100px;
+  @media (max-width: 768px) {
+    margin-top: 100px;
     // height: 3600px;
   }
-  @media (max-width:376px){
+  @media (max-width: 376px) {
     // height:3500px;
   }
-  `;
+`;
 
 const TitleWrapper = styled.div`
   position: relative;
@@ -332,8 +339,8 @@ const MainVideoWrapper = styled.div`
   @media screen and (max-width: 425px) {
     margin-top: 50px;
   }
-  @media screen and (max-width: 376px){
-    margin-top:0px;
+  @media screen and (max-width: 376px) {
+    margin-top: 0px;
   }
   @media only screen and (device-width: 428px) and (device-height: 926px) {
     margin-top: 0px;
@@ -460,7 +467,7 @@ const MenuSocial = styled.div`
   margin-top: 20px;
   margin-bottom: 20px;
   position: relative;
-  width:100%;
+  width: 100%;
   @media (max-width: 768px) {
     justify-content: flex-start;
   }
@@ -470,7 +477,7 @@ const MenuSocial = styled.div`
     padding: 5px;
     margin-right: 10px;
     transition: all 0.3s ease-in-out;
-    :hover{
+    :hover {
       transform: scale(1.2);
     }
     @media (max-width: 428px) {
@@ -483,7 +490,7 @@ const MenuSocial = styled.div`
     position: relative;
     font-size: 20px;
     margin-right: 40px;
-    width:20%;
+    width: 20%;
     @media (max-width: 768px) {
       width: 20%;
     }
@@ -513,10 +520,10 @@ const MoreVideoWrapper = styled.div`
   iframe {
     text-align: center;
     font-size: 30px;
-    
+
     @media (max-width: 768px) {
       width: 100vw;
-      margin-bottom:5px;
+      margin-bottom: 5px;
     }
   }
 `;

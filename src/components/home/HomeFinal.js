@@ -10,13 +10,17 @@ import HammerComponent from "react-hammerjs";
 
 const HomeFinal = () => {
   const videos = [
+    {
+      src: "https://www.youtube.com/embed/01QbeS4G8FM",
+      title: "red family tranquill",
+    },
     { src: "/images/puntata-10.mp4", title: "red radio pt 10" },
     { src: "/images/puntata-9.mp4", title: "red radio pt 9" },
     { src: "/images/puntata-8.mp4", title: "red radio pt 8" },
-    { src: "https://youtu.be/t_BbtC6px3c", title: "red family pippat" },
   ];
   const [indexVideo, setIndexVideo] = useState(0);
   const [tempLoader, setTempLoader] = useState(true);
+  const [playing, setPlaying] = useState(false);
   const loader = useSelector((state) => state.loader.loading);
   const player = useSelector((state) => state.player.playing);
   const dispatch = useDispatch();
@@ -55,13 +59,17 @@ const HomeFinal = () => {
     }
   };
   const handleDotClick = (index) => {
-    dispatch(stop())
+    dispatch(stop());
     setIndexVideo(index);
   };
+  const handleTogglePlaying = () => {
+    console.log(playing)
+    playing ? setPlaying(false) : setPlaying(true);
+  };
   const handleSwipe = (e) => {
-    let pointer = e.originalEvent.changedTouches[0].clientX
+    let pointer = e.originalEvent.changedTouches[0].clientX;
     console.log(pointer);
-  }
+  };
   const handleToggleVideo = (player) => {
     !player ? dispatch(play()) : dispatch(stop());
   };
@@ -126,21 +134,26 @@ const HomeFinal = () => {
           className="Home__container__gallery__leftArrow"
           onClick={() => handleArrowClick("left")}
         >
-          <img className="Home__container__gallery__leftArrow__img" src="/images/l-arrow.png" alt="" />
+          <img
+            className="Home__container__gallery__leftArrow__img"
+            src="/images/l-arrow.png"
+            alt=""
+          />
         </div>
         <li className="Home__container__gallery__slide">
-          {indexVideo === 3 && (
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/t_BbtC6px3c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          {indexVideo === 0 && (
+              <iframe
+                width="100%"
+                height="100%"
+                src={videos[0].src}
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                onPlay={() => handleTogglePlaying()}
+              ></iframe>
           )}
-          {indexVideo !== 3 && (
+          {indexVideo !== 0 && (
             <HammerComponent>
               <video
                 id="desktopVideo"
@@ -148,14 +161,13 @@ const HomeFinal = () => {
                 src={videos[indexVideo].src + "#t=0.001"}
                 preload="metadata"
                 type="video/mp4"
-                onPlay={() => handleToggleVideo(player) }
-                onPause={() => handleToggleVideo(player) }
+                onPlay={() => handleToggleVideo(player)}
+                onPause={() => handleToggleVideo(player)}
                 className={player === false ? "Disabled" : "Active"}
               />
             </HammerComponent>
-           
           )}
-          {player === false && (
+          {player === false && indexVideo !== 0 && (
             <p className="Home__container__gallery__slide__title">
               {videos[indexVideo].title}
             </p>
@@ -165,7 +177,11 @@ const HomeFinal = () => {
           className="Home__container__gallery__rightArrow"
           onClick={() => handleArrowClick("right")}
         >
-          <img className="Home__container__gallery__rightArrow__img" src="/images/r-arrow.png" alt="" />
+          <img
+            className="Home__container__gallery__rightArrow__img"
+            src="/images/r-arrow.png"
+            alt=""
+          />
         </div>
       </div>
       <div className="Home__container__dots">

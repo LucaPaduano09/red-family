@@ -38,6 +38,7 @@ function App() {
           <Route path="/testi">
             <Testi
               titoli={[
+                "Tranquill",
                 "Pippat",
                 "in form",
                 "uapp",
@@ -49,6 +50,7 @@ function App() {
                 "amore e soldi? no!",
               ]}
               url={[
+                "tranquill",
                 "pippat",
                 "in form",
                 "uapp",
@@ -60,6 +62,7 @@ function App() {
                 "amore e soldi no!",
               ]}
               cover={[
+                "./images/cover/tranquill.png",
                 "./images/cover/pippat.png",
                 "./images/cover/in-form.png",
                 "./images/cover/uapp.png",
@@ -73,10 +76,117 @@ function App() {
             />
           </Route>
           {/* ROTTE DEI TESTI */}
+          <Route path="/tranquill">
+            <TestiDetails
+              mp3="./songs/tranquill.mp3"
+              data="29/07/2022"
+              immagine="./images/cover/tranquill.png"
+              titolo="Tranquill"
+              desc={`Prod by Red Family
+              Mix & Master by Yakikoji
+              Regia by Red Family
+              Filmed and edited by Tony Becher`}
+              spotify="https://open.spotify.com/album/30UYJi47Vmx1D2IrtADi9f"
+              testo={`
+              [Ritornello 1: Gianni Red]
+Tranquill
+Ua sto pop sciolt
+Tranquill
+Ua sto pop sciolt
+Tranquill
+Ua sto pop sciolt
+Tra-tra-tranquill
+Ua sto pop sciolt
+Tranquill
+Ua sto pop sciolt
+
+[Strofa 1: Gianni Red]
+So' comme o’ Colombo
+Perchè sacc fà tt’ cos
+Scinn nsiem a me !  è comm si iss a scol
+Parol, parol, parol, parol
+A cunusc sta canzon? chell iev 'e mod
+E tu mi vuoi importunare 
+Ma nn’ t' rong o' mod
+Teng semp a risposta pront aret a' mol
+Dot canor, not e parol
+A cervella nummr un chest è a' prov ro' nov
+A piccrill m' chiammavn pummarol
+Mo e' pummarol te lanciamm appriess, tesor 
+Sacc cantà, sacc sunà, sacc scrivr, sacc parlà
+Sacc cantà, sacc sunà, sacc scrivr, sacc parlà
+E ancor ! Chiammem Gianni Tuttofare
+Nun vogl na scarpett ma o' stival 'e l’ Italia
+Allor nun le capit se voglio lo so fare
+Io quando parlo non uso il condizionale
+Se vuoi ci puoi provare, che ti costa tentare?
+Ma è un poco come a scuola, frà copiare non vale
+Che vuoi fare?
+
+[Ritornello 2: Gianni Red]
+Tranquill
+Ua sto pop sciolt
+Tranquill
+Ua sto pop sciolt
+Tranquill
+Ua sto pop sciolt
+Tra-tra-tranquill
+Ua sto pop sciolt
+Tranquill
+Ua sto pop sciolt
+
+[Strofa 2: Loris Bastr]
+Accort ca si mett e' pall 'ncopp a' valanz , s' scass
+E mett e' cos in chiar fin e quann nn' m' rilass
+Acqua cristallin , vogl fa nu tip ‘e vit over checazz
+Over ch' e' sord, over ch' e' fatt
+Io ? Quann maj m' stev attiggiann?
+Teng o' record re record ca nn'e maj tnut ammó
+Ven Report riport , fa frni e' pazziell uaglió
+Cazzó , t vuó scetà?
+Staj alliert comme nu bacchetton
+Vuo parlà e music tra Bach e Beethoven?
+Se sei il più umile del mondo  non lo dici a nessuno
+Carriera al culmine , a tratti verso il dirupio
+La guerra tra i poveri non arricchisce nessuno
+Basta dire "Hai ragione" ed eviti il miscuglio
+Il prezzo da pagare non si può scontare
+Hai dato a tutte le persone un valore materiale
+Quello che semini raccogli
+Quindi cosa credevi di mangiare?
+So catare, so suonare, so ballare
+So catare, so suonare, so ballare
+So catare, so suonare, so ballare
+Sono un tuttofare 
+Trovatemi una cosa sola che non so fare
+
+[Ritornello 3: Gianni Red]
+Tranquill
+Ua sto pop sciolt
+Tranquill
+Ua sto pop sciolt
+Tra-tra-tranquill
+Ua sto pop sciolt
+Tranquill
+Ua sto pop sciolt
+Tranquill
+Ua sto pop sciolt
+Tranquill
+Ua sto pop sciolt
+Tra-tra-tranquill
+Ua sto pop sciolt
+Tranquill
+Ua sto pop sciolt
+
+              `}
+              traduzione={``}
+            />
+          </Route>
+
           <Route path="/pippat">
             <TestiDetails
               mp3="./songs/pippat.wav"
-              data="20/2/2019"
+              data="31/05/2022"
               immagine="./images/cover/pippat.png"
               titolo="Pippat"
               desc={`Gianni Red & Loris Bastr presentano : "Pippat" 

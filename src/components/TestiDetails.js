@@ -98,7 +98,7 @@ const Container = styled.div`
   width: 70%;
   margin: 0 auto;
   background-image: linear-gradient(to right, #0f0f11ea, transparent);
-  margin-top: 150px;
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   @media (max-width: 768px) {

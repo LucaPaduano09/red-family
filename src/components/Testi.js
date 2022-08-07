@@ -62,7 +62,6 @@ const ContainerContainers = styled.div`
     margin-top:68px;
   }
   @media (max-width: 1540px){
-    margin-top:100px;
   }
   @media (max-width: 1024px){
     
