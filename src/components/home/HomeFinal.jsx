@@ -39,10 +39,9 @@ const HomeFinal = () => {
   const [playing, setPlaying] = useState(false);
   const [transform, setTransform] = useState("Reset");
   const [active, setActive] = useState(0);
-  const loader = useSelector((state: any) => state.loader.loading);
-  const player = useSelector((state: any) => state.player.playing);
+  const loader = useSelector((state) => state.loader.loading);
+  const player = useSelector((state) => state.player.playing);
   const dispatch = useDispatch();
-  const [prodotti, setProdotti] = useState([]);
 
   const handleArrowClick = (direction) => {
     if (direction === "right") {
@@ -106,7 +105,7 @@ const HomeFinal = () => {
         break;
     }
   };
-
+  const [prodotti, setProdotti] = useState([]);
   useEffect(() => {
     const getProduct = async () => {
       const response = await fetch(
@@ -127,18 +126,14 @@ const HomeFinal = () => {
       const result = await response.json();
       setProdotti(result);
     };
-    if (tempLoader === true) {
-      let timer = setTimeout(() => {
+    tempLoader === true &&
+      setTimeout(() => {
         setTempLoader(false);
         dispatch(update(tempLoader));
       }, 1700);
-      return () => {
-        clearTimeout(timer);
-      };
-    }
     getProduct();
   }, [prodotti]);
-
+  
   useEffect(() => {
     if (player === false) {
       let timer = setTimeout(() => {
@@ -289,10 +284,10 @@ const HomeFinal = () => {
       </div>
       <div className="Home__container__products">
         {
-          console.log(prodotti)
+          // console.log(prodotti)
         }
         {prodotti.map((element) => (
-          <div className="Home__container__products__product">
+          <div className="Home__container__products__product" key={element.prodotti_name}>
             <img
               className="Home__container__products__product__productImage"
               src={"." + element.prodotti_image[0]}
