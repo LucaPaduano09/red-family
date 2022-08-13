@@ -1,16 +1,11 @@
 import React from "react";
-import styled from "styled-components";
 import "./App.css";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Fotografie from "./components/Fotografie";
 import Testi from "./components/Testi";
 import TestiDetails from "./components/TestiDetails";
 import Finalfooter from "./components/Finalfooter";
 import NewHeader from "./components/headers/NewHeader";
 import Video from "./components/Video";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Newsletter from "./components/Newsletter";
 import ScrollToTop from "./components/ScrollToTop";
 import Prodotto from "./components/Prodotto";
 import Radio from "./components/Radio";

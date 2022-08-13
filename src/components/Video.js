@@ -400,7 +400,7 @@ const DescriptionWrapper = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     font-size: 15px;
-    margin-top: 170px;
+    margin: 170px 0px 20px 0px;
     padding: 0px;
     float: none;
     text-align: left;
