@@ -44,7 +44,7 @@ const HomeFinal = () => {
   const dispatch = useDispatch();
   const [prodotti, setProdotti] = useState([]);
 
-  const handleArrowClick = (direction: string) => {
+  const handleArrowClick = (direction) => {
     if (direction === "right") {
       switch (transform) {
         case "Reset":
@@ -77,7 +77,7 @@ const HomeFinal = () => {
       }
     }
   };
-  const handleDotClick = (index: string) => {
+  const handleDotClick = (index) => {
     dispatch(stop());
     setPlaying(false);
     setTransform(index);
@@ -86,11 +86,11 @@ const HomeFinal = () => {
     playing ? setPlaying(false) : setPlaying(true);
   };
 
-  const handleToggleVideo = (player: any) => {
+  const handleToggleVideo = (player) => {
     player === false ? dispatch(play()) : dispatch(stop());
     playing === true ? setPlaying(false) : setPlaying(true);
   };
-  const handleTransform = (transform: string) => {
+  const handleTransform = (transform) => {
     switch (transform) {
       case "Reset":
         setTransform("1");
@@ -291,7 +291,7 @@ const HomeFinal = () => {
         {
           console.log(prodotti)
         }
-        {prodotti.map((element: any) => (
+        {prodotti.map((element) => (
           <div className="Home__container__products__product">
             <img
               className="Home__container__products__product__productImage"
