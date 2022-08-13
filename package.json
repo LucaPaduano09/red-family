@@ -18,6 +18,7 @@
     "react-dom": "^17.0.2",
     "react-facebook-share-link": "^1.0.4",
     "react-hammerjs": "^1.0.1",
+    "react-iframe-click": "^2.0.2",
     "react-js-loader": "^0.1.0",
     "react-redux": "^7.2.8",
     "react-reveal": "^1.2.2",
@@ -25,6 +26,7 @@
     "react-scripts": "4.0.3",
     "redux": "^4.2.0",
     "styled-components": "^5.3.3",
+    "typescript": "^4.7.4",
     "video-react": "^0.15.0"
   },
   "scripts": {

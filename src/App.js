@@ -17,7 +17,7 @@ import Radio from "./components/Radio";
 import Login from "./components/admin/Login";
 import AdminHome from "./components/admin/AdminHome";
 import AdminSottoscrizioni from "./components/admin/AdminSottoscrizioni";
-import HomeFinal from "./components/home/HomeFinal";
+import HomeFinal from "./components/home/HomeFinal.tsx";
 
 function App() {
   return (
