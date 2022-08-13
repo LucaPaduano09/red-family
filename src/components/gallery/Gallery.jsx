@@ -6,36 +6,35 @@ import Iframe from "react-iframe-click";
 import "./Gallery.scss";
 
 const Gallery = (props) => {
-    const videos = [
-        {
-          src: "https://www.youtube.com/embed/01QbeS4G8FM",
-          title: "red family tranquill",
-          type: "youtube",
-          id: 0,
-        },
-        {
-          src: "/images/puntata-10.mp4",
-          title: "red radio pt 10",
-          type: "project",
-          id: 1,
-        },
-        {
-          src: "/images/puntata-9.mp4",
-          title: "red radio pt 9",
-          type: "project",
-          id: 2,
-        },
-        {
-          src: "/images/puntata-8.mp4",
-          title: "red radio pt 8",
-          type: "project",
-          id: 3,
-        },
-      ];
-      const dispatch = useDispatch()
-      const player = useSelector((state) => state.player.playing);
-    const [active, setActive] = useState(0);
-    const [playing, setPlaying] = useState(false);
+  const videos = [
+    {
+      src: "https://www.youtube.com/embed/01QbeS4G8FM",
+      title: "red family tranquill",
+      type: "youtube",
+      id: 0,
+    },
+    {
+      src: "/images/puntata-10.mp4",
+      title: "red radio pt 10",
+      type: "project",
+      id: 1,
+    },
+    {
+      src: "/images/puntata-9.mp4",
+      title: "red radio pt 9",
+      type: "project",
+      id: 2,
+    },
+    {
+      src: "/images/puntata-8.mp4",
+      title: "red radio pt 8",
+      type: "project",
+      id: 3,
+    },
+  ];
+  const dispatch = useDispatch();
+  const player = useSelector((state) => state.player.playing);
+  const [playing, setPlaying] = useState(false);
   const [transform, setTransform] = useState("Reset");
   const handleArrowClick = (direction) => {
     if (direction === "right") {
@@ -104,7 +103,6 @@ const Gallery = (props) => {
         clearTimeout(timer);
       };
     } else {
-
     }
   }, [transform, playing]);
   return (
@@ -139,8 +137,8 @@ const Gallery = (props) => {
                     controls
                     src={x.src + "#t=0.001"}
                     preload="metadata"
-                    // type="video/mp4"
-                    onClick={() => handleToggleVideo(player)}
+                    onPause={() => handleToggleVideo(player)}
+                    onPlay={() => handleToggleVideo(player)}
                     className={playing === false ? "Disabled" : "Active"}
                   />
                 )}
@@ -186,7 +184,8 @@ const Gallery = (props) => {
         ></div>
         <div
           className={
-            "Gallery__container__dots__dot" + (transform === "1" ? "__active" : "")
+            "Gallery__container__dots__dot" +
+            (transform === "1" ? "__active" : "")
           }
           onClick={() => {
             handleDotClick("1");
@@ -194,7 +193,8 @@ const Gallery = (props) => {
         ></div>
         <div
           className={
-            "Gallery__container__dots__dot" + (transform === "2" ? "__active" : "")
+            "Gallery__container__dots__dot" +
+            (transform === "2" ? "__active" : "")
           }
           onClick={() => {
             handleDotClick("2");
@@ -202,7 +202,8 @@ const Gallery = (props) => {
         ></div>
         <div
           className={
-            "Gallery__container__dots__dot" + (transform === "3" ? "__active" : "")
+            "Gallery__container__dots__dot" +
+            (transform === "3" ? "__active" : "")
           }
           onClick={() => {
             handleDotClick("3");
