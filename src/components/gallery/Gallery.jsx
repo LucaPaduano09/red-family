@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { play, stop } from "../../redux/playerSlice";
+import {isMobile} from 'react-device-detect';
 import Iframe from "react-iframe-click";
 import "./Gallery.scss";
 
@@ -150,17 +151,19 @@ const Gallery = (props) => {
                     onPause={() => handleToggleVideo(playing)}
                   ></Iframe>
                 )}
-                {playing === false && x.type !== "youtube" && (
+                {playing === false && x.type !== "youtube" && 
                   <div className="Gallery__container__gallery__slideContainer__slide__title">
-                    <img
-                      className="Gallery__container__gallery__slideContainer__slide__title__logo"
-                      src="./images/red-profile.jpg"
-                    />
+                    {isMobile && (
+                      <img
+                        className="Gallery__container__gallery__slideContainer__slide__title__logo"
+                        src="./images/red-profile.jpg"
+                      />
+                    )}
                     <p className="Gallery__container__gallery__slideContainer__slide__title__text">
                       {x.title}
                     </p>
                   </div>
-                )}
+                }
               </li>
             </>
           ))}
