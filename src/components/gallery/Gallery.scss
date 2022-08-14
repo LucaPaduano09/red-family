@@ -159,7 +159,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
-                    bottom: 10px;
+                    bottom: 0px;
                     left: 0;
                     height: 50px;
                     width: 100%;
@@ -167,11 +167,10 @@
                   }
                   &__logo{
                     position: relative;
-                    height: 50px;
-                    width: 50px;
+                    height: 40px;
+                    width: 40px;
                     border-radius: 50%;
                     margin: 0px 20px;
-                    // flex: 1;
                   }
                   &__text{
                     position: relative;
