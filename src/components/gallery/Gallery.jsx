@@ -151,9 +151,15 @@ const Gallery = (props) => {
                   ></Iframe>
                 )}
                 {playing === false && x.type !== "youtube" && (
-                  <p className="Gallery__container__gallery__slideContainer__slide__title">
-                    {x.title}
-                  </p>
+                  <div className="Gallery__container__gallery__slideContainer__slide__title">
+                    <img
+                      className="Gallery__container__gallery__slideContainer__slide__title__logo"
+                      src="./images/red-profile.jpg"
+                    />
+                    <p className="Gallery__container__gallery__slideContainer__slide__title__text">
+                      {x.title}
+                    </p>
+                  </div>
                 )}
               </li>
             </>
