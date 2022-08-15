@@ -69,37 +69,36 @@ const Gallery = (props) => {
     return arrayId;
   };
   const handleTransform = (id) => {
+    let newArray = [];
     setTransform(id);
   };
 
-  useEffect(() => {
-    let newArray = [];
-    console.log(arrayId);
-    if (arrayId.length > 1) {
-      newArray = removeFirstId(arrayId);
-      setArrayId(newArray);
-    } else {
-      resetArrayId();
-    }
-  }, [transform, arrayId]);
-
   const resetArrayId = () => {
-    setArrayId(getId(props.videos));
-    return getId(props.videos);
+    let ids = getId(props.videos)
+    ids.unshift("ciao");
+    console.log(ids)
+    setArrayId(ids);
+    // return getId(props.videos).unshift("ciao");
   };
 
   useEffect(() => {
-    console.log(arrayId);
+    // console.log(arrayId);
     if (player === false) {
-      let timer = setTimeout(() => {
-        handleTransform(arrayId[0]);
-      }, 3000);
-      return () => {
-        clearTimeout(timer);
-      };
-    } else {
-    }
-  }, [transform,arrayId.length]);
+      if (arrayId.length > 1) {
+        let newArray = removeFirstId(arrayId);
+        setArrayId(newArray);
+        let timer = setTimeout(() => {
+          handleTransform(arrayId[0]);
+        }, 3000);
+        return () => {
+          clearTimeout(timer);
+        };
+      } else if(arrayId.length === 1) {
+        let t = resetArrayId();
+      }
+      } else {
+      }
+  }, [transform, arrayId]);
 
   return (
     <div className="Gallery__container">
