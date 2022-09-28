@@ -45,6 +45,10 @@ const Radio = () => {
       titolo: "puntata 10",
       src: "./images/puntata-10.mp4#t=0.001",
     },
+    {
+      titolo: "puntata 11",
+      src: "./images/puntata-11.mp4#t=0.001"
+    }
   ];
   const [max, setMax] = useState(4);
   const handleLoadMore = () => {

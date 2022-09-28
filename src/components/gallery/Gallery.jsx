@@ -2,117 +2,26 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { play, stop } from "../../redux/playerSlice";
-import {isMobile} from 'react-device-detect';
+import { isMobile } from "react-device-detect";
 import Iframe from "react-iframe-click";
 import "./Gallery.scss";
+import { visitParameterList } from "typescript";
+import  useGallery  from "../../hooks/useGallery";
 
 const Gallery = (props) => {
-  const videos = [
-    {
-      src: "https://www.youtube.com/embed/01QbeS4G8FM",
-      title: "red family tranquill",
-      type: "youtube",
-      id: 0,
-    },
-    {
-      src: "/images/puntata-10.mp4",
-      title: "red radio pt 10",
-      type: "project",
-      id: 1,
-    },
-    {
-      src: "/images/puntata-9.mp4",
-      title: "red radio pt 9",
-      type: "project",
-      id: 2,
-    },
-    {
-      src: "/images/puntata-8.mp4",
-      title: "red radio pt 8",
-      type: "project",
-      id: 3,
-    },
-  ];
+  var videos = props.videos;
   const dispatch = useDispatch();
   const player = useSelector((state) => state.player.playing);
   const [playing, setPlaying] = useState(false);
-  const [transform, setTransform] = useState("Reset");
-  const handleArrowClick = (direction) => {
-    if (direction === "right") {
-      switch (transform) {
-        case "Reset":
-          setTransform("1");
-          break;
-        case "1":
-          setTransform("2");
-          break;
-        case "2":
-          setTransform("3");
-          break;
-        case "3":
-          setTransform("Reset");
-          break;
-      }
-    } else if (direction === "left") {
-      switch (transform) {
-        case "Reset":
-          setTransform("3");
-          break;
-        case "3":
-          setTransform("2");
-          break;
-        case "2":
-          setTransform("1");
-          break;
-        case "1":
-          setTransform("Reset");
-          break;
-      }
-    }
-  };
-  const handleDotClick = (index) => {
-    dispatch(stop());
-    setPlaying(false);
-    setTransform(index);
-  };
-  const handleToggleVideo = (player) => {
-    player === false ? dispatch(play()) : dispatch(stop());
-    playing === true ? setPlaying(false) : setPlaying(true);
-  };
-  const handleTransform = (transform) => {
-    switch (transform) {
-      case "Reset":
-        setTransform("1");
-        break;
-      case "1":
-        setTransform("2");
-        break;
-      case "2":
-        setTransform("3");
-        break;
-      case "3":
-        setTransform("Reset");
-        break;
-    }
-  };
-  useEffect(() => {
-    if (player === false) {
-      let timer = setTimeout(() => {
-        handleTransform(transform);
-      }, 5000);
-      return () => {
-        clearTimeout(timer);
-      };
-    } else {
-    }
-  }, [transform, playing]);
+  const gallery  = useGallery(videos);
+
   return (
     <div className="Gallery__container">
       <div className="Gallery__container__gallery">
         {playing === false && (
           <div
             className="Gallery__container__gallery__leftArrow"
-            onClick={() => handleArrowClick("left")}
+            onClick={() => gallery.handleArrowClick("left")}
           >
             <img
               className="Gallery__container__gallery__leftArrow__img"
@@ -123,7 +32,7 @@ const Gallery = (props) => {
         )}
         <div
           className={
-            "Gallery__container__gallery__slideContainer__transform" + transform
+            "Gallery__container__gallery__slideContainer__transform" + gallery.transform.id
           }
         >
           {videos.map((x) => (
@@ -138,8 +47,8 @@ const Gallery = (props) => {
                     controls
                     src={x.src + "#t=0.001"}
                     preload="metadata"
-                    onPause={() => handleToggleVideo(player)}
-                    onPlay={() => handleToggleVideo(player)}
+                    onPause={() => gallery.handleToggleVideo(player)}
+                    onPlay={() => gallery.handleToggleVideo(player)}
                     className={playing === false ? "Disabled" : "Active"}
                   />
                 )}
@@ -147,11 +56,11 @@ const Gallery = (props) => {
                   <Iframe
                     frameBorder={0}
                     src={"https://www.youtube.com/embed/01QbeS4G8FM"}
-                    onInferredClick={() => handleToggleVideo(playing)}
-                    onPause={() => handleToggleVideo(playing)}
+                    onInferredClick={() => gallery.handleToggleVideo(playing)}
+                    onPause={() => gallery.handleToggleVideo(playing)}
                   ></Iframe>
                 )}
-                {playing === false && x.type !== "youtube" && 
+                {playing === false && x.type !== "youtube" && (
                   <div className="Gallery__container__gallery__slideContainer__slide__title">
                     {isMobile && (
                       <img
@@ -163,7 +72,7 @@ const Gallery = (props) => {
                       {x.title}
                     </p>
                   </div>
-                }
+                )}
               </li>
             </>
           ))}
@@ -171,7 +80,7 @@ const Gallery = (props) => {
         {playing === false && (
           <div
             className="Gallery__container__gallery__rightArrow"
-            onClick={() => handleArrowClick("right")}
+            onClick={() => gallery.handleArrowClick("right")}
           >
             <img
               className="Gallery__container__gallery__rightArrow__img"
@@ -182,42 +91,17 @@ const Gallery = (props) => {
         )}
       </div>
       <div className="Gallery__container__dots">
-        <div
-          className={
-            "Gallery__container__dots__dot" +
-            (transform === "Reset" ? "__active" : "")
-          }
-          onClick={() => {
-            handleDotClick("Reset");
-          }}
-        ></div>
-        <div
-          className={
-            "Gallery__container__dots__dot" +
-            (transform === "1" ? "__active" : "")
-          }
-          onClick={() => {
-            handleDotClick("1");
-          }}
-        ></div>
-        <div
-          className={
-            "Gallery__container__dots__dot" +
-            (transform === "2" ? "__active" : "")
-          }
-          onClick={() => {
-            handleDotClick("2");
-          }}
-        ></div>
-        <div
-          className={
-            "Gallery__container__dots__dot" +
-            (transform === "3" ? "__active" : "")
-          }
-          onClick={() => {
-            handleDotClick("3");
-          }}
-        ></div>
+        {videos.map((v) => (
+          <div
+            className={
+              "Gallery__container__dots__dot" +
+              (gallery.transform.id === v.id ? "__active" : "")
+            }
+            onClick={() => {
+              gallery.handleDotClick(v.id, gallery.getId(props.videos));
+            }}
+          ></div>
+        ))}
       </div>
     </div>
   );

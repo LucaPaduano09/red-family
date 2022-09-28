@@ -13,6 +13,7 @@ import Login from "./components/admin/Login";
 import AdminHome from "./components/admin/AdminHome";
 import AdminSottoscrizioni from "./components/admin/AdminSottoscrizioni";
 import HomeFinal from "./components/home/HomeFinal.jsx";
+import Test from "./components/Test";
 
 function App() {
   return (
@@ -2255,6 +2256,10 @@ Prendi una camomilla , non fare il guappo!
 
           <Route path="/prodotto/:id">
             <Prodotto />
+          </Route>
+
+          <Route path='/test'>
+              <Test />
           </Route>
 
           <Route path="/">
