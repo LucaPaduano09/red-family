@@ -35,26 +35,27 @@ const HomeFinal = () => {
       <Gallery
         videos={[
           {
+            src: "/images/puntata-1-radio2.mp4",
+            title: "red radio2 pt 1",
+            type: "project",
+            id: "Reset",
+            size: "story"
+          },
+          {
             src: "/images/puntata-11.mp4",
             title: "red radio pt 11",
             type: "project",
-            id: "Reset",
+            id: "1",
           },
           {
             src: "https://www.youtube.com/embed/01QbeS4G8FM",
             title: "red family tranquill",
             type: "youtube",
-            id: "1",
+            id: "2",
           },
           {
             src: "/images/puntata-10.mp4",
             title: "red radio pt 10",
-            type: "project",
-            id: "2",
-          },
-          {
-            src: "/images/puntata-9.mp4",
-            title: "red radio pt 9",
             type: "project",
             id: "3",
           },

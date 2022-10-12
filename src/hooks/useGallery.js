@@ -100,29 +100,29 @@ export default function useGallery(videos) {
       //   id !== id
       // ));
   };
-  useEffect(() => {
-    if (player === false && dotClicked === false ) {
-      if (arrayId.length > 1) {
-        let newArray = removeFirstId(arrayId);
-        setArrayId(newArray);
-        let timer = setTimeout(() => {
-          handleTransform(arrayId[0], arrayId);
-        }, 3000);
-        return () => {
-          clearTimeout(timer);
-        };
-      } else if (arrayId.length === 1 || isNaN(arrayId) || arrayId === null || arrayId === undefined) {
-        resetArrayId(videos);
-      }
-    } else {
-      let timer = setTimeout(() => {
-        setDotclicked(false);
-      }, 8000);
-      return () => {
-        clearTimeout(timer);
-      };
-    }
-  }, [transform, arrayId, dotClicked]);
+  // useEffect(() => {
+  //   if (player === false && dotClicked === false ) {
+  //     if (arrayId.length > 1) {
+  //       let newArray = removeFirstId(arrayId);
+  //       setArrayId(newArray);
+  //       let timer = setTimeout(() => {
+  //         handleTransform(arrayId[0], arrayId);
+  //       }, 6000);
+  //       return () => {
+  //         clearTimeout(timer);
+  //       };
+  //     } else if (arrayId.length === 1 || isNaN(arrayId) || arrayId === null || arrayId === undefined) {
+  //       resetArrayId(videos);
+  //     }
+  //   } else {
+  //     let timer = setTimeout(() => {
+  //       setDotclicked(false);
+  //     }, 8000);
+  //     return () => {
+  //       clearTimeout(timer);
+  //     };
+  //   }
+  // }, [transform, arrayId, dotClicked]);
 
   return {
     transform,

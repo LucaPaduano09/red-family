@@ -49,7 +49,9 @@ const Gallery = (props) => {
                     preload="metadata"
                     onPause={() => gallery.handleToggleVideo(player)}
                     onPlay={() => gallery.handleToggleVideo(player)}
-                    className={playing === false ? "Disabled" : "Active"}
+                    onClick={() => gallery.handleToggleVideo(player)}
+                    className={player === false ? "Disabled" : "Active"}
+                    style={(x.size === "story" && !isMobile)? { objectFit:"contain"} : (x.size === "story" && isMobile)? { objectFit: "cover"} : {}}
                   />
                 )}
                 {x.type === "youtube" && (
@@ -60,7 +62,7 @@ const Gallery = (props) => {
                     onPause={() => gallery.handleToggleVideo(playing)}
                   ></Iframe>
                 )}
-                {playing === false && x.type !== "youtube" && (
+                {player === false && x.type !== "youtube" && (
                   <div className="Gallery__container__gallery__slideContainer__slide__title">
                     {isMobile && (
                       <img

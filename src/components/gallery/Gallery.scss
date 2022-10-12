@@ -11,7 +11,7 @@
             margin-top: 70px;
             background-color: black;
             @media screen and (max-width: 1000px) {
-                height: 50vh;
+                height: 80vh;
               }
             &__leftArrow {
               position: absolute;
@@ -91,7 +91,7 @@
                 transition: all 0.3s ease-in-out;
                 transform: translateX(-100vw);
                 @media screen and (max-width: 1000px){
-                    height: 50vh;
+                    height: 80vh;
                 }
               }
               &__transform2 {
@@ -102,7 +102,7 @@
                 transition: all 0.3s ease-in-out;
                 transform: translateX(-200vw);
                 @media screen and (max-width: 1000px){
-                    height: 50vh;
+                    height: 80vh;
                 }
               }
               &__transform3 {
@@ -113,7 +113,7 @@
                 transition: all 0.3s ease-in-out;
                 transform: translateX(-300vw);
                 @media screen and (max-width: 1000px){
-                    height: 50vh;
+                    height: 80vh;
                 }
               }
               &__transformReset {
@@ -124,7 +124,7 @@
                 transition: all 0.3s ease-in-out;
                 transform: translateX(0vh);
                 @media screen and (max-width: 1000px){
-                    height: 50vh;
+                    height: 80vh;
                 }
               }
               &__slide {
